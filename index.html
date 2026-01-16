@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GXO Instances Manager</title>
@@ -13,7 +14,7 @@
 
         :root {
             --gxo-blue: #003DA5;
-            --gxo-dark-blue: #002855;
+            --gxo-dark-blue: #FF3A00;
             --gxo-gray: #6D6E71;
             --gxo-light-gray: #E5E5E5;
             --gxo-white: #FFFFFF;
@@ -94,6 +95,7 @@
             min-width: 250px;
             padding: 12px 20px;
             border: 2px solid var(--gxo-light-gray);
+            color: #FF3A00;
             border-radius: 6px;
             font-size: 16px;
             transition: border-color 0.3s;
@@ -192,7 +194,7 @@
         }
 
         .live-badge.no {
-            background: #FF9800;
+            background: #ff0000;
             color: white;
         }
 
@@ -321,23 +323,34 @@
             margin-bottom: 20px;
         }
 
-        .stat-card {
+        .stat-card1 {
             background: var(--gxo-white);
+            color: #FF3A00;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
-        .stat-value {
-            font-size: 32px;
+        .stat-card2 {
+            background: var(--gxo-white);
+            color: #17d427;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .stat-value{
+            font-size: 35px;
             font-weight: 700;
-            color: var(--gxo-blue);
+            color: var(#32e30a);
+            text-align: center;
         }
 
         .stat-label {
             color: var(--gxo-gray);
-            font-size: 14px;
+            font-size: 15px;
             margin-top: 5px;
+            text-align: center;
         }
 
         .location-info {
@@ -370,32 +383,32 @@
 <body>
     <div class="header">
         <h1>GXO Logistics - Instance Manager</h1>
-        <p>Gestión y monitorización de instancias WMS/TMS/PDC</p>
+        <p>Management and Monitoring WMS/TMS/PDC instances</p>
     </div>
 
     <div class="container">
-        <div id="loadingIndicator" class="loading">Cargando datos desde GitHub</div>
+        <div id="loadingIndicator" class="loading">Loading data from GitHub</div>
         <div id="errorContainer"></div>
         <div id="mainContent" style="display: none;">
             <div class="stats-bar" id="statsBar"></div>
 
             <div class="search-section">
                 <div class="search-box">
-                    <input type="text" class="search-input" id="searchInput" placeholder="Buscar por cliente, warehouse, site, WHID, producto...">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Find bye Client, Warehouse, product...">
                     <select class="filter-select" id="filterLive">
-                        <option value="all">Todos los estados</option>
-                        <option value="true">Solo Live</option>
-                        <option value="false">Solo No Live</option>
+                        <option value="all">All status</option>
+                        <option value="true">Live</option>
+                        <option value="false">No Live</option>
                     </select>
                     <select class="filter-select" id="filterProduct">
-                        <option value="all">Todos los productos</option>
+                        <option value="all">All Products</option>
                     </select>
                     <select class="filter-select" id="filterAccount">
-                        <option value="all">Todas las cuentas</option>
+                        <option value="all">All accounts</option>
                     </select>
                 </div>
                 <div class="tabs">
-                    <button class="tab active" data-tab="all">Todas las Instancias</button>
+                    <button class="tab active" data-tab="all">All the Instances</button>
                     <button class="tab" data-tab="logistics">GXO Logistics</button>
                     <button class="tab" data-tab="enterprise">GXO Enterprise</button>
                 </div>
@@ -438,8 +451,8 @@
                 
                 initializeApp();
             } catch (error) {
-                console.error('Error loading data:', error);
-                showError(`Error al cargar datos: ${error.message}. Mostrando datos de ejemplo.`);
+                console.error('Loading data error:', error);
+                showError(`Loading data error: ${error.message}. Showing sample data.`);
                 loadFallbackData();
             }
         }
@@ -528,14 +541,15 @@
             const enterprise = instancesData.filter(i => i.account === 'GXO Enterprise').length;
 
             document.getElementById('statsBar').innerHTML = `
-                <div class="stat-card">
+                <div class="stat-card1">
                     <div class="stat-value">${total}</div>
-                    <div class="stat-label">Total Instancias</div>
+                    <div class="stat-label">Total Instances</div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card2">
                     <div class="stat-value">${live}</div>
-                    <div class="stat-label">Instancias Live</div>
+                    <div class="stat-label">Live Instances</div>
                 </div>
+                <!--
                 <div class="stat-card">
                     <div class="stat-value">${logistics}</div>
                     <div class="stat-label">GXO Logistics</div>
@@ -544,6 +558,7 @@
                     <div class="stat-value">${enterprise}</div>
                     <div class="stat-label">GXO Enterprise</div>
                 </div>
+                -->
             `;
         }
 
@@ -580,7 +595,7 @@
             });
 
             if (filtered.length === 0) {
-                grid.innerHTML = '<div class="no-results">No se encontraron instancias con los filtros aplicados</div>';
+                grid.innerHTML = '<div class="no-results">No instances were found with the filters applied.</div>';
                 return;
             }
 
@@ -605,10 +620,13 @@
                             <span class="info-label">Site:</span>
                             <span class="info-value">${instance.site}</span>
                         </div>
+                        <!--
                         <div class="info-row">
                             <span class="info-label">WHID:</span>
                             <span class="info-value">${instance.whid || 'N/A'}</span>
                         </div>
+                        -->
+
                         ${instance.wgs ? `
                         <div class="info-row">
                             <span class="info-label">WGS:</span>
@@ -656,7 +674,7 @@
                     ` : ''}
                     <div class="extensions-link">
                         <button class="extensions-btn" onclick="viewExtensions('${instance.id}', '${instance.client}')">
-                            📦 Ver Extensions Repository
+                            📦 Extensions Repository
                         </button>
                     </div>
                 </div>
