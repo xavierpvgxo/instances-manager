@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+*.egg-info/
+.pytest_cache/
+
+# Excel temporales
+~$*.xlsx
+~$*.xls
+*.tmp
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Node modules (si usas npm)
+node_modules/
+
+# Archivos de prueba
+test_*.xlsx
+test_*.csv
