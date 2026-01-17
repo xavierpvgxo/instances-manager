@@ -30,7 +30,6 @@
 
         .container { max-width: 1400px; margin: 0 auto; padding: 30px 40px; }
 
-        /* Estilos de los Contadores (Stats) Corregidos */
         .stats-bar {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -46,7 +45,7 @@
             text-align: center;
         }
 
-            .tab {
+        .tab, .tab-link {
             padding: 12px 24px;
             background: transparent;
             border: none;
@@ -56,9 +55,11 @@
             border-bottom: 3px solid transparent;
             transition: all 0.3s;
             font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .tab:hover {
+        .tab:hover, .tab-link:hover {
             color: var(--gxo-blue);
         }
 
@@ -70,20 +71,15 @@
         .stat-value { font-size: 35px; font-weight: 700; display: block; }
         .stat-label { color: var(--gxo-gray); font-size: 15px; margin-top: 5px; text-transform: uppercase; }
 
-        /* Colores específicos para cada contador */
         .results-color { color: var(--gxo-orange); }
         .live-color { color: #00ff15; }
 
-        /* Buscador y Filtros */
         .search-box { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;}
         .search-input { flex: 1; min-width: 250px; padding: 12px 20px; border: 2px solid #FF3A00; border-radius: 6px; font-size: 16px; color: #FF3A00;}
         .filter-select { padding: 12px 20px; border: 2px solid #FF3A00; color:#FF3A00; border-radius: 6px; background: white; min-width: 150px; }
 
-        .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid; color: #FF3A00); }
-        .tab { padding: 12px 24px; background: transparent; border: none; cursor: pointer; border-bottom: 3px solid transparent; font-weight: 500; }
-        .tab.active { color: var(--gxo-blue); border-bottom-color: var(--gxo-blue); }
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #FF3A00; }
 
-        /* Tarjetas */
         .instances-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 20px; }
         .instance-card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s; }
         .instance-card:hover { transform: translateY(-4px); box-shadow: 0 4px 16px rgba(0,61,165,0.15); }
@@ -98,7 +94,7 @@
         .info-row { display: flex; font-size: 14px; margin-bottom: 8px; }
         .info-label { font-weight: 600; color: var(--gxo-blue); min-width: 120px; }
 
-        .products { margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--gxo-light-gray);}
+        .products { margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--gxo-light-gray); }
         .product-tag { display: inline-block; background: var(--gxo-blue); color: white; padding: 4px 10px; border-radius: 4px; font-size: 11px; margin: 0 6px 6px 0; }
 
         .urls-section { margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--gxo-light-gray); }
@@ -111,7 +107,6 @@
         .url-link.disabled { opacity: 0.4; pointer-events: none; }
 
         .extensions-btn { width: 100%; margin-top: 15px; padding: 12px; background: #FF3A00; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 15px;}
-        
         .loading { text-align: center; padding: 60px; color: var(--gxo-blue); font-weight: bold; }
 
         .location-info {
@@ -120,13 +115,6 @@
             border-top: 1px solid var(--gxo-light-gray);
             font-size: 13px;
         }
-
-        .location-info i {
-            color: var(--gxo-blue);
-            margin-right: 8px;
-            font-size: 8px;
-        }
-        
     </style>
 </head>
 <body>
@@ -151,20 +139,14 @@
                     <option value="false">No Live</option>
                 </select>
 
-                <!-- <select class="filter-select" id="filterAccount">
-                    <option value="all">All accounts</option>
-                </select> -->
-
                 <select class="filter-select" id="filterCountry">
                     <option value="all">All Countries</option>
                 </select>
             </div>
 
             <div class="tabs">
-                <button class="tab active" data-tab="all">All Instances</button>
-                <button class="tab" data-tab="logistics">GXO Logistics</button>
-                <button class="tab" data-tab="enterprise">GXO Enterprise</button>
-                <button class="tab" data-tab="extensions">Extensions</button>                
+                <button class="tab active" data-tab="all">Gxo BY WMS Instances</button>
+                <a href="extensions.html" class="tab-link">Extensions</a> <!-- separado de los tabs filtrables -->
             </div>
 
             <div class="instances-grid" id="instancesGrid"></div>
@@ -200,49 +182,37 @@
         }
 
         function fillFilters() {
-            const accounts = new Set();
             const countries = new Set();
             instancesData.forEach(i => {
-                if(i.account) accounts.add(i.account);
                 if(i.location?.country) countries.add(i.location.country);
             });
 
-            // Llenado seguro de filtros (solo si existen en el HTML)
-            const accEl = document.getElementById('filterAccount');
-            if (accEl) {
-                [...accounts].sort().forEach(a => accEl.innerHTML += `<option value="${a}">${a}</option>`);
-            }
-
             const countEl = document.getElementById('filterCountry');
             if (countEl) {
-                [...countries].sort().forEach(c => countEl.innerHTML += `<option value="${c}">${c}</option>`);
+                [...countries].sort().forEach(c => {
+                    countEl.innerHTML += `<option value="${c}">${c}</option>`;
+                });
             }
         }
 
         function render() {
             const search = document.getElementById('searchInput').value.toLowerCase();
             const liveF = document.getElementById('filterLive').value;
-            
-            // Detectar si el filtro de cuenta existe antes de pedir su valor
-            const accEl = document.getElementById('filterAccount');
-            const accF = accEl ? accEl.value : 'all';
-
-            const countEl = document.getElementById('filterCountry');
-            const countF = countEl ? countEl.value : 'all';
+            const countF = document.getElementById('filterCountry').value;
 
             const filtered = instancesData.filter(i => {
                 const matchesSearch = (i.client + i.id + i.site + (i.account || '') + (i.location?.country || '')).toLowerCase().includes(search);
-                const matchesTab = activeTab === 'all' || 
-                                  (activeTab === 'logistics' && i.account === 'GXO Logistics') || 
-                                  (activeTab === 'enterprise' && i.account === 'GXO Enterprise');
-                const matchesAcc = accF === 'all' || i.account === accF;
+                
+                let matchesTab = true;
+                if (activeTab === 'logistics') matchesTab = i.account === 'GXO Logistics';
+                if (activeTab === 'enterprise') matchesTab = i.account === 'GXO Enterprise';
+
                 const matchesLive = liveF === 'all' || String(i.live) === liveF;
                 const matchesCount = countF === 'all' || i.location?.country === countF;
 
-                return matchesSearch && matchesTab && matchesAcc && matchesLive && matchesCount;
+                return matchesSearch && matchesTab && matchesLive && matchesCount;
             });
 
-            // Renderizar Stats con clases CSS corregidas
             document.getElementById('statsBar').innerHTML = `
                 <div class="stat-card">
                     <span class="stat-value results-color">${filtered.length}</span>
@@ -271,8 +241,8 @@
                     </div>
 
                     <div class="location-info">
-                        📍 <strong>${instance.location?.country || ''}</strong><br>                          (${instance.location?.address || 'N/A'})
-                             
+                        📍 <strong>${instance.location?.country || ''}</strong><br>
+                        (${instance.location?.address || 'N/A'})
                     </div>
 
                     <div class="products">
@@ -311,21 +281,20 @@
         }
 
         function setupEvents() {
+            // Eventos para Tabs de filtrado
             document.querySelectorAll('.tab').forEach(tab => {
                 tab.addEventListener('click', () => {
-                    // Si es el tab de extensions, redirigir a la página
-                    if (tab.dataset.tab === 'extensions') {
-                        window.location.href = 'extensions.html';
-                        return;
-                    }
-                    
-                    // Para los demás tabs, comportamiento normal
                     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
                     tab.classList.add('active');
                     activeTab = tab.dataset.tab;
                     render();
                 });
             });
+
+            // Eventos para Buscador y Selects
+            document.getElementById('searchInput').addEventListener('input', render);
+            document.getElementById('filterLive').addEventListener('change', render);
+            document.getElementById('filterCountry').addEventListener('change', render);
         }
 
         init();

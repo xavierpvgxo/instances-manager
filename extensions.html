@@ -8,7 +8,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --gxo-blue: #003DA5;
+            --gxo-blue: #FF3A00;
             --gxo-orange: #FF3A00;
             --gxo-gray: #6D6E71;
             --gxo-light-gray: #E5E5E5;
@@ -35,7 +35,7 @@
             display: inline-block;
             margin-top: 15px;
             padding: 8px 16px;
-            background: rgba(255,255,255,0.2);
+            background: rgb(141, 138, 138);
             color: white;
             text-decoration: none;
             border-radius: 6px;
@@ -218,8 +218,8 @@
 <body>
     <div class="header">
         <h1>🛠️ GXO Extensions Manager</h1>
-        <p>Gestión y monitorización de extensiones desplegadas</p>
-        <a href="index.html" class="nav-back">← Volver a Instancias</a>
+        <p>Management and monitoring of deployed extensions</p>
+        <a href="index.html" class="nav-back">← Back to list of instances</a>
     </div>
 
     <div class="container">
@@ -233,19 +233,19 @@
                     <input type="text" class="search-input" id="searchInput" placeholder="Buscar por nombre, descripción o instancia...">
                     
                     <select class="filter-select" id="filterInstance">
-                        <option value="all">Todas las Instancias</option>
+                        <option value="all">All the Instances</option>
                     </select>
 
                     <select class="filter-select" id="filterNP">
-                        <option value="all">NP - Todos</option>
-                        <option value="deployed">NP - Desplegado</option>
-                        <option value="not_deployed">NP - No Desplegado</option>
+                        <option value="all">NP - All</option>
+                        <option value="deployed">NP - Deployed</option>
+                        <option value="not_deployed">NP - No Deployed</option>
                     </select>
 
                     <select class="filter-select" id="filterProd">
-                        <option value="all">PROD - Todos</option>
-                        <option value="deployed">PROD - Desplegado</option>
-                        <option value="not_deployed">PROD - No Desplegado</option>
+                        <option value="all">PROD - All</option>
+                        <option value="deployed">PROD - Deployed</option>
+                        <option value="not_deployed">PROD - No Deployed</option>
                     </select>
                 </div>
             </div>
