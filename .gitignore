@@ -33,3 +33,8 @@ node_modules/
 # Archivos de prueba
 test_*.xlsx
 test_*.csv
+
+# Archivos Rollouts
+.pl
+.mcmd
+.mctrg
