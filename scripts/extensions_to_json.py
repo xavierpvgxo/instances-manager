@@ -66,6 +66,7 @@ def convert_extensions_to_json(input_file='data/extensions.xlsx', output_file='d
         description = str(row.get('Description', '')).strip()
         instance_id = str(row.get('Instance', '')).strip()
         client_id = str(row.get('Client', '')).strip()
+        version = str(row.get('Version', '')).strip()
         
         # Parsear datos de NP
         np_deployed = parse_boolean(row.get('NP'))
@@ -84,6 +85,7 @@ def convert_extensions_to_json(input_file='data/extensions.xlsx', output_file='d
             'description': description if description else 'No description available',
             'instance_id': instance_id,
             'client_id': client_id,
+            'version': version,
             'environments': {
                 'np': {
                     'deployed': np_deployed,

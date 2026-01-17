@@ -177,6 +177,16 @@
             font-weight: 600;
         }
 
+        .client-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--gxo-gray);
+            color: rgb(0, 0, 0);
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
         .status-badge {
             display: inline-block;
             padding: 6px 12px;
@@ -265,6 +275,7 @@
                             <th>Extension Name</th>
                             <th>Instance</th>
                             <th>Client</th>
+                            <th>Version</th>                            
                             <th>NP Status</th>
                             <th>NP Date</th>
                             <th>PROD Status</th>
@@ -385,6 +396,7 @@
                     </td>
                     <td><span class="instance-badge">${ext.instance_id}</span></td>
                     <td><span class="client-badge">${ext.client_id}</span></td>
+                    <td><span class="version-badge">${ext.version}</span></td>                    
                     <td><span class="status-badge ${ext.environments.np.deployed ? 'status-deployed' : 'status-not-deployed'}">${ext.environments.np.deployed ? '✓ Deployed' : '✗ Not Deployed'}</span></td>
                     <td><span class="date-text">${formatDate(ext.environments.np.installation_date)}</span></td>
                     <td><span class="status-badge ${ext.environments.prod.deployed ? 'status-deployed' : 'status-not-deployed'}">${ext.environments.prod.deployed ? '✓ Deployed' : '✗ Not Deployed'}</span></td>
