@@ -1,21 +1,26 @@
 {
   "metadata": {
-    "generated_at": "2026-01-16T23:58:03.609634",
+    "generated_at": "2026-01-17T02:08:53.035650",
     "total_instances": 24,
     "source_file": "data/instances.xlsx"
   },
   "instances": [
     {
       "id": "PR1",
-      "account": "GXO Logistics",
+      "account": "",
       "client": "Hasbro",
       "site": "RI3",
-      "whid": "",
+      "whid": null,
       "live": true,
-      "wgs": "",
+      "wgs": null,
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -25,8 +30,7 @@
       "versions": {
         "wms": "2021.1.1.28",
         "oms": "2023.3.3",
-        "pdc": "",
-        "tms": ""
+        "pdc": null
       },
       "urls": {
         "np": {
@@ -41,21 +45,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.606295",
+        "last_updated": "2026-01-17T02:08:53.009061",
         "repository": "https://github.com/gxo-instances/pr1-extensions"
       }
     },
     {
       "id": "PR2",
-      "account": "GXO Logistics",
+      "account": "",
       "client": "Amyris",
       "site": "FBG",
-      "whid": "",
+      "whid": null,
       "live": true,
-      "wgs": "",
+      "wgs": null,
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -65,8 +74,7 @@
       "versions": {
         "wms": "2021.1.1.28",
         "oms": "2023.3.3",
-        "pdc": "",
-        "tms": ""
+        "pdc": null
       },
       "urls": {
         "np": {
@@ -81,21 +89,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.606648",
+        "last_updated": "2026-01-17T02:08:53.010882",
         "repository": "https://github.com/gxo-instances/pr2-extensions"
       }
     },
     {
       "id": "PR3",
-      "account": "GXO Logistics",
+      "account": "",
       "client": "Louis Vuitton",
       "site": "DJ1",
-      "whid": "",
+      "whid": null,
       "live": true,
-      "wgs": "",
+      "wgs": null,
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -105,8 +118,7 @@
       "versions": {
         "wms": "2021.1.1.28.2",
         "oms": "2023.3.3",
-        "pdc": "",
-        "tms": ""
+        "pdc": null
       },
       "urls": {
         "np": {
@@ -121,21 +133,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.606847",
+        "last_updated": "2026-01-17T02:08:53.012140",
         "repository": "https://github.com/gxo-instances/pr3-extensions"
       }
     },
     {
       "id": "PR5",
-      "account": "GXO Logistics",
+      "account": "",
       "client": "Darigold 2",
       "site": "NI1",
-      "whid": "",
+      "whid": null,
       "live": true,
-      "wgs": "",
+      "wgs": null,
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -145,8 +162,7 @@
       "versions": {
         "wms": "2021.1.1.28",
         "oms": "2023.3.3",
-        "pdc": "",
-        "tms": ""
+        "pdc": null
       },
       "urls": {
         "np": {
@@ -161,21 +177,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.606988",
+        "last_updated": "2026-01-17T02:08:53.013742",
         "repository": "https://github.com/gxo-instances/pr5-extensions"
       }
     },
     {
       "id": "PR6",
-      "account": "GXO Logistics",
+      "account": "",
       "client": "Alpargatas",
       "site": "GO1",
-      "whid": "",
+      "whid": null,
       "live": true,
-      "wgs": "",
+      "wgs": null,
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -185,8 +206,7 @@
       "versions": {
         "wms": "2021.1.1.28.4",
         "oms": "2023.3.3",
-        "pdc": "",
-        "tms": ""
+        "pdc": null
       },
       "urls": {
         "np": {
@@ -201,21 +221,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.607111",
+        "last_updated": "2026-01-17T02:08:53.015079",
         "repository": "https://github.com/gxo-instances/pr6-extensions"
       }
     },
     {
       "id": "PR7",
-      "account": "GXO Logistics",
+      "account": "",
       "client": "Astara",
       "site": "R001",
-      "whid": "",
+      "whid": null,
       "live": true,
-      "wgs": "",
+      "wgs": null,
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -225,8 +250,7 @@
       "versions": {
         "wms": "2021.1.1.17",
         "oms": "2023.3.3",
-        "pdc": "",
-        "tms": ""
+        "pdc": null
       },
       "urls": {
         "np": {
@@ -241,21 +265,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.607229",
+        "last_updated": "2026-01-17T02:08:53.016306",
         "repository": "https://github.com/gxo-instances/pr7-extensions"
       }
     },
     {
       "id": "PR8",
-      "account": "GXO Logistics",
+      "account": "",
       "client": "Peleton 1",
       "site": "MP2",
-      "whid": "",
+      "whid": null,
       "live": true,
-      "wgs": "",
+      "wgs": null,
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -265,8 +294,7 @@
       "versions": {
         "wms": "2021.1.1.28.4",
         "oms": "2023.3.3",
-        "pdc": "",
-        "tms": ""
+        "pdc": null
       },
       "urls": {
         "np": {
@@ -281,21 +309,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.607338",
+        "last_updated": "2026-01-17T02:08:53.017466",
         "repository": "https://github.com/gxo-instances/pr8-extensions"
       }
     },
     {
       "id": "PR10",
-      "account": "GXO Logistics",
+      "account": "",
       "client": "Soda Stream",
       "site": "MC1",
-      "whid": "",
+      "whid": null,
       "live": true,
-      "wgs": "",
+      "wgs": null,
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -305,8 +338,7 @@
       "versions": {
         "wms": "2021.1.1.28",
         "oms": "2023.3.3",
-        "pdc": "",
-        "tms": ""
+        "pdc": null
       },
       "urls": {
         "np": {
@@ -321,21 +353,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.607446",
+        "last_updated": "2026-01-17T02:08:53.018631",
         "repository": "https://github.com/gxo-instances/pr10-extensions"
       }
     },
     {
       "id": "PR11",
-      "account": "GXO Logistics",
+      "account": "",
       "client": "Corsair (inbound)",
       "site": "XS1",
-      "whid": "",
+      "whid": null,
       "live": true,
-      "wgs": "",
+      "wgs": null,
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -345,8 +382,7 @@
       "versions": {
         "wms": "2021.1.1.28.3",
         "oms": "2023.3.3",
-        "pdc": "",
-        "tms": ""
+        "pdc": null
       },
       "urls": {
         "np": {
@@ -361,21 +397,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.607590",
+        "last_updated": "2026-01-17T02:08:53.019762",
         "repository": "https://github.com/gxo-instances/pr11-extensions"
       }
     },
     {
       "id": "PR12",
-      "account": "GXO Logistics",
+      "account": "",
       "client": "Food52",
       "site": "HM1",
-      "whid": "",
+      "whid": null,
       "live": true,
-      "wgs": "",
+      "wgs": null,
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -385,8 +426,7 @@
       "versions": {
         "wms": "2021.1.1.28.4",
         "oms": "2023.3.3",
-        "pdc": "",
-        "tms": ""
+        "pdc": null
       },
       "urls": {
         "np": {
@@ -401,21 +441,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.607722",
+        "last_updated": "2026-01-17T02:08:53.020992",
         "repository": "https://github.com/gxo-instances/pr12-extensions"
       }
     },
     {
       "id": "PR13",
-      "account": "GXO Logistics",
+      "account": "",
       "client": "Soda Stream East",
       "site": "CPO",
-      "whid": "",
+      "whid": null,
       "live": true,
-      "wgs": "",
+      "wgs": null,
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -423,10 +468,9 @@
         "DMS"
       ],
       "versions": {
-        "wms": "",
+        "wms": null,
         "oms": "2023.3.3",
-        "pdc": "",
-        "tms": ""
+        "pdc": null
       },
       "urls": {
         "np": {
@@ -441,21 +485,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.607829",
+        "last_updated": "2026-01-17T02:08:53.023559",
         "repository": "https://github.com/gxo-instances/pr13-extensions"
       }
     },
     {
       "id": "PR14",
-      "account": "GXO Enterprise",
+      "account": "",
       "client": "Starbucks",
       "site": "LV1",
-      "whid": "",
+      "whid": null,
       "live": true,
       "wgs": "WGS",
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -464,9 +513,8 @@
       ],
       "versions": {
         "wms": "2023.1.0.10",
-        "oms": "",
-        "pdc": "2025.3",
-        "tms": ""
+        "oms": null,
+        "pdc": "2025.3"
       },
       "urls": {
         "np": {
@@ -481,21 +529,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.607958",
+        "last_updated": "2026-01-17T02:08:53.024827",
         "repository": "https://github.com/gxo-instances/pr14-extensions"
       }
     },
     {
       "id": "PR15",
-      "account": "GXO Enterprise",
+      "account": "",
       "client": "Castore (Inbound)",
       "site": "XNI",
-      "whid": "",
+      "whid": null,
       "live": true,
       "wgs": "WGS",
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -504,8 +557,7 @@
       "versions": {
         "wms": "2023.1.0.10",
         "oms": "2023.3.3",
-        "pdc": "2025.3",
-        "tms": ""
+        "pdc": "2025.3"
       },
       "urls": {
         "np": {
@@ -520,21 +572,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.608163",
+        "last_updated": "2026-01-17T02:08:53.026571",
         "repository": "https://github.com/gxo-instances/pr15-extensions"
       }
     },
     {
       "id": "PR17",
-      "account": "GXO Enterprise",
+      "account": "",
       "client": "Mountaion Warehourse",
       "site": "GPA",
-      "whid": "",
+      "whid": null,
       "live": true,
       "wgs": "WGS",
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -542,9 +599,8 @@
       ],
       "versions": {
         "wms": "2023.1.0.10",
-        "oms": "",
-        "pdc": "2025.3",
-        "tms": ""
+        "oms": null,
+        "pdc": "2025.3"
       },
       "urls": {
         "np": {
@@ -559,21 +615,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.608428",
+        "last_updated": "2026-01-17T02:08:53.028129",
         "repository": "https://github.com/gxo-instances/pr17-extensions"
       }
     },
     {
       "id": "PR18",
-      "account": "GXO Enterprise",
+      "account": "",
       "client": "Span.io",
       "site": "FT1",
-      "whid": "",
+      "whid": null,
       "live": true,
       "wgs": "WGS",
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -581,9 +642,8 @@
       ],
       "versions": {
         "wms": "2023.1.0.10",
-        "oms": "",
-        "pdc": "2025.3",
-        "tms": ""
+        "oms": null,
+        "pdc": "2025.3"
       },
       "urls": {
         "np": {
@@ -598,21 +658,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.608606",
+        "last_updated": "2026-01-17T02:08:53.029542",
         "repository": "https://github.com/gxo-instances/pr18-extensions"
       }
     },
     {
       "id": "PR1",
-      "account": "GXO Enterprise",
+      "account": "",
       "client": "Passenger",
       "site": "DN1",
-      "whid": "",
+      "whid": null,
       "live": true,
       "wgs": "WGS",
       "location": {
         "country": "Germany",
-        "address": ""
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -620,9 +685,8 @@
       ],
       "versions": {
         "wms": "2023.1.0.30",
-        "oms": "",
-        "pdc": "2025.3",
-        "tms": ""
+        "oms": null,
+        "pdc": "2025.3"
       },
       "urls": {
         "np": {
@@ -637,21 +701,26 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.608745",
+        "last_updated": "2026-01-17T02:08:53.030327",
         "repository": "https://github.com/gxo-instances/pr1-extensions"
       }
     },
     {
-      "id": "",
-      "account": "GXO Enterprise",
+      "id": "nan",
+      "account": "",
       "client": "Toolstation",
-      "site": "",
-      "whid": "",
+      "site": "nan",
+      "whid": null,
       "live": false,
       "wgs": "WGS",
       "location": {
         "country": "Netherlands",
-        "address": ""
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [
         "WMS",
@@ -659,153 +728,171 @@
       ],
       "versions": {
         "wms": "2023.1.0.30",
-        "oms": "",
-        "pdc": "2025.3",
-        "tms": ""
+        "oms": null,
+        "pdc": "2025.3"
       },
       "urls": {
         "np": {
-          "web": "",
-          "app": "",
-          "config": ""
+          "web": null,
+          "app": null,
+          "config": null
         },
         "prod": {
-          "web": "",
-          "app": "",
-          "config": ""
+          "web": null,
+          "app": null,
+          "config": null
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.608893",
-        "repository": null
+        "last_updated": "2026-01-17T02:08:53.030466",
+        "repository": "https://github.com/gxo-instances/nan-extensions"
       }
     },
     {
-      "id": "",
-      "account": "GXO Enterprise",
+      "id": "nan",
+      "account": "",
       "client": "Orlando/Plainfield",
       "site": "RJR",
-      "whid": "",
+      "whid": null,
       "live": false,
       "wgs": "WGS",
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [],
       "versions": {
-        "wms": "",
-        "oms": "",
-        "pdc": "",
-        "tms": ""
+        "wms": null,
+        "oms": null,
+        "pdc": null
       },
       "urls": {
         "np": {
-          "web": "",
-          "app": "",
-          "config": ""
+          "web": null,
+          "app": null,
+          "config": null
         },
         "prod": {
-          "web": "",
-          "app": "",
-          "config": ""
+          "web": null,
+          "app": null,
+          "config": null
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.609000",
-        "repository": null
+        "last_updated": "2026-01-17T02:08:53.030531",
+        "repository": "https://github.com/gxo-instances/nan-extensions"
       }
     },
     {
-      "id": "",
-      "account": "GXO Enterprise",
+      "id": "nan",
+      "account": "",
       "client": "TOAST",
       "site": "TOAST",
-      "whid": "",
+      "whid": null,
       "live": false,
       "wgs": "WGS",
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [],
       "versions": {
-        "wms": "",
-        "oms": "",
-        "pdc": "",
-        "tms": ""
+        "wms": null,
+        "oms": null,
+        "pdc": null
       },
       "urls": {
         "np": {
-          "web": "",
-          "app": "",
-          "config": ""
+          "web": null,
+          "app": null,
+          "config": null
         },
         "prod": {
-          "web": "",
-          "app": "",
-          "config": ""
+          "web": null,
+          "app": null,
+          "config": null
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.609106",
-        "repository": null
+        "last_updated": "2026-01-17T02:08:53.030585",
+        "repository": "https://github.com/gxo-instances/nan-extensions"
       }
     },
     {
-      "id": "",
-      "account": "GXO Enterprise",
+      "id": "nan",
+      "account": "",
       "client": "BOLT",
       "site": "BOLT",
-      "whid": "",
+      "whid": null,
       "live": false,
       "wgs": "WGS",
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [],
       "versions": {
-        "wms": "",
-        "oms": "",
-        "pdc": "",
-        "tms": ""
+        "wms": null,
+        "oms": null,
+        "pdc": null
       },
       "urls": {
         "np": {
-          "web": "",
-          "app": "",
-          "config": ""
+          "web": null,
+          "app": null,
+          "config": null
         },
         "prod": {
-          "web": "",
-          "app": "",
-          "config": ""
+          "web": null,
+          "app": null,
+          "config": null
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.609212",
-        "repository": null
+        "last_updated": "2026-01-17T02:08:53.030636",
+        "repository": "https://github.com/gxo-instances/nan-extensions"
       }
     },
     {
       "id": "PR3",
-      "account": "GXO Enterprise",
+      "account": "",
       "client": "Kumo Tires",
-      "site": "Kumho",
-      "whid": "GE1",
+      "site": "GE1",
+      "whid": null,
       "live": false,
       "wgs": "WGS",
       "location": {
         "country": "Spain",
         "address": "GXO MARCHAMALO 2"
       },
-      "products": [],
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
+      },
+      "products": [
+        "WMS",
+        "PDC"
+      ],
       "versions": {
-        "wms": "",
-        "oms": "",
-        "pdc": "",
-        "tms": ""
+        "wms": "2023.1.0.30",
+        "oms": null,
+        "pdc": "2025.3"
       },
       "urls": {
         "np": {
@@ -814,106 +901,118 @@
           "config": "https://bh10-gxo-wms-con-np4.jdadelivers.com/"
         },
         "prod": {
-          "web": "",
-          "app": "",
-          "config": ""
+          "web": null,
+          "app": null,
+          "config": null
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.609315",
+        "last_updated": "2026-01-17T02:08:53.031052",
         "repository": "https://github.com/gxo-instances/pr3-extensions"
       }
     },
     {
       "id": "PR4",
-      "account": "GXO Enterprise",
+      "account": "",
       "client": "Prenatale Phoenix",
       "site": "WNL",
-      "whid": "",
+      "whid": null,
       "live": false,
       "wgs": "WGS",
       "location": {
-        "country": "USA",
-        "address": ""
+        "country": "US",
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [],
       "versions": {
-        "wms": "",
-        "oms": "",
-        "pdc": "",
-        "tms": ""
+        "wms": null,
+        "oms": null,
+        "pdc": null
       },
       "urls": {
         "np": {
-          "web": "",
-          "app": "",
-          "config": ""
+          "web": null,
+          "app": null,
+          "config": null
         },
         "prod": {
-          "web": "",
-          "app": "",
-          "config": ""
+          "web": null,
+          "app": null,
+          "config": null
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.609418",
+        "last_updated": "2026-01-17T02:08:53.033498",
         "repository": "https://github.com/gxo-instances/pr4-extensions"
       }
     },
     {
       "id": "PR20",
-      "account": "GXO Enterprise",
+      "account": "",
       "client": "Corsair Canada",
-      "site": "",
-      "whid": "",
+      "site": "nan",
+      "whid": null,
       "live": false,
       "wgs": "WGS",
       "location": {
         "country": "Canada",
-        "address": ""
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [],
       "versions": {
-        "wms": "",
-        "oms": "",
-        "pdc": "",
-        "tms": ""
+        "wms": null,
+        "oms": null,
+        "pdc": null
       },
       "urls": {
         "np": {
-          "web": "",
-          "app": "",
-          "config": ""
+          "web": null,
+          "app": null,
+          "config": null
         },
         "prod": {
-          "web": "",
-          "app": "",
-          "config": ""
+          "web": null,
+          "app": null,
+          "config": null
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.609519",
+        "last_updated": "2026-01-17T02:08:53.035468",
         "repository": "https://github.com/gxo-instances/pr20-extensions"
       }
     },
     {
-      "id": "",
-      "account": "GXO Enterprise",
+      "id": "nan",
+      "account": "",
       "client": "TMS",
-      "site": "",
-      "whid": "",
+      "site": "nan",
+      "whid": null,
       "live": true,
-      "wgs": "",
+      "wgs": null,
       "location": {
-        "country": "",
-        "address": ""
+        "country": null,
+        "address": null
+      },
+      "contact": {
+        "name": null,
+        "email": null,
+        "phone": null
       },
       "products": [],
       "versions": {
-        "wms": "",
-        "oms": "",
-        "pdc": "",
-        "tms": "2023.1"
+        "wms": null,
+        "oms": null,
+        "pdc": null
       },
       "urls": {
         "np": {
@@ -928,8 +1027,8 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-16T23:58:03.609623",
-        "repository": null
+        "last_updated": "2026-01-17T02:08:53.035643",
+        "repository": "https://github.com/gxo-instances/nan-extensions"
       }
     }
   ]
