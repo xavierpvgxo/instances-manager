@@ -311,9 +311,15 @@
         }
 
         function setupEvents() {
-            document.querySelectorAll('.filter-select, #searchInput').forEach(el => el.addEventListener('input', render));
             document.querySelectorAll('.tab').forEach(tab => {
                 tab.addEventListener('click', () => {
+                    // Si es el tab de extensions, redirigir a la página
+                    if (tab.dataset.tab === 'extensions') {
+                        window.location.href = 'extensions.html';
+                        return;
+                    }
+                    
+                    // Para los demás tabs, comportamiento normal
                     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
                     tab.classList.add('active');
                     activeTab = tab.dataset.tab;

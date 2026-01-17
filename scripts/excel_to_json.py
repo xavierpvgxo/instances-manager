@@ -22,29 +22,28 @@ def convert_excel_to_json(input_file, output_file='data/instances.json'):
     else:
         df = pd.read_excel(input_file)
 
-    # Limpiar nombres de columnas para evitar errores de espacios extra
+    # Limpiar nombres de columnas
     df.columns = [str(c).strip() for c in df.columns]
     
     instances = []
-    # Definir la ruta base para los repositorios
+    # Carpeta raíz donde colgarán todos los repositorios
     repo_base_dir = Path('repositories')
     
     for index, row in df.iterrows():
-        # Extracción de ID para el repositorio
         instance_id = str(row.get('Instance', '')).strip()
         
-        # --- LÓGICA DE CREACIÓN DE CARPETAS ---
+        # --- LÓGICA DE CREACIÓN DE CARPETAS (MODIFICADA: SIN SUB-CARPETAS) ---
         if instance_id and instance_id.lower() != 'nan':
             repo_name = f"{instance_id.lower()}-extensions"
-            # Creamos la ruta: repositories/[id]-extensions/yaml
-            instance_path = repo_base_dir / repo_name / 'yaml'
+            # Creamos la ruta directamente: repositories/[id]-extensions/
+            instance_repo_path = repo_base_dir / repo_name
             
-            # Crear directorios (exist_ok=True evita errores si ya existen)
-            instance_path.mkdir(parents=True, exist_ok=True)
+            # Crear la carpeta de la instancia
+            instance_repo_path.mkdir(parents=True, exist_ok=True)
             
-            # Crear un archivo .gitkeep para que Git no ignore la carpeta vacía
-            (instance_path / '.gitkeep').touch()
-        # --------------------------------------
+            # Crear .gitkeep en la raíz de la carpeta de la instancia
+            (instance_repo_path / '.gitkeep').touch()
+        # --------------------------------------------------------------------
 
         instance = {
             'id': instance_id,
@@ -62,7 +61,7 @@ def convert_excel_to_json(input_file, output_file='data/instances.json'):
             
             'contact': {
                 'name': str(row.get('Person of Contact', '')).strip() if not pd.isna(row.get('Person of Contact')) else None,
-                'email': None, # No detectado en este Excel
+                'email': None,
                 'phone': None
             },
             
@@ -92,7 +91,6 @@ def convert_excel_to_json(input_file, output_file='data/instances.json'):
             }
         }
         
-        # Validar que no sea una fila vacía (usamos client como clave)
         if instance['client'] and instance['client'] != 'nan':
             instances.append(instance)
     
@@ -110,14 +108,12 @@ def convert_excel_to_json(input_file, output_file='data/instances.json'):
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(output_data, f, indent=2, ensure_ascii=False)
     
-    print(f"✅ Conversión completada!")
-    print(f"📊 {len(instances)} instancias procesadas.")
-    print(f"📂 Estructura de carpetas actualizada en /repositories")
+    print(f"✅ Proceso finalizado.")
+    print(f"📂 Carpetas creadas en /repositories: {len(instances)}")
     return instances
 
 if __name__ == '__main__':
     import sys
-    # Ajuste de nombres de archivos por defecto para que coincidan con tu estructura
     input_f = sys.argv[1] if len(sys.argv) > 1 else 'data/instances.xlsx'
     output_f = sys.argv[2] if len(sys.argv) > 2 else 'data/instances.json'
     convert_excel_to_json(input_f, output_f)
