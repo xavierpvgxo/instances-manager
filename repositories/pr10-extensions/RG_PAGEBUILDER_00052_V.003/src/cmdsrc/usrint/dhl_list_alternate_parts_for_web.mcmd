@@ -1,0 +1,70 @@
+<command>
+
+<name>list alternate parts for web</name>
+
+<description>List Alternate Parts For Web</description>
+
+<type>Local Syntax</type>
+
+<local-syntax>
+<![CDATA[
+    get client in clause for user
+      where usr_id = nvl(@usr_id, @@usr_id)
+        and table_prefix = 'prt'
+        and prt_client_id_flg = 1
+    |
+    [select decode(@filterByClause, '1=1', '1=1 and rownum < 100', ' 1 = 1 ','1=1 and rownum < 100',null, '1=1',@filterByClause) as customFilter
+   from dual]
+    |
+    get warehouse id
+        where wh_id = @wh_id
+    |
+    [/*#api-query*/
+     select distinct alt.*, dsc1.lngdsc alt_prt_typ_dsc,
+          decode(alt.alt_prtnum,prt.dsp_prtnum,1,0) dsp_prt_flg,
+          @wh_id wh_id
+      from alt_prtmst alt
+      join prtmst_view prt
+        on alt.prtnum = prt.prtnum
+       and alt.prt_client_id = prt.prt_client_id
+       and prt.wh_id = @wh_id
+      join dscmst dsc1
+        on dsc1.colval = alt.alt_prt_typ
+       and dsc1.colnam = 'alt_prt_typ'
+       and dsc1.locale_id = nvl(@locale_id, @@locale_id)
+      left outer join dscmst dsc2
+        on alt.uomcod = dsc2.colval
+       and dsc2.colnam = 'uomcod'
+       and dsc2.locale_id = nvl(@locale_id, @@locale_id)
+     where @+alt.prtnum
+       and @+alt.prt_client_id
+       and @+alt.alt_prt_typ
+       and @client_in_clause:raw
+       and @customFilter:raw
+       and @*
+    order by alt.prtnum,
+             alt.prt_client_id,
+             alt.alt_prt_typ]
+]]>
+</local-syntax>
+
+<documentation>
+<remarks>
+<![CDATA[
+  <p>
+  This command is used to list the alternate parts. </p>
+]]>
+</remarks>
+
+<retcol name="(all alternate part master fields)" type="(varies according to field type)"> </retcol>
+
+<exception value="eOK">Normal successful completion</exception>
+
+<seealso cref="copy alternate part"> </seealso>
+<seealso cref="change alternate part"> </seealso>
+<seealso cref="create alternate part"> </seealso>
+<seealso cref="remove alternate part for web"> </seealso>
+
+</documentation>
+</command>
+

@@ -8,7 +8,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --gxo-blue: #FF3A00;
+            --gxo-blue: #003DA5; /* Corregido a azul para consistencia */
             --gxo-orange: #FF3A00;
             --gxo-gray: #6D6E71;
             --gxo-light-gray: #E5E5E5;
@@ -139,10 +139,16 @@
             background: rgba(0,61,165,0.05);
         }
 
-        .extension-name {
+        .extension-name-link {
             font-weight: 600;
             color: var(--gxo-blue);
             font-size: 14px;
+            text-decoration: none;
+        }
+        
+        .extension-name-link:hover {
+            text-decoration: underline;
+            color: var(--gxo-orange);
         }
 
         .extension-description {
@@ -152,6 +158,16 @@
         }
 
         .instance-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--gxo-orange);
+            color: white;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .client-badge {
             display: inline-block;
             padding: 4px 12px;
             background: var(--gxo-orange);
@@ -201,17 +217,9 @@
         }
 
         @media (max-width: 1200px) {
-            .search-box {
-                grid-template-columns: 1fr;
-            }
-            
-            table {
-                font-size: 12px;
-            }
-            
-            th, td {
-                padding: 10px;
-            }
+            .search-box { grid-template-columns: 1fr; }
+            table { font-size: 12px; }
+            th, td { padding: 10px; }
         }
     </style>
 </head>
@@ -256,6 +264,7 @@
                         <tr>
                             <th>Extension Name</th>
                             <th>Instance</th>
+                            <th>Client</th>
                             <th>NP Status</th>
                             <th>NP Date</th>
                             <th>PROD Status</th>
@@ -280,7 +289,6 @@
             path: 'data/extensions.json'
         };
 
-        let extensionsData = [];
         let allExtensions = [];
 
         async function init() {
@@ -288,7 +296,6 @@
                 const resp = await fetch(`https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/${CONFIG.path}`);
                 const data = await resp.json();
                 
-                extensionsData = data;
                 allExtensions = data.extensions || [];
                 
                 document.getElementById('loadingIndicator').style.display = 'none';
@@ -299,21 +306,13 @@
                 setupEvents();
             } catch (err) {
                 console.error(err);
-                document.getElementById('loadingIndicator').innerHTML = `
-                    <div style="color: #ff5252;">
-                        ❌ Error al cargar datos<br>
-                        <small>Asegúrate de haber ejecutado: python scripts/extensions_to_json.py data/extensions.xlsx</small>
-                    </div>
-                `;
+                document.getElementById('loadingIndicator').innerHTML = `<div style="color: #ff5252;">❌ Error loading data from GitHub</div>`;
             }
         }
 
         function fillFilters() {
             const instances = new Set();
-            allExtensions.forEach(ext => {
-                if (ext.instance_id) instances.add(ext.instance_id);
-            });
-
+            allExtensions.forEach(ext => { if (ext.instance_id) instances.add(ext.instance_id); });
             const instanceSelect = document.getElementById('filterInstance');
             [...instances].sort().forEach(inst => {
                 instanceSelect.innerHTML += `<option value="${inst}">${inst}</option>`;
@@ -321,18 +320,12 @@
         }
 
         function formatDate(dateStr) {
-            if (!dateStr) return 'N/A';
-            
-            try {
-                // Si viene en formato ISO (YYYY-MM-DD)
-                if (dateStr.includes('-')) {
-                    const [year, month, day] = dateStr.split('-');
-                    return `${day}/${month}/${year}`;
-                }
-                return dateStr;
-            } catch {
-                return dateStr;
+            if (!dateStr || dateStr === 'N/A') return 'N/A';
+            if (dateStr.includes('-')) {
+                const [year, month, day] = dateStr.split('-');
+                return `${day}/${month}/${year}`;
             }
+            return dateStr;
         }
 
         function render() {
@@ -342,50 +335,25 @@
             const prodFilter = document.getElementById('filterProd').value;
 
             const filtered = allExtensions.filter(ext => {
-                const matchesSearch = (
-                    ext.name.toLowerCase().includes(search) ||
-                    ext.description.toLowerCase().includes(search) ||
-                    ext.instance_id.toLowerCase().includes(search)
-                );
-
+                const matchesSearch = (ext.name + ext.description + ext.instance_id).toLowerCase().includes(search);
                 const matchesInstance = instanceFilter === 'all' || ext.instance_id === instanceFilter;
-                
-                const matchesNP = npFilter === 'all' || 
-                    (npFilter === 'deployed' && ext.environments.np.deployed) ||
-                    (npFilter === 'not_deployed' && !ext.environments.np.deployed);
-
-                const matchesProd = prodFilter === 'all' || 
-                    (prodFilter === 'deployed' && ext.environments.prod.deployed) ||
-                    (prodFilter === 'not_deployed' && !ext.environments.prod.deployed);
-
+                const matchesNP = npFilter === 'all' || (npFilter === 'deployed' ? ext.environments.np.deployed : !ext.environments.np.deployed);
+                const matchesProd = prodFilter === 'all' || (prodFilter === 'deployed' ? ext.environments.prod.deployed : !ext.environments.prod.deployed);
                 return matchesSearch && matchesInstance && matchesNP && matchesProd;
             });
 
-            // Actualizar estadísticas
+            // Stats
             const totalNP = filtered.filter(e => e.environments.np.deployed).length;
             const totalProd = filtered.filter(e => e.environments.prod.deployed).length;
             const uniqueInstances = new Set(filtered.map(e => e.instance_id)).size;
 
             document.getElementById('statsBar').innerHTML = `
-                <div class="stat-card">
-                    <span class="stat-value total-color">${filtered.length}</span>
-                    <span class="stat-label">Total Extensions</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-value np-color">${totalNP}</span>
-                    <span class="stat-label">Deployed NP</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-value prod-color">${totalProd}</span>
-                    <span class="stat-label">Deployed PROD</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-value instances-color">${uniqueInstances}</span>
-                    <span class="stat-label">Instances</span>
-                </div>
+                <div class="stat-card"><span class="stat-value total-color">${filtered.length}</span><span class="stat-label">Total Extensions</span></div>
+                <div class="stat-card"><span class="stat-value np-color">${totalNP}</span><span class="stat-label">Deployed NP</span></div>
+                <div class="stat-card"><span class="stat-value prod-color">${totalProd}</span><span class="stat-label">Deployed PROD</span></div>
+                <div class="stat-card"><span class="stat-value instances-color">${uniqueInstances}</span><span class="stat-label">Instances</span></div>
             `;
 
-            // Renderizar tabla
             const tableBody = document.getElementById('extensionsTableBody');
             const noResults = document.getElementById('noResults');
 
@@ -396,34 +364,33 @@
             }
 
             noResults.style.display = 'none';
+            tableBody.innerHTML = filtered.map(ext => {
+                // 1. Limpiamos el ID por si acaso ya trae .tar o .ta
+                let cleanId = ext.id;
+                if (cleanId.endsWith('.tar')) cleanId = cleanId.slice(0, -4);
+                if (cleanId.endsWith('.ta')) cleanId = cleanId.slice(0, -3);
 
-            tableBody.innerHTML = filtered.map(ext => `
+                // 2. Construimos la URL de descarga directa (RAW)
+                const repoFolder = `${ext.instance_id.toLowerCase()}-extensions`;
+                const fileName = `${cleanId}.tar`;
+                
+                // Usamos raw.githubusercontent.com para que el navegador descargue el archivo directamente
+                const githubUrl = `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/repositories/${repoFolder}/${fileName}`;
+
+                return `
                 <tr>
                     <td>
-                        <div class="extension-name">${ext.name}</div>
+                        <a href="${githubUrl}" download="${fileName}" class="extension-name-link">📦 ${ext.name}</a>
                         <div class="extension-description">${ext.description}</div>
                     </td>
-                    <td>
-                        <span class="instance-badge">${ext.instance_id}</span>
-                    </td>
-                    <td>
-                        <span class="status-badge ${ext.environments.np.deployed ? 'status-deployed' : 'status-not-deployed'}">
-                            ${ext.environments.np.deployed ? '✓ Deployed' : '✗ Not Deployed'}
-                        </span>
-                    </td>
-                    <td>
-                        <span class="date-text">${formatDate(ext.environments.np.installation_date)}</span>
-                    </td>
-                    <td>
-                        <span class="status-badge ${ext.environments.prod.deployed ? 'status-deployed' : 'status-not-deployed'}">
-                            ${ext.environments.prod.deployed ? '✓ Deployed' : '✗ Not Deployed'}
-                        </span>
-                    </td>
-                    <td>
-                        <span class="date-text">${formatDate(ext.environments.prod.installation_date)}</span>
-                    </td>
-                </tr>
-            `).join('');
+                    <td><span class="instance-badge">${ext.instance_id}</span></td>
+                    <td><span class="client-badge">${ext.client_id}</span></td>
+                    <td><span class="status-badge ${ext.environments.np.deployed ? 'status-deployed' : 'status-not-deployed'}">${ext.environments.np.deployed ? '✓ Deployed' : '✗ Not Deployed'}</span></td>
+                    <td><span class="date-text">${formatDate(ext.environments.np.installation_date)}</span></td>
+                    <td><span class="status-badge ${ext.environments.prod.deployed ? 'status-deployed' : 'status-not-deployed'}">${ext.environments.prod.deployed ? '✓ Deployed' : '✗ Not Deployed'}</span></td>
+                    <td><span class="date-text">${formatDate(ext.environments.prod.installation_date)}</span></td>
+                </tr>`;
+            }).join('');
         }
 
         function setupEvents() {

@@ -1,0 +1,83 @@
+<command>
+
+<name>change alternate part</name>
+
+<description>Change Alternate Part</description>
+
+<type>Local Syntax</type>
+<local-syntax>
+<![CDATA[
+
+[select '1'
+   from poldat
+  where polcod = 'VAR-DHL'
+    and polvar = 'DHL-CUSTOM-DDA'
+    and polval = 'ALTERNATE-TYPE'
+    and wh_id_tmpl = @wh_id
+    and rtnum1 = '1'] catch(-1403)
+|
+if (@? = 0)
+{
+[select case when @dsp_prt_flg = 0 then @prtnum
+             when @dsp_prt_flg = 1 then @alt_prtnum
+             else @prtnum
+        end display
+   from prtmst
+  where prtnum = @prtnum
+    and prt_client_id = @prt_client_id] catch(-1403)
+|
+[update prtmst
+    set dsp_prtnum = @display
+  where prtnum = @prtnum
+    and prt_client_id = @prt_client_id] catch(-1403)
+|
+[update alt_prtmst
+    set uomcod = @uomcod,
+        moddte = sysdate,
+        mod_usr_id = @@usr_id,
+        u_version = '1',
+        last_upd_dt = sysdate,
+        last_upd_user_id = @@usr_id
+  where alt_prt_typ = @alt_prt_typ
+    and prtnum = @prtnum
+    and prt_client_id = @prt_client_id
+    and alt_prtnum = @alt_prtnum] catch(-1403)
+}
+else if (@? = -1403)
+    {
+        ^change alternate part
+    }
+]]>
+</local-syntax>
+
+<argument name="alt_prtnum" datatype="string"> </argument>
+<argument name="prtnum" datatype="string"> </argument>
+<argument name="prt_client_id" datatype="string"> </argument>
+<argument name="alt_prt_typ" datatype="string"> </argument>
+<argument name="wh_id" datatype="string"> </argument>
+<argument name="dsp_prt_flg" datatype="integer"> </argument>
+<argument name="uomcod" datatype="string"> </argument>
+<argument name="rfid_filter_val_cod" datatype="string"> </argument>
+
+<documentation>
+<remarks>
+<![CDATA[
+  <p>  This command is used to change an existing alternate part identifier.</p>
+]]>
+</remarks>
+
+<exception value="eOK">Normal successful completion</exception>
+<exception value="eDB_NO_ROWS_AFFECTED">Specified alternate part not found</exception>
+
+<seealso cref="copy alternate part"> </seealso>
+<seealso cref="create alternate part"> </seealso>
+<seealso cref="list alternate parts"> </seealso>
+<seealso cref="remove alternate part"> </seealso>
+
+<retcol name="whrlst" type="string"/>
+<retcol name="uomcod" type="string"/>
+<retcol name="updlst" type="string"/>
+<retcol name="tblnam" type="string"/>
+<retcol name="rfid_filter_val_cod" type="string"/>
+</documentation>
+</command>

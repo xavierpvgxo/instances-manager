@@ -1,0 +1,2 @@
+REPLACE src/cmdsrc/usrint/change_alternate_part.mcmd $LESDIR/src/cmdsrc/usrint
+REPLACE src/cmdsrc/usrint/dhl_list_alternate_parts_for_web.mcmd $LESDIR/src/cmdsrc/usrint

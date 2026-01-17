@@ -1,16 +1,17 @@
 {
   "metadata": {
-    "generated_at": "2026-01-17T02:25:01.389951",
-    "total_extensions": 1,
-    "total_instances": 1,
+    "generated_at": "2026-01-17T03:36:19.384287",
+    "total_extensions": 2,
+    "total_instances": 2,
     "source_file": "data/extensions.xlsx"
   },
   "extensions": [
     {
-      "id": "CT_REPORT_00303_V.001.ta",
-      "name": "CT_REPORT_00303_V.001.ta",
+      "id": "CT_REPORT_00303_V.001.tar",
+      "name": "CT_REPORT_00303_V.001.tar",
       "description": "KUMHO Packing List",
       "instance_id": "PR3",
+      "client_id": "KUMHO - 3036",
       "environments": {
         "np": {
           "deployed": true,
@@ -24,18 +25,42 @@
         }
       },
       "metadata": {
-        "last_updated": "2026-01-17T02:25:01.389939",
+        "last_updated": "2026-01-17T03:36:19.384026",
         "source_row": 2
+      }
+    },
+    {
+      "id": "RG_PAGEBUILDER_00052_V.003",
+      "name": "RG_PAGEBUILDER_00052_V.003",
+      "description": "PB to create Orders",
+      "instance_id": "PR10",
+      "client_id": "Soda Stream",
+      "environments": {
+        "np": {
+          "deployed": false,
+          "installation_date": null,
+          "status": "not_deployed"
+        },
+        "prod": {
+          "deployed": false,
+          "installation_date": null,
+          "status": "not_deployed"
+        }
+      },
+      "metadata": {
+        "last_updated": "2026-01-17T03:36:19.384281",
+        "source_row": 3
       }
     }
   ],
   "by_instance": {
     "PR3": [
       {
-        "id": "CT_REPORT_00303_V.001.ta",
-        "name": "CT_REPORT_00303_V.001.ta",
+        "id": "CT_REPORT_00303_V.001.tar",
+        "name": "CT_REPORT_00303_V.001.tar",
         "description": "KUMHO Packing List",
         "instance_id": "PR3",
+        "client_id": "KUMHO - 3036",
         "environments": {
           "np": {
             "deployed": true,
@@ -49,16 +74,41 @@
           }
         },
         "metadata": {
-          "last_updated": "2026-01-17T02:25:01.389939",
+          "last_updated": "2026-01-17T03:36:19.384026",
           "source_row": 2
+        }
+      }
+    ],
+    "PR10": [
+      {
+        "id": "RG_PAGEBUILDER_00052_V.003",
+        "name": "RG_PAGEBUILDER_00052_V.003",
+        "description": "PB to create Orders",
+        "instance_id": "PR10",
+        "client_id": "Soda Stream",
+        "environments": {
+          "np": {
+            "deployed": false,
+            "installation_date": null,
+            "status": "not_deployed"
+          },
+          "prod": {
+            "deployed": false,
+            "installation_date": null,
+            "status": "not_deployed"
+          }
+        },
+        "metadata": {
+          "last_updated": "2026-01-17T03:36:19.384281",
+          "source_row": 3
         }
       }
     ]
   },
   "statistics": {
-    "total": 1,
+    "total": 2,
     "deployed_np": 1,
     "deployed_prod": 0,
-    "instances_with_extensions": 1
+    "instances_with_extensions": 2
   }
 }
