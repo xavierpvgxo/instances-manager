@@ -87,7 +87,8 @@ def convert_excel_to_json(input_file, output_file='data/instances.json'):
             
             'metadata': {
                 'last_updated': datetime.now().isoformat(),
-                'repository': f"https://github.com/gxo-instances/{instance_id.lower()}-extensions" if instance_id else None
+                # URL corregida para apuntar a la subcarpeta dentro de tu repo principal
+                'repository': f"https://github.com/xavierpvgxo/instances-manager/tree/main/repositories/{instance_id.lower()}-extensions" if instance_id else None
             }
         }
         
