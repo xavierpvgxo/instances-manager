@@ -88,8 +88,21 @@
         .instance-name { font-size: 20px; font-weight: 600; color: var(--gxo-orange); }
 
         .live-badge { padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; color: white; }
-        .live-badge.yes { background: #21ff29; }
+        .live-badge.yes { background: #21ff29; animation: blink 1.3s infinite; }
         .live-badge.no { background: #ff5252; }
+        
+        /* Animación */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 
         .info-row { display: flex; font-size: 14px; margin-bottom: 8px; }
         .info-label { font-weight: 600; color: var(--gxo-blue); min-width: 120px; }
@@ -145,7 +158,7 @@
             </div>
 
             <div class="tabs">
-                <button class="tab active" data-tab="all">Gxo BY WMS Instances</button>
+                <button class="tab active" data-tab="all">GXO BY WMS Instances</button>
                 <a href="extensions.html" class="tab-link">Extensions</a> <!-- separado de los tabs filtrables -->
             </div>
 
