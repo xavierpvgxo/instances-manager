@@ -214,7 +214,7 @@
             const countF = document.getElementById('filterCountry').value;
 
             const filtered = instancesData.filter(i => {
-                const matchesSearch = (i.client + i.id + i.site + (i.account || '') + (i.location?.country || '')).toLowerCase().includes(search);
+                const matchesSearch = (i.client + i.id + i.site + i.versions + i.contact + i.products + (i.account || '') + (i.location?.country || '')).toLowerCase().includes(search);
                 
                 let matchesTab = true;
                 if (activeTab === 'logistics') matchesTab = i.account === 'GXO Logistics';
