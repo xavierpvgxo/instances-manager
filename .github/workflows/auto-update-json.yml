@@ -1,0 +1,97 @@
+# .github/workflows/auto-update-json.yml
+name: Auto-update JSON from Excel
+
+on:
+  push:
+    paths:
+      - 'data/instances.xlsx'
+      - 'data/instances.csv'
+      - 'data/extensions.xlsx'
+      - 'data/extensions.csv'
+  workflow_dispatch:  # Permite ejecutarlo manualmente
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: 📦 Install dependencies
+        run: |
+          pip install pandas openpyxl xlrd pyyaml
+      
+      - name: 🔄 Convert instances Excel to JSON
+        run: |
+          if [ -f "data/instances.xlsx" ]; then
+            echo "Converting instances.xlsx to JSON..."
+            python scripts/excel_to_json.py data/instances.xlsx data/instances.json
+          elif [ -f "data/instances.csv" ]; then
+            echo "Converting instances.csv to JSON..."
+            python scripts/excel_to_json.py data/instances.csv data/instances.json
+          else
+            echo "⚠️ No instances file found"
+          fi
+      
+      - name: 🔄 Convert extensions Excel to JSON
+        run: |
+          if [ -f "data/extensions.xlsx" ]; then
+            echo "Converting extensions.xlsx to JSON..."
+            python scripts/extensions_to_json.py data/extensions.xlsx data/extensions.json
+          elif [ -f "data/extensions.csv" ]; then
+            echo "Converting extensions.csv to JSON..."
+            python scripts/extensions_to_json.py data/extensions.csv data/extensions.json
+          else
+            echo "⚠️ No extensions file found"
+          fi
+      
+      - name: 📂 Create instance folders
+        run: |
+          if [ -f "data/instances.json" ]; then
+            echo "Creating instance folder structure..."
+            python scripts/create_instance_folders.py
+          else
+            echo "⚠️ instances.json not found, skipping folder creation"
+          fi
+      
+      - name: 📝 Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected"
+          fi
+      
+      - name: 💾 Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/*.json instances/
+          git commit -m "🤖 Auto-update: JSON files regenerated from Excel - $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
+      
+      - name: ✅ Summary
+        run: |
+          echo "### 🎉 Workflow completed successfully!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📊 Updated files:" >> $GITHUB_STEP_SUMMARY
+          if [ -f "data/instances.json" ]; then
+            echo "- ✅ instances.json" >> $GITHUB_STEP_SUMMARY
+          fi
+          if [ -f "data/extensions.json" ]; then
+            echo "- ✅ extensions.json" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🕐 Timestamp: $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
