@@ -39,8 +39,9 @@ Reglas:
 - `live` = la columna Go-Live tiene valor (cualquier fecha).
 - `region` = `instance` `be40` → `AMAPAC`, `bh10` → `EUROPE`, otro → `null`.
 - `"PR12 - NO SSO"` → code `PR12` + `flags: ["NO SSO"]`.
-- URLs **calculadas**: `https://<instance>-gxo-wms-<web|app|con>-<env>.jdadelivers.com/portal`
-  (NP usa NP Env, PROD usa Prod Env). Si falta `instance` o el env, o el env es `TBD` → `null`.
+- URLs **calculadas**: `https://<instance>-gxo-wms-<kind>-<env>.jdadelivers.com<suffix>`
+  — `web → /portal`, `app → /service`, `con → (sin path)`. NP usa NP Env, PROD usa Prod Env.
+  Si falta `instance` o el env, o el env es `TBD` → `null`.
 - `extensions_repo` = `https://github.com/BYExternal/<GIT Repo>`; `null` si no hay GIT Repo.
 - El script ya **no crea** carpetas `repositories/<id>-extensions/`.
 

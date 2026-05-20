@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-20T12:38:28.129182",
+    "generated_at": "2026-05-20T20:21:47.124597",
     "total_instances": 34,
     "source_file": "data/instances.xlsx",
     "source_sheet": "Client Info"
@@ -47,17 +47,17 @@
           "prod": "https://be40-gxo-wms-web-PR1.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP2.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR1.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP2.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR1.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP2.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR1.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP2.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR1.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-romeoville-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.123144"
+        "last_updated": "2026-05-20T20:21:47.119585"
       }
     },
     {
@@ -101,17 +101,17 @@
           "prod": "https://be40-gxo-wms-web-PR26.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP28.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR26.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP28.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR26.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP28.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR26.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP28.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR26.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-savannah-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.124145"
+        "last_updated": "2026-05-20T20:21:47.119585"
       }
     },
     {
@@ -155,17 +155,17 @@
           "prod": "https://be40-gxo-wms-web-PR3.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP3.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR3.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP3.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR3.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP3.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR3.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP3.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR3.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-loewe-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.124145"
+        "last_updated": "2026-05-20T20:21:47.119585"
       }
     },
     {
@@ -209,17 +209,17 @@
           "prod": "https://be40-gxo-wms-web-PR2.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP5.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR2.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP5.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR2.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP5.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR2.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP5.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR2.jdadelivers.com"
         }
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.125143"
+        "last_updated": "2026-05-20T20:21:47.119585"
       }
     },
     {
@@ -264,16 +264,16 @@
         },
         "app": {
           "np": null,
-          "prod": "https://be40-gxo-wms-app-PR4.jdadelivers.com/portal"
+          "prod": "https://be40-gxo-wms-app-PR4.jdadelivers.com/service"
         },
         "console": {
           "np": null,
-          "prod": "https://be40-gxo-wms-con-PR4.jdadelivers.com/portal"
+          "prod": "https://be40-gxo-wms-con-PR4.jdadelivers.com"
         }
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.125143"
+        "last_updated": "2026-05-20T20:21:47.120591"
       }
     },
     {
@@ -317,17 +317,17 @@
           "prod": "https://be40-gxo-wms-web-PR5.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP6.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR5.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP6.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR5.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP6.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR5.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP6.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR5.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-darigold-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.125143"
+        "last_updated": "2026-05-20T20:21:47.120591"
       }
     },
     {
@@ -371,17 +371,17 @@
           "prod": "https://be40-gxo-wms-web-PR6.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP9.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR6.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP9.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR6.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP9.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR6.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP9.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR6.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-alpargata-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.125143"
+        "last_updated": "2026-05-20T20:21:47.120591"
       }
     },
     {
@@ -425,17 +425,17 @@
           "prod": "https://be40-gxo-wms-web-PR10.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP10.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR10.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP10.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR10.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP10.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR10.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP10.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR10.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-west-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.125143"
+        "last_updated": "2026-05-20T20:21:47.120591"
       }
     },
     {
@@ -479,17 +479,17 @@
           "prod": "https://be40-gxo-wms-web-PR13.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP12.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR13.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP12.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR13.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP12.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR13.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP12.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR13.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-east-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.125143"
+        "last_updated": "2026-05-20T20:21:47.120591"
       }
     },
     {
@@ -533,17 +533,17 @@
           "prod": "https://be40-gxo-wms-web-PR14.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP14.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR14.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP14.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR14.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP14.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR14.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP14.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR14.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-starbucks-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.126141"
+        "last_updated": "2026-05-20T20:21:47.120591"
       }
     },
     {
@@ -587,17 +587,17 @@
           "prod": "https://be40-gxo-wms-web-PR16.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP19.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR16.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP19.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR16.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP19.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR16.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP19.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR16.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-lg-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.126141"
+        "last_updated": "2026-05-20T20:21:47.120591"
       }
     },
     {
@@ -641,17 +641,17 @@
           "prod": "https://be40-gxo-wms-web-PR8.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP7.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR8.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP7.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR8.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP7.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR8.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP7.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR8.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-peloton-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.126141"
+        "last_updated": "2026-05-20T20:21:47.120591"
       }
     },
     {
@@ -695,17 +695,17 @@
           "prod": "https://be40-gxo-wms-web-PR9.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP8.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR9.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP8.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR9.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP8.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR9.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP8.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR9.jdadelivers.com"
         }
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.126141"
+        "last_updated": "2026-05-20T20:21:47.120591"
       }
     },
     {
@@ -749,17 +749,17 @@
           "prod": "https://be40-gxo-wms-web-PR11.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP11.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR11.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP11.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR11.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP11.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR11.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP11.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR11.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-california-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.126141"
+        "last_updated": "2026-05-20T20:21:47.121584"
       }
     },
     {
@@ -803,17 +803,17 @@
           "prod": "https://be40-gxo-wms-web-PR20.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP27.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR20.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP27.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR20.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP27.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR20.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP27.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR20.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-canada-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.126141"
+        "last_updated": "2026-05-20T20:21:47.121584"
       }
     },
     {
@@ -857,17 +857,17 @@
           "prod": "https://be40-gxo-wms-web-PR2.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP5.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR2.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP5.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR2.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP5.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR2.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP5.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR2.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-amiri-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.126141"
+        "last_updated": "2026-05-20T20:21:47.121584"
       }
     },
     {
@@ -913,17 +913,17 @@
           "prod": "https://be40-gxo-wms-web-PR12.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP13.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR12.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP13.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR12.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP13.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR12.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP13.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR12.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-food52-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.126141"
+        "last_updated": "2026-05-20T20:21:47.121584"
       }
     },
     {
@@ -967,17 +967,17 @@
           "prod": "https://be40-gxo-wms-web-PR25.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP30.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR25.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP30.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR25.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP30.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR25.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP30.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR25.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toast-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.126141"
+        "last_updated": "2026-05-20T20:21:47.121584"
       }
     },
     {
@@ -1021,17 +1021,17 @@
           "prod": "https://be40-gxo-wms-web-PR49.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP26 / NP35.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR49.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP26 / NP35.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR49.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP26 / NP35.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR49.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP26 / NP35.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR49.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-on-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.126141"
+        "last_updated": "2026-05-20T20:21:47.121584"
       }
     },
     {
@@ -1075,17 +1075,17 @@
           "prod": "https://be40-gxo-wms-web-PR15.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP17.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR15.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP17.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR15.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP17.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR15.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP17.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR15.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-castore-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.126141"
+        "last_updated": "2026-05-20T20:21:47.121584"
       }
     },
     {
@@ -1129,17 +1129,17 @@
           "prod": "https://be40-gxo-wms-web-PR17.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP21.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR17.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP21.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR17.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP21.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR17.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP21.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR17.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-mw-les\nexec-wms-gxo-mt-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.126141"
+        "last_updated": "2026-05-20T20:21:47.121584"
       }
     },
     {
@@ -1183,17 +1183,17 @@
           "prod": "https://bh10-gxo-wms-web-PR2.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://bh10-gxo-wms-app-NP2.jdadelivers.com/portal",
-          "prod": "https://bh10-gxo-wms-app-PR2.jdadelivers.com/portal"
+          "np": "https://bh10-gxo-wms-app-NP2.jdadelivers.com/service",
+          "prod": "https://bh10-gxo-wms-app-PR2.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://bh10-gxo-wms-con-NP2.jdadelivers.com/portal",
-          "prod": "https://bh10-gxo-wms-con-PR2.jdadelivers.com/portal"
+          "np": "https://bh10-gxo-wms-con-NP2.jdadelivers.com",
+          "prod": "https://bh10-gxo-wms-con-PR2.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toolstation-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.128183"
+        "last_updated": "2026-05-20T20:21:47.123590"
       }
     },
     {
@@ -1237,17 +1237,17 @@
           "prod": "https://be40-gxo-wms-web-PR18.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP22.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR18.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP22.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR18.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP22.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR18.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP22.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR18.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-span-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.128183"
+        "last_updated": "2026-05-20T20:21:47.123590"
       }
     },
     {
@@ -1291,17 +1291,17 @@
           "prod": "https://bh10-gxo-wms-web-PR1.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://bh10-gxo-wms-app-NP3.jdadelivers.com/portal",
-          "prod": "https://bh10-gxo-wms-app-PR1.jdadelivers.com/portal"
+          "np": "https://bh10-gxo-wms-app-NP3.jdadelivers.com/service",
+          "prod": "https://bh10-gxo-wms-app-PR1.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://bh10-gxo-wms-con-NP3.jdadelivers.com/portal",
-          "prod": "https://bh10-gxo-wms-con-PR1.jdadelivers.com/portal"
+          "np": "https://bh10-gxo-wms-con-NP3.jdadelivers.com",
+          "prod": "https://bh10-gxo-wms-con-PR1.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-passenger-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.128183"
+        "last_updated": "2026-05-20T20:21:47.123590"
       }
     },
     {
@@ -1345,17 +1345,17 @@
           "prod": null
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP24.jdadelivers.com/portal",
+          "np": "https://be40-gxo-wms-app-NP24.jdadelivers.com/service",
           "prod": null
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP24.jdadelivers.com/portal",
+          "np": "https://be40-gxo-wms-con-NP24.jdadelivers.com",
           "prod": null
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-wh-smith-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.128183"
+        "last_updated": "2026-05-20T20:21:47.123590"
       }
     },
     {
@@ -1399,17 +1399,17 @@
           "prod": "https://bh10-gxo-wms-web-PR4.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://bh10-gxo-wms-app-NP6.jdadelivers.com/portal",
-          "prod": "https://bh10-gxo-wms-app-PR4.jdadelivers.com/portal"
+          "np": "https://bh10-gxo-wms-app-NP6.jdadelivers.com/service",
+          "prod": "https://bh10-gxo-wms-app-PR4.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://bh10-gxo-wms-con-NP6.jdadelivers.com/portal",
-          "prod": "https://bh10-gxo-wms-con-PR4.jdadelivers.com/portal"
+          "np": "https://bh10-gxo-wms-con-NP6.jdadelivers.com",
+          "prod": "https://bh10-gxo-wms-con-PR4.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-prenatal-les\nexec-wms-gxo-phoenix-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.128183"
+        "last_updated": "2026-05-20T20:21:47.123590"
       }
     },
     {
@@ -1453,17 +1453,17 @@
           "prod": "https://be40-gxo-wms-web-PR21.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP29.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR21.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP29.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR21.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP29.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR21.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP29.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR21.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-plainfield-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.128183"
+        "last_updated": "2026-05-20T20:21:47.123590"
       }
     },
     {
@@ -1507,17 +1507,17 @@
           "prod": "https://be40-gxo-wms-web-PR23.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP32.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR23.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP32.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR23.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP32.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR23.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP32.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR23.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-orlando-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.128183"
+        "last_updated": "2026-05-20T20:21:47.123590"
       }
     },
     {
@@ -1561,17 +1561,17 @@
           "prod": null
         },
         "app": {
-          "np": "https://bh10-gxo-wms-app-NP4.jdadelivers.com/portal",
+          "np": "https://bh10-gxo-wms-app-NP4.jdadelivers.com/service",
           "prod": null
         },
         "console": {
-          "np": "https://bh10-gxo-wms-con-NP4.jdadelivers.com/portal",
+          "np": "https://bh10-gxo-wms-con-NP4.jdadelivers.com",
           "prod": null
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-kumho-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.128183"
+        "last_updated": "2026-05-20T20:21:47.123590"
       }
     },
     {
@@ -1615,17 +1615,17 @@
           "prod": null
         },
         "app": {
-          "np": "https://bh10-gxo-wms-app-NP7.jdadelivers.com/portal",
+          "np": "https://bh10-gxo-wms-app-NP7.jdadelivers.com/service",
           "prod": null
         },
         "console": {
-          "np": "https://bh10-gxo-wms-con-NP7.jdadelivers.com/portal",
+          "np": "https://bh10-gxo-wms-con-NP7.jdadelivers.com",
           "prod": null
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-commscope-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.128183"
+        "last_updated": "2026-05-20T20:21:47.123590"
       }
     },
     {
@@ -1669,17 +1669,17 @@
           "prod": null
         },
         "app": {
-          "np": "https://bh10-gxo-wms-app-NP8.jdadelivers.com/portal",
+          "np": "https://bh10-gxo-wms-app-NP8.jdadelivers.com/service",
           "prod": null
         },
         "console": {
-          "np": "https://bh10-gxo-wms-con-NP8.jdadelivers.com/portal",
+          "np": "https://bh10-gxo-wms-con-NP8.jdadelivers.com",
           "prod": null
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.128183"
+        "last_updated": "2026-05-20T20:21:47.123590"
       }
     },
     {
@@ -1723,17 +1723,17 @@
           "prod": "https://be40-gxo-wms-web-PR24.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP31.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR24.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP31.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR24.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP31.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR24.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP31.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR24.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-portland-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.128183"
+        "last_updated": "2026-05-20T20:21:47.123590"
       }
     },
     {
@@ -1777,17 +1777,17 @@
           "prod": "https://be40-gxo-wms-web-PR22.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP34.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR22.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP34.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR22.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP34.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR22.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP34.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR22.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-ruralhall-les",
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.128183"
+        "last_updated": "2026-05-20T20:21:47.123590"
       }
     },
     {
@@ -1831,17 +1831,17 @@
           "prod": "https://be40-gxo-wms-web-PR27.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP36.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-app-PR27.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-app-NP36.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR27.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP36.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-con-PR27.jdadelivers.com/portal"
+          "np": "https://be40-gxo-wms-con-NP36.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR27.jdadelivers.com"
         }
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-05-20T12:38:28.129182"
+        "last_updated": "2026-05-20T20:21:47.124597"
       }
     }
   ]

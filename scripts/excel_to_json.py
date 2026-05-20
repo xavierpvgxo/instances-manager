@@ -32,7 +32,8 @@ Mapeo de columnas (hoja 'Client Info'):
 Reglas:
   - live  = la columna Go-Live tiene valor.
   - region: instance be40 -> AMAPAC, bh10 -> EUROPE, otro -> None.
-  - URLs calculadas: https://<instance>-gxo-wms-<web|app|con>-<env>.jdadelivers.com/portal
+  - URLs calculadas: https://<instance>-gxo-wms-<kind>-<env>.jdadelivers.com<suffix>
+    kind -> suffix:  web -> /portal,  app -> /service,  con -> (sin path).
     NP usa NP Env; PROD usa Prod Env. Si falta instance o env -> None (boton no clickable).
   - "PR12 - NO SSO" -> code 'PR12' + flags ['NO SSO'].
 """
@@ -51,7 +52,8 @@ REGION_BY_INSTANCE = {
     "bh10": "EUROPE",
 }
 
-URL_TEMPLATE = "https://{instance}-gxo-wms-{kind}-{env}.jdadelivers.com/portal"
+URL_BASE = "https://{instance}-gxo-wms-{kind}-{env}.jdadelivers.com"
+URL_SUFFIX = {"web": "/portal", "app": "/service", "con": ""}
 
 
 def normalize_str(v):
@@ -89,7 +91,7 @@ def build_url(instance, env_code, kind):
     env = env_for_url(env_code)
     if not inst or not env:
         return None
-    return URL_TEMPLATE.format(instance=inst, kind=kind, env=env)
+    return URL_BASE.format(instance=inst, kind=kind, env=env) + URL_SUFFIX.get(kind, "")
 
 
 def fmt_date(v):
