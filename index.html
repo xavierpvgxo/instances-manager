@@ -126,12 +126,7 @@
     position:sticky; top:0; z-index:50;
   }
   .brand{ display:flex; align-items:center; gap:12px; }
-  .brand-logo{
-    min-width:40px; height:32px; padding:0 8px; background:var(--gxo-orange);
-    display:grid; place-items:center;
-    color:#fff; font-weight:800; font-size:12px; letter-spacing:.5px;
-  }
-  .brand-name{ font-weight:700; font-size:15px; letter-spacing:-.01em; }
+  .brand-logo{ height:32px; width:auto; display:block; }
   .brand-divider{ width:1px; height:24px; background:rgba(255,255,255,.18); }
   .brand-sub{ font-size:13px; color:rgba(255,255,255,.7); font-weight:400; }
 
@@ -395,8 +390,7 @@
 <!-- ─── Top header ─── -->
 <div class="topbar">
   <div class="brand">
-    <div class="brand-logo">GXO</div>
-    <div class="brand-name">GXO</div>
+    <img class="brand-logo" src="assets/gxo-logo.png" alt="GXO">
   </div>
   <div class="brand-divider"></div>
   <div class="brand-sub">Instance Manager</div>
