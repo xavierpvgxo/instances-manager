@@ -38,3 +38,12 @@ test_*.csv
 .pl
 .mcmd
 .mctrg
+
+# Copia local del Excel completo de SharePoint (con datos sensibles: facturas, usuarios, T&E)
+# Solo se commitea la version saneada data/instances.xlsx
+data/_incoming_*.xlsx
+data/_verify*.json
+
+# Scripts one-off de inspeccion/saneado
+_inspect.py
+_sanitize.py

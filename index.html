@@ -59,9 +59,7 @@
             display: inline-block;
         }
 
-        .tab:hover, .tab-link:hover {
-            color: var(--gxo-blue);
-        }
+        .tab:hover, .tab-link:hover { color: var(--gxo-blue); }
 
         .tab.active {
             color: var(--gxo-blue);
@@ -72,7 +70,7 @@
         .stat-label { color: var(--gxo-gray); font-size: 15px; margin-top: 5px; text-transform: uppercase; }
 
         .results-color { color: var(--gxo-orange); }
-        .live-color { color: #00ff15; }
+        .live-color { color: #00b818; }
 
         .search-box { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;}
         .search-input { flex: 1; min-width: 250px; padding: 12px 20px; border: 2px solid #FF3A00; border-radius: 6px; font-size: 16px; color: #FF3A00;}
@@ -80,54 +78,71 @@
 
         .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #FF3A00; }
 
-        .instances-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 20px; }
+        .instances-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 20px; }
         .instance-card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s; }
         .instance-card:hover { transform: translateY(-4px); box-shadow: 0 4px 16px rgba(0,61,165,0.15); }
 
-        .instance-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 2px solid var(--gxo-light-gray); }
-        .instance-name { font-size: 20px; font-weight: 600; color: var(--gxo-orange); }
+        .instance-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 2px solid var(--gxo-light-gray); }
+        .instance-name { font-size: 19px; font-weight: 700; color: var(--gxo-orange); }
 
-        .live-badge { padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; color: white; }
-        .live-badge.yes { background: #21ff29; animation: blink 1.3s infinite; }
+        .live-badge { padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; color: white; white-space: nowrap; }
+        .live-badge.yes { background: #00b818; animation: blink 1.3s infinite; }
         .live-badge.no { background: #ff5252; }
-        
-        /* Animación */
+
+        .flag-tag { display: inline-block; background: var(--gxo-blue); color: white; padding: 3px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px; font-weight: 600; vertical-align: middle; }
+
         @keyframes blink {
-            0% {
-                opacity: 1;
-            }
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
         }
 
         .info-row { display: flex; font-size: 14px; margin-bottom: 8px; }
-        .info-label { font-weight: 600; color: var(--gxo-blue); min-width: 120px; }
+        .info-label { font-weight: 600; color: var(--gxo-blue); min-width: 130px; flex-shrink: 0; }
+        .info-row span:last-child { word-break: break-word; }
 
-        .products { margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--gxo-light-gray); }
-        .product-tag { display: inline-block; background: var(--gxo-blue); color: white; padding: 4px 10px; border-radius: 4px; font-size: 11px; margin: 0 6px 6px 0; }
+        .section { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--gxo-light-gray); }
+        .section-title { font-size: 12px; font-weight: 700; color: var(--gxo-orange); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 10px; }
 
-        .urls-section { margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--gxo-light-gray); }
+        .env-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .env-table th { text-align: left; font-size: 10px; text-transform: uppercase; color: var(--gxo-gray); letter-spacing: 0.5px; padding: 0 10px 5px 0; font-weight: 700; }
+        .env-table td { padding: 4px 10px 4px 0; vertical-align: top; }
+        .env-name { font-weight: 700; color: var(--gxo-blue); }
+        .env-code { font-weight: 600; color: var(--gxo-orange); }
+
         .url-group { margin-bottom: 10px; }
         .url-label { font-size: 12px; font-weight: 600; color: var(--gxo-blue); margin-bottom: 4px; }
         .url-links { display: flex; gap: 10px; }
-        .url-link-np { flex: 1; padding: 6px; background: var(--gxo-light-gray); color: #17d427; text-decoration: none; border-radius: 4px; font-size: 15px; text-align: center; font-weight: 500; }
-        .url-link-prd { flex: 1; padding: 6px; background: var(--gxo-light-gray); color: #ff5252; text-decoration: none; border-radius: 4px; font-size: 15px; text-align: center; font-weight: 500; }
-        .url-link:hover { background: var(--gxo-blue); color: white; }
-        .url-link.disabled { opacity: 0.4; pointer-events: none; }
 
-        .extensions-btn { width: 100%; margin-top: 15px; padding: 12px; background: #FF3A00; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 15px;}
+        .conn-btn {
+            flex: 1; padding: 7px 6px;
+            background: var(--gxo-light-gray);
+            border: none; border-radius: 4px;
+            font-family: inherit; font-size: 14px; font-weight: 600;
+            text-align: center; text-decoration: none; cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+        }
+        .conn-btn--np { color: #17a52a; }
+        .conn-btn--prod { color: #ff5252; }
+        .conn-btn:hover:not(.conn-btn--disabled) { background: var(--gxo-blue); color: white; }
+        .conn-btn--disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+
+        .extensions-btn { width: 100%; margin-top: 16px; padding: 12px; background: #FF3A00; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 15px; }
+        .extensions-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
         .loading { text-align: center; padding: 60px; color: var(--gxo-blue); font-weight: bold; }
 
-        .location-info {
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px solid var(--gxo-light-gray);
-            font-size: 13px;
+        .toast {
+            position: fixed; bottom: 32px; left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: var(--gxo-blue); color: white;
+            padding: 12px 26px; border-radius: 8px;
+            font-weight: 600; font-size: 14px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.25s, transform 0.25s;
+            z-index: 9999;
         }
+        .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
     </style>
 </head>
 <body>
@@ -140,31 +155,32 @@
     <div class="container">
         <div id="loadingIndicator" class="loading">Loading data from GitHub...</div>
         <div id="mainContent" style="display: none;">
-            
+
             <div class="stats-bar" id="statsBar"></div>
 
             <div class="search-box">
-                <input type="text" class="search-input" id="searchInput" placeholder="Find by Client, Warehouse, product...">
-                
+                <input type="text" class="search-input" id="searchInput" placeholder="Find by client, site, instance, env, realm...">
+
                 <select class="filter-select" id="filterLive">
                     <option value="all">All status</option>
                     <option value="true">Live</option>
                     <option value="false">No Live</option>
                 </select>
 
-                <select class="filter-select" id="filterCountry">
-                    <option value="all">All Countries</option>
+                <select class="filter-select" id="filterRegion">
+                    <option value="all">All Regions</option>
                 </select>
             </div>
 
             <div class="tabs">
                 <button class="tab active" data-tab="all">GXO BY WMS Instances</button>
-                <a href="extensions.html" class="tab-link">Extensions</a> <!-- separado de los tabs filtrables -->
             </div>
 
             <div class="instances-grid" id="instancesGrid"></div>
         </div>
     </div>
+
+    <div class="toast" id="toast"></div>
 
     <script>
         const CONFIG = {
@@ -175,14 +191,29 @@
         };
 
         let instancesData = [];
-        let activeTab = 'all';
+
+        // Carga el JSON priorizando el archivo local (refleja el estado actual del
+        // repo cuando se sirve por http: servidor local o GitHub Pages). Si no es
+        // accesible, usa GitHub raw (rama main, datos ya publicados).
+        async function loadInstances() {
+            const local = CONFIG.path;
+            const remote = `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/${CONFIG.path}`;
+            let lastErr;
+            for (const url of [local, remote]) {
+                try {
+                    const r = await fetch(url, { cache: 'no-store' });
+                    if (r.ok) return await r.json();
+                    lastErr = new Error('HTTP ' + r.status);
+                } catch (e) { lastErr = e; }
+            }
+            throw lastErr || new Error('No data source reachable');
+        }
 
         async function init() {
             try {
-                const resp = await fetch(`https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/${CONFIG.path}`);
-                const data = await resp.json();
+                const data = await loadInstances();
                 instancesData = data.instances || [];
-                
+
                 document.getElementById('loadingIndicator').style.display = 'none';
                 document.getElementById('mainContent').style.display = 'block';
 
@@ -190,40 +221,104 @@
                 render();
                 setupEvents();
             } catch (err) {
-                document.getElementById('loadingIndicator').innerHTML = "Error loading data.";
+                const isFile = location.protocol === 'file:';
+                document.getElementById('loadingIndicator').innerHTML = isFile
+                    ? '⚠️ Para previsualizar los cambios locales, sirve la carpeta con un servidor:<br><br>'
+                      + '<code>python -m http.server 8000</code><br><br>'
+                      + 'y abre <a href="http://localhost:8000">http://localhost:8000</a><br><br>'
+                      + '<small>Al abrir el HTML con doble clic (file://) el navegador bloquea la carga de data/instances.json.</small>'
+                    : 'Error loading data: ' + err.message;
             }
         }
 
-        function fillFilters() {
-            const countries = new Set();
-            instancesData.forEach(i => {
-                if(i.location?.country) countries.add(i.location.country);
-            });
+        function esc(v) {
+            if (v === null || v === undefined) return '';
+            return String(v).replace(/[&<>"']/g, c => (
+                { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+            ));
+        }
 
-            const countEl = document.getElementById('filterCountry');
-            if (countEl) {
-                [...countries].sort().forEach(c => {
-                    countEl.innerHTML += `<option value="${c}">${c}</option>`;
-                });
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            clearTimeout(t._timer);
+            t._timer = setTimeout(() => t.classList.remove('show'), 2200);
+        }
+
+        function copyAppUrl(url) {
+            navigator.clipboard.writeText(url).then(
+                () => showToast('APP URL copied'),
+                () => showToast('Could not copy URL')
+            );
+        }
+
+        function fillFilters() {
+            const regions = new Set();
+            instancesData.forEach(i => { if (i.region) regions.add(i.region); });
+
+            const regionEl = document.getElementById('filterRegion');
+            [...regions].sort().forEach(r => {
+                regionEl.innerHTML += `<option value="${esc(r)}">${esc(r)}</option>`;
+            });
+        }
+
+        function envRow(name, env) {
+            env = env || {};
+            return `<tr>
+                <td class="env-name">${name}</td>
+                <td class="env-code">${esc(env.code) || '—'}</td>
+                <td>${esc(env.version) || '—'}</td>
+                <td>${esc(env.realm) || '—'}</td>
+            </tr>`;
+        }
+
+        // kind: 'np' | 'prod'   mode: 'link' | 'copy'
+        function connButton(url, kind, mode) {
+            const cls = kind === 'np' ? 'conn-btn--np' : 'conn-btn--prod';
+            const tag = kind === 'np' ? 'NP' : 'PROD';
+            if (!url) {
+                const label = mode === 'copy' ? `⧉ Copy ${tag}` : `Link to ${tag}`;
+                return `<span class="conn-btn ${cls} conn-btn--disabled">${label}</span>`;
             }
+            if (mode === 'copy') {
+                return `<button type="button" class="conn-btn ${cls}" onclick="copyAppUrl('${url}')">⧉ Copy ${tag}</button>`;
+            }
+            return `<a class="conn-btn ${cls}" href="${url}" target="_blank" rel="noopener">Link to ${tag}</a>`;
+        }
+
+        function connRow(icon, label, np, prod, mode) {
+            return `<div class="url-group">
+                <div class="url-label">${icon} ${label}</div>
+                <div class="url-links">
+                    ${connButton(np, 'np', mode)}
+                    ${connButton(prod, 'prod', mode)}
+                </div>
+            </div>`;
         }
 
         function render() {
             const search = document.getElementById('searchInput').value.toLowerCase();
             const liveF = document.getElementById('filterLive').value;
-            const countF = document.getElementById('filterCountry').value;
+            const regionF = document.getElementById('filterRegion').value;
 
             const filtered = instancesData.filter(i => {
-                const matchesSearch = (i.client + i.id + i.site + i.versions?.wms + i.contact?.name + i.products + (i.account || '') + (i.location?.country || '')).toLowerCase().includes(search);
-                
-                let matchesTab = true;
-                if (activeTab === 'logistics') matchesTab = i.account === 'GXO Logistics';
-                if (activeTab === 'enterprise') matchesTab = i.account === 'GXO Enterprise';
+                const e = i.environments || {};
+                const haystack = [
+                    i.card_title, i.client, i.client_id, i.id, i.instance,
+                    i.site, i.region, i.location, i.operating_hours,
+                    (i.flags || []).join(' '),
+                    e.np?.code, e.np?.version, e.np?.realm,
+                    e.prod?.code, e.prod?.version, e.prod?.realm,
+                    e.arch?.code,
+                    i.contact?.poc, i.contact?.site_contact, i.contact?.site_distribution
+                ].filter(Boolean).join(' ').toLowerCase();
 
+                const matchesSearch = haystack.includes(search);
                 const matchesLive = liveF === 'all' || String(i.live) === liveF;
-                const matchesCount = countF === 'all' || i.location?.country === countF;
+                const matchesRegion = regionF === 'all' || i.region === regionF;
 
-                return matchesSearch && matchesTab && matchesLive && matchesCount;
+                return matchesSearch && matchesLive && matchesRegion;
             });
 
             document.getElementById('statsBar').innerHTML = `
@@ -237,77 +332,80 @@
                 </div>
             `;
 
-            document.getElementById('instancesGrid').innerHTML = filtered.map(instance => `
+            document.getElementById('instancesGrid').innerHTML = filtered.map(it => {
+                const e = it.environments || {};
+                const u = it.urls || {};
+                const c = it.contact || {};
+
+                const goLiveRow = it.go_live
+                    ? `<div class="info-row"><span class="info-label">Go-Live:</span><span>${esc(it.go_live)}</span></div>`
+                    : '';
+
+                const extBtn = it.extensions_repo
+                    ? `<button class="extensions-btn" onclick="window.open('${it.extensions_repo}','_blank')">🛠️ Extensions repository</button>`
+                    : `<button class="extensions-btn" disabled>🛠️ Extensions repository</button>`;
+
+                return `
                 <div class="instance-card">
                     <div class="instance-header">
-                        <div class="instance-name">${instance.client}</div>
-                        <div class="live-badge ${instance.live ? 'yes' : 'no'}">${instance.live ? '● LIVE' : '○ NO LIVE'}</div>
+                        <div class="instance-name">${esc(it.card_title)}${(it.flags || []).map(f => `<span class="flag-tag">${esc(f)}</span>`).join('')}</div>
+                        <div class="live-badge ${it.live ? 'yes' : 'no'}">${it.live ? '● LIVE' : '○ NO LIVE'}</div>
                     </div>
-                    
+
                     <div class="instance-info">
-                        <div class="info-row"><span class="info-label">Account:</span><span>${instance.account || 'N/A'}</span></div>
-                        <div class="info-row"><span class="info-label">Country:</span><span>${instance.location?.country || 'N/A'}</span></div>
-                        <div class="info-row"><span class="info-label">Contact:</span><span>${instance.contact?.name || 'N/A'}</span></div>
-                        <div class="info-row"><span class="info-label">Instance ID:</span><span>${instance.id}</span></div>
-                        <div class="info-row"><span class="info-label">Site:</span><span>${instance.site}</span></div>
-                        <div class="info-row"><span class="info-label">WMS Version:</span><span>${instance.versions?.wms}</span></div>
+                        <div class="info-row"><span class="info-label">Instance:</span><span>${esc(it.instance) || '—'}</span></div>
+                        <div class="info-row"><span class="info-label">Client ID:</span><span>${esc(it.client_id) || '—'}</span></div>
+                        <div class="info-row"><span class="info-label">Site:</span><span>${esc(it.site) || '—'}</span></div>
+                        <div class="info-row"><span class="info-label">Region:</span><span>${esc(it.region) || '—'}</span></div>
+                        <div class="info-row"><span class="info-label">Location:</span><span>${esc(it.location) || '—'}</span></div>
+                        <div class="info-row"><span class="info-label">Operating Hours:</span><span>${esc(it.operating_hours) || '—'}</span></div>
+                        ${goLiveRow}
                     </div>
 
-                    <div class="location-info">
-                        📍 <strong>${instance.location?.country || ''}</strong><br>
-                        (${instance.location?.address || 'N/A'})
+                    <div class="section">
+                        <div class="section-title">Environments</div>
+                        <table class="env-table">
+                            <thead>
+                                <tr><th>Env</th><th>Code</th><th>Version</th><th>Realm</th></tr>
+                            </thead>
+                            <tbody>
+                                ${envRow('NP', e.np)}
+                                ${envRow('PR', e.prod)}
+                                ${envRow('ARCH', e.arch)}
+                            </tbody>
+                        </table>
                     </div>
 
-                    <div class="products">
-                        ${(instance.products || []).map(p => `<span class="product-tag">${p}</span>`).join('')}
+                    <div class="section">
+                        <div class="section-title">Contact</div>
+                        <div class="info-row"><span class="info-label">POC:</span><span>${esc(c.poc) || '—'}</span></div>
+                        <div class="info-row"><span class="info-label">Site Contact:</span><span>${esc(c.site_contact) || '—'}</span></div>
+                        <div class="info-row"><span class="info-label">Site Distribution:</span><span>${esc(c.site_distribution) || '—'}</span></div>
                     </div>
 
-                    <div class="urls-section">
-                        <div class="url-group">
-                            <div class="url-label">💻 WEB</div>
-                            <div class="url-links">
-                                <a href="${instance.urls?.np?.web || '#'}" class="url-link-np ${!instance.urls?.np?.web ? 'disabled' : ''}" target="_blank">Link to NP</a>
-                                <a href="${instance.urls?.prod?.web || '#'}" class="url-link-prd ${!instance.urls?.prod?.web ? 'disabled' : ''}" target="_blank">Link to PROD</a>
-                            </div>
-                        </div>
-                        <div class="url-group">
-                            <div class="url-label">⚙️ APP</div>
-                            <div class="url-links">
-                                <a href="${instance.urls?.np?.app || '#'}" class="url-link-np ${!instance.urls?.np?.app ? 'disabled' : ''}" target="_blank">Link to NP</a>
-                                <a href="${instance.urls?.prod?.app || '#'}" class="url-link-prd ${!instance.urls?.prod?.app ? 'disabled' : ''}" target="_blank">Link to PROD</a>
-                            </div>
-                        </div>
-                        <div class="url-group">
-                            <div class="url-label">🚨 CONSOLE</div>
-                            <div class="url-links">
-                                <a href="${instance.urls?.np?.config || '#'}" class="url-link-np ${!instance.urls?.np?.config ? 'disabled' : ''}" target="_blank">Link to NP</a>
-                                <a href="${instance.urls?.prod?.config || '#'}" class="url-link-prd ${!instance.urls?.prod?.config ? 'disabled' : ''}" target="_blank">Link to PROD</a>
-                            </div>
-                        </div>
+                    <div class="section">
+                        <div class="section-title">Connectivity</div>
+                        ${connRow('💻', 'WEB', u.web?.np, u.web?.prod, 'link')}
+                        ${connRow('⚙️', 'APP', u.app?.np, u.app?.prod, 'copy')}
+                        ${connRow('🖥️', 'CONSOLE', u.console?.np, u.console?.prod, 'link')}
                     </div>
 
-                    <button class="extensions-btn" onclick="window.open('${instance.metadata?.repository || '#'}', '_blank')">
-                        🛠️ Extensions Repository
-                    </button>
-                </div>
-            `).join('');
+                    ${extBtn}
+                </div>`;
+            }).join('');
         }
 
         function setupEvents() {
-            // Eventos para Tabs de filtrado
             document.querySelectorAll('.tab').forEach(tab => {
                 tab.addEventListener('click', () => {
                     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
                     tab.classList.add('active');
-                    activeTab = tab.dataset.tab;
-                    render();
                 });
             });
 
-            // Eventos para Buscador y Selects
             document.getElementById('searchInput').addEventListener('input', render);
             document.getElementById('filterLive').addEventListener('change', render);
-            document.getElementById('filterCountry').addEventListener('change', render);
+            document.getElementById('filterRegion').addEventListener('change', render);
         }
 
         init();
