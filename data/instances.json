@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-20T20:21:47.124597",
+    "generated_at": "2026-05-20T20:32:11.500941",
     "total_instances": 34,
     "source_file": "data/instances.xlsx",
     "source_sheet": "Client Info"
@@ -57,7 +57,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-romeoville-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.119585"
+        "last_updated": "2026-05-20T20:32:11.494939"
       }
     },
     {
@@ -70,7 +70,7 @@
       "region": "AMAPAC",
       "location": "122 Dorchester Village rd, Midway GA 31320",
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -111,7 +111,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-savannah-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.119585"
+        "last_updated": "2026-05-20T20:32:11.494939"
       }
     },
     {
@@ -165,7 +165,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-loewe-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.119585"
+        "last_updated": "2026-05-20T20:32:11.495940"
       }
     },
     {
@@ -219,7 +219,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.119585"
+        "last_updated": "2026-05-20T20:32:11.495940"
       }
     },
     {
@@ -273,7 +273,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.120591"
+        "last_updated": "2026-05-20T20:32:11.495940"
       }
     },
     {
@@ -327,7 +327,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-darigold-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.120591"
+        "last_updated": "2026-05-20T20:32:11.495940"
       }
     },
     {
@@ -381,7 +381,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-alpargata-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.120591"
+        "last_updated": "2026-05-20T20:32:11.495940"
       }
     },
     {
@@ -435,7 +435,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-west-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.120591"
+        "last_updated": "2026-05-20T20:32:11.495940"
       }
     },
     {
@@ -489,7 +489,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-east-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.120591"
+        "last_updated": "2026-05-20T20:32:11.496943"
       }
     },
     {
@@ -543,7 +543,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-starbucks-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.120591"
+        "last_updated": "2026-05-20T20:32:11.496943"
       }
     },
     {
@@ -597,7 +597,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-lg-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.120591"
+        "last_updated": "2026-05-20T20:32:11.496943"
       }
     },
     {
@@ -651,7 +651,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-peloton-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.120591"
+        "last_updated": "2026-05-20T20:32:11.496943"
       }
     },
     {
@@ -705,7 +705,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.120591"
+        "last_updated": "2026-05-20T20:32:11.496943"
       }
     },
     {
@@ -759,7 +759,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-california-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.121584"
+        "last_updated": "2026-05-20T20:32:11.496943"
       }
     },
     {
@@ -772,7 +772,7 @@
       "region": "AMAPAC",
       "location": "1695 Drew Rd. Unit 2, Mississauga, Ontario, CA, L5S 1J5",
       "operating_hours": "7:30 am to 4:30 pm EST",
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -813,7 +813,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-canada-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.121584"
+        "last_updated": "2026-05-20T20:32:11.496943"
       }
     },
     {
@@ -867,7 +867,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-amiri-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.121584"
+        "last_updated": "2026-05-20T20:32:11.496943"
       }
     },
     {
@@ -923,7 +923,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-food52-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.121584"
+        "last_updated": "2026-05-20T20:32:11.496943"
       }
     },
     {
@@ -936,7 +936,7 @@
       "region": "AMAPAC",
       "location": "7140 N. CAJON BLVD\nSAN BERNARDINO, CA 92407\nUSA",
       "operating_hours": "NEW TBD",
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -977,7 +977,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toast-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.121584"
+        "last_updated": "2026-05-20T20:32:11.496943"
       }
     },
     {
@@ -990,7 +990,7 @@
       "region": "AMAPAC",
       "location": "125 Colvin Dr, Locust Grove, GA 30248",
       "operating_hours": "2 daily shifts and 1 shift on Saturday",
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -1031,7 +1031,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-on-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.121584"
+        "last_updated": "2026-05-20T20:32:11.496943"
       }
     },
     {
@@ -1044,7 +1044,7 @@
       "region": "AMAPAC",
       "location": null,
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -1085,7 +1085,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-castore-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.121584"
+        "last_updated": "2026-05-20T20:32:11.496943"
       }
     },
     {
@@ -1098,7 +1098,7 @@
       "region": "AMAPAC",
       "location": "6111 Grayson Rd Harrisburg, PA",
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -1139,7 +1139,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-mw-les\nexec-wms-gxo-mt-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.121584"
+        "last_updated": "2026-05-20T20:32:11.497947"
       }
     },
     {
@@ -1152,7 +1152,7 @@
       "region": "EUROPE",
       "location": "DC1 - Brandpuntlaan Zuid 12, 2665 NZ Bleiswijk, Netherlands\nDC2 - Prismalaan Oost, 2665 Bleiswijk, Netherlands",
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -1193,7 +1193,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toolstation-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.123590"
+        "last_updated": "2026-05-20T20:32:11.499940"
       }
     },
     {
@@ -1206,7 +1206,7 @@
       "region": "AMAPAC",
       "location": "1401 EVERMAN PARKWAY, FORT WORTH, TX 76140",
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -1247,7 +1247,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-span-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.123590"
+        "last_updated": "2026-05-20T20:32:11.499940"
       }
     },
     {
@@ -1260,7 +1260,7 @@
       "region": "EUROPE",
       "location": "Düsseldorfer str. 85 -41541 Dormagen, Germany",
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -1301,7 +1301,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-passenger-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.123590"
+        "last_updated": "2026-05-20T20:32:11.499940"
       }
     },
     {
@@ -1355,7 +1355,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-wh-smith-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.123590"
+        "last_updated": "2026-05-20T20:32:11.499940"
       }
     },
     {
@@ -1368,7 +1368,7 @@
       "region": "EUROPE",
       "location": "GXO Op Den Dries 1\n6019 RA Wessem, Netherlands",
       "operating_hours": "NP13 (PRENTAL AUTOMATION)",
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -1409,7 +1409,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-prenatal-les\nexec-wms-gxo-phoenix-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.123590"
+        "last_updated": "2026-05-20T20:32:11.499940"
       }
     },
     {
@@ -1422,7 +1422,7 @@
       "region": "AMAPAC",
       "location": "600 S Perry Rd\nPlainfield, IN 46168\nUSA",
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -1463,7 +1463,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-plainfield-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.123590"
+        "last_updated": "2026-05-20T20:32:11.499940"
       }
     },
     {
@@ -1476,7 +1476,7 @@
       "region": "AMAPAC",
       "location": "7469 PRESIDENTS DRIVE\nORLANDO, FL 32809\nUSA",
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -1517,7 +1517,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-orlando-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.123590"
+        "last_updated": "2026-05-20T20:32:11.500941"
       }
     },
     {
@@ -1571,7 +1571,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-kumho-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.123590"
+        "last_updated": "2026-05-20T20:32:11.500941"
       }
     },
     {
@@ -1625,7 +1625,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-commscope-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.123590"
+        "last_updated": "2026-05-20T20:32:11.500941"
       }
     },
     {
@@ -1679,7 +1679,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.123590"
+        "last_updated": "2026-05-20T20:32:11.500941"
       }
     },
     {
@@ -1692,7 +1692,7 @@
       "region": "AMAPAC",
       "location": "3591 YEON AVE\nPORTLAND, OR 97210\nUSA",
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -1733,7 +1733,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-portland-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.123590"
+        "last_updated": "2026-05-20T20:32:11.500941"
       }
     },
     {
@@ -1746,7 +1746,7 @@
       "region": "AMAPAC",
       "location": "RJR\n200 FORUM PARKWAY\nRURAL HALL, NC 27045\nUSA",
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -1787,7 +1787,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-ruralhall-les",
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.123590"
+        "last_updated": "2026-05-20T20:32:11.500941"
       }
     },
     {
@@ -1800,7 +1800,7 @@
       "region": "AMAPAC",
       "location": "4801 Mercantile Dr\nFt Worth, TX 76137\nUSA",
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -1841,7 +1841,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-05-20T20:21:47.124597"
+        "last_updated": "2026-05-20T20:32:11.500941"
       }
     }
   ]

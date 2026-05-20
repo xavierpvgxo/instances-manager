@@ -36,7 +36,7 @@ Mapeo de columnas:
 
 Reglas:
 - `card_title` = `<Client> - <NP Env>` (fallback a Prod Env / Site Code).
-- `live` = la columna Go-Live tiene valor (cualquier fecha).
+- `live` = la columna Prod Env tiene un valor real (TBD no cuenta). No depende de Go-Live.
 - `region` = `instance` `be40` → `AMAPAC`, `bh10` → `EUROPE`, otro → `null`.
 - `"PR12 - NO SSO"` → code `PR12` + `flags: ["NO SSO"]`.
 - URLs **calculadas**: `https://<instance>-gxo-wms-<kind>-<env>.jdadelivers.com<suffix>`
@@ -97,7 +97,7 @@ Solo hoja `Client Info`, 20 columnas. El `Client ID list.xlsx` completo (factura
 
 ## Métricas (2026-05-20)
 
-- Total: **34 instancias** · Live: **15** · No-live: **19**
+- Total: **34 instancias** · Live: **30** · No-live: **4** (las 4 filas TBD)
 - Region: AMAPAC 28 · EUROPE 6
 - Sin `extensions_repo`: 4 (sin GIT Repo) · Sin URL PROD: 4 (filas TBD)
 - Con flag `NO SSO`: 1 (Food52)

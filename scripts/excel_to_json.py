@@ -30,7 +30,7 @@ Mapeo de columnas (hoja 'Client Info'):
   Y Go-Live           -> go_live / live
 
 Reglas:
-  - live  = la columna Go-Live tiene valor.
+  - live  = la columna Prod Env tiene un valor real (TBD no cuenta).
   - region: instance be40 -> AMAPAC, bh10 -> EUROPE, otro -> None.
   - URLs calculadas: https://<instance>-gxo-wms-<kind>-<env>.jdadelivers.com<suffix>
     kind -> suffix:  web -> /portal,  app -> /service,  con -> (sin path).
@@ -130,6 +130,8 @@ def convert_excel_to_json(input_file, output_file="data/instances.json"):
         instance = normalize_str(row.get("Instance"))
         git_repo = normalize_str(row.get("GIT Repo"))
         go_live = fmt_date(row.get("Go-Live"))
+        # En PROD si Prod Env tiene un valor real (TBD no cuenta como entorno).
+        in_prod = env_for_url(display_prod) is not None
 
         unique_id = f"{display_prod}-{site_code}" if site_code else display_prod
         if unique_id in seen_ids:
@@ -155,7 +157,7 @@ def convert_excel_to_json(input_file, output_file="data/instances.json"):
             "region": region,
             "location": normalize_str(row.get("Location")),
             "operating_hours": normalize_str(row.get("Operating Hours")),
-            "live": go_live is not None,
+            "live": in_prod,
             "go_live": go_live,
             "flags": flags,
 
