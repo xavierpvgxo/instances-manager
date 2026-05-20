@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GXO · Instance Manager</title>
+<script>
+  // Apply saved theme before paint to avoid flash
+  try {
+    if (localStorage.getItem('gxo-im-theme') === 'light')
+      document.documentElement.setAttribute('data-theme','light');
+  } catch(e){}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gxo-orange:#FF3A00;
+    --gxo-orange-soft:#FF5A2C;
+    --gxo-black:#1C1C1C;
+    --gxo-dark:#2E3033;
+    --gxo-light:#F0F0F0;
+    --gxo-white:#FFFFFF;
+
+    --bg:#0F1011;
+    --surface:#1C1C1C;
+    --surface-2:#23262A;
+    --surface-3:#2E3033;
+    --line:rgba(255,255,255,.07);
+    --line-strong:rgba(255,255,255,.14);
+    --text:#F0F0F0;
+    --text-mute:#8A8E94;
+    --text-dim:#5E6268;
+
+    --ok:#22C55E;
+    --warn:#F59E0B;
+    --err:#EF4444;
+
+    --ok-text:#86EFAC;
+    --err-text:#FCA5A5;
+    --kbd-bg:var(--surface-2);
+
+    --glow-1:rgba(255,58,0,.18);
+    --glow-2:rgba(255,90,44,.10);
+
+    --r-sm:6px; --r-md:10px; --r-lg:14px; --r-xl:20px;
+    --shadow-card:0 1px 0 rgba(255,255,255,.04) inset, 0 8px 24px rgba(0,0,0,.35);
+  }
+
+  [data-theme="light"]{
+    --bg:#F7F7F8;
+    --surface:#FFFFFF;
+    --surface-2:#F0F0F0;
+    --surface-3:#E5E5E8;
+    --line:rgba(28,28,28,.08);
+    --line-strong:rgba(28,28,28,.16);
+    --text:#1C1C1C;
+    --text-mute:#5E6268;
+    --text-dim:#A0A4AA;
+
+    --ok:#1F8A4C;
+    --warn:#B45309;
+    --err:#B91C1C;
+
+    --ok-text:#1F8A4C;
+    --err-text:#B91C1C;
+    --kbd-bg:#FFFFFF;
+
+    --glow-1:rgba(255,58,0,.10);
+    --glow-2:rgba(255,90,44,.06);
+
+    --shadow-card:0 1px 2px rgba(28,28,28,.04), 0 0 0 1px rgba(28,28,28,.04);
+  }
+
+  /* ── Light-mode element overrides (where color isn't a variable) ── */
+  [data-theme="light"] .conn-btn.np{ color:#1F8A4C; border-color:#C8E2D2; }
+  [data-theme="light"] .conn-btn.pr{ color:#B91C1C; border-color:#FFD0BB; }
+  [data-theme="light"] .conn-btn:hover{ color:#fff; }
+  [data-theme="light"] .conn-btn.np:hover{ background:#1F8A4C; color:#fff; }
+  [data-theme="light"] .conn-btn.pr:hover{ background:var(--gxo-orange); color:#fff; }
+  [data-theme="light"] .side{ background:linear-gradient(180deg, rgba(28,28,28,.02), transparent 30%); }
+  [data-theme="light"] .nav-item:hover{ background:rgba(28,28,28,.04); }
+  [data-theme="light"] .nav-item.active{ color:var(--gxo-black); background:rgba(255,58,0,.08); border-color:rgba(255,58,0,.30); }
+  [data-theme="light"] .btn{ background:var(--surface); }
+  [data-theme="light"] .btn:hover{ background:var(--surface-2); border-color:var(--line-strong); }
+  [data-theme="light"] .btn-ghost:hover{ background:rgba(28,28,28,.05); }
+  [data-theme="light"] .side-foot{ background:var(--surface); }
+  [data-theme="light"] .card{ background:linear-gradient(180deg, rgba(28,28,28,.015), transparent 40%), var(--surface); }
+  [data-theme="light"] .pill{ background:rgba(28,28,28,.05); }
+  [data-theme="light"] .env-tag.ar{ background:rgba(28,28,28,.06); }
+  [data-theme="light"] .toast{ background:var(--gxo-black); color:#fff; border-color:transparent; }
+  [data-theme="light"] .search input:focus{ box-shadow:0 0 0 3px rgba(255,58,0,.12); }
+  [data-theme="light"] .kpi-spark{ opacity:.7; }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    font-family:'Geist','Inter',-apple-system,system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    font-size:14px;
+    line-height:1.45;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* ambient glow */
+  body::before{
+    content:"";
+    position:fixed; inset:-200px -200px auto auto;
+    width:900px; height:900px; pointer-events:none; z-index:0;
+    background:radial-gradient(circle at center, var(--glow-1), transparent 60%);
+    filter:blur(40px);
+  }
+  body::after{
+    content:"";
+    position:fixed; inset:auto auto -300px -200px;
+    width:700px; height:700px; pointer-events:none; z-index:0;
+    background:radial-gradient(circle at center, var(--glow-2), transparent 60%);
+    filter:blur(40px);
+  }
+
+  code, .mono { font-family:'Geist Mono', ui-monospace, monospace; }
+
+  /* ───── Layout ───── */
+  .app{ display:grid; grid-template-columns: 240px 1fr; min-height:100vh; position:relative; z-index:1; }
+
+  /* ───── Sidebar ───── */
+  .side{
+    border-right:2px solid var(--gxo-orange);
+    padding:22px 18px 18px;
+    background:linear-gradient(180deg, rgba(255,255,255,.02), transparent 30%);
+    position:sticky; top:0; height:100vh;
+    display:flex; flex-direction:column; gap:24px;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; }
+  .brand-logo{
+    min-width:42px; height:34px; padding:0 8px; border-radius:9px;
+    background:var(--gxo-orange);
+    display:grid; place-items:center;
+    color:#fff; font-weight:800; font-size:13px; letter-spacing:.5px;
+    box-shadow:0 6px 18px rgba(255,58,0,.45);
+  }
+  .brand-name{ font-weight:700; font-size:15px; letter-spacing:-.01em; }
+  .brand-sub{ font-size:11px; color:var(--text-mute); margin-top:1px; }
+
+  .nav-section{ display:flex; flex-direction:column; gap:2px; }
+  .nav-label{ font-size:10px; text-transform:uppercase; letter-spacing:.12em; color:var(--text-dim); padding:0 10px 8px; }
+  .nav-item{
+    display:flex; align-items:center; gap:10px;
+    padding:8px 10px; border-radius:var(--r-sm);
+    color:var(--text-mute); cursor:pointer; font-size:13px; font-weight:500;
+    transition:all .15s ease;
+    border:1px solid transparent;
+  }
+  .nav-item:hover{ background:rgba(255,255,255,.04); color:var(--text); }
+  .nav-item.active{
+    background:rgba(255,58,0,.10);
+    color:#fff;
+    border-color:rgba(255,58,0,.25);
+  }
+  .nav-item .dot{ width:6px; height:6px; border-radius:50%; background:currentColor; opacity:.5; }
+  .nav-item.active .dot{ background:var(--gxo-orange); opacity:1; }
+  .nav-count{ margin-left:auto; font-size:11px; color:var(--text-dim); }
+
+  .side-foot{ margin-top:auto; padding:12px; border:1px solid var(--line); border-radius:var(--r-md); background:rgba(255,255,255,.02); }
+  .side-foot .row{ display:flex; align-items:center; gap:10px; }
+  .avatar{ width:30px; height:30px; border-radius:50%; background:linear-gradient(135deg,#FF3A00,#FF7A4C); display:grid; place-items:center; color:#fff; font-weight:700; font-size:12px;}
+  .side-foot .name{ font-size:12px; font-weight:600; }
+  .side-foot .role{ font-size:11px; color:var(--text-dim); }
+
+  /* ───── Main ───── */
+  .main{ padding:22px 28px 60px; min-width:0; }
+
+  .topbar{
+    display:flex; align-items:center; gap:14px;
+    padding-bottom:18px;
+    margin-bottom:18px;
+    border-bottom:1px solid var(--line);
+  }
+  .crumbs{ font-size:12px; color:var(--text-mute); }
+  .crumbs b{ color:var(--text); font-weight:600; }
+
+  .page-head{ display:flex; align-items:flex-end; gap:18px; justify-content:space-between; margin-bottom:22px; flex-wrap:wrap; }
+  .page-title{ font-size:26px; font-weight:600; letter-spacing:-.02em; }
+  .page-sub{ color:var(--text-mute); font-size:13px; margin-top:4px; }
+  .head-actions{ display:flex; gap:8px; }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:9px 14px; border-radius:var(--r-sm);
+    background:var(--surface-2); border:1px solid var(--line-strong);
+    color:var(--text); font:inherit; font-size:13px; font-weight:500;
+    cursor:pointer; transition:all .15s ease;
+  }
+  .btn:hover{ background:var(--surface-3); border-color:rgba(255,255,255,.22); }
+  .btn-primary{ background:var(--gxo-orange); border-color:var(--gxo-orange); color:#fff; box-shadow:0 4px 14px rgba(255,58,0,.35); }
+  .btn-primary:hover{ background:var(--gxo-orange-soft); border-color:var(--gxo-orange-soft); }
+  .btn-ghost{ background:transparent; border-color:var(--line); }
+  .btn-ghost:hover{ background:rgba(255,255,255,.04); }
+
+  /* ───── KPI strip ───── */
+  .kpis{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:12px;
+    margin-bottom:22px;
+  }
+  .kpi{
+    position:relative; overflow:hidden;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-left:3px solid var(--gxo-orange);
+    border-radius:var(--r-md);
+    padding:16px 18px;
+  }
+  .kpi-label{ font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--text-mute); }
+  .kpi-value{ font-size:28px; font-weight:600; margin-top:6px; letter-spacing:-.02em; display:flex; align-items:baseline; gap:8px; }
+  .kpi-delta{ font-size:11px; color:var(--ok); font-weight:500; }
+  .kpi.is-orange .kpi-value{ color:var(--gxo-orange); }
+  .kpi.is-ok .kpi-value{ color:var(--ok); }
+  .kpi.is-warn .kpi-value{ color:var(--warn); }
+  .kpi-spark{ position:absolute; right:14px; bottom:12px; opacity:.5; }
+
+  /* ───── Toolbar ───── */
+  .toolbar{
+    display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+    margin-bottom:18px;
+  }
+  .search{
+    position:relative; flex:1; min-width:280px;
+  }
+  .search input{
+    width:100%;
+    background:var(--surface);
+    border:1px solid var(--line-strong);
+    color:var(--text);
+    padding:11px 14px 11px 40px;
+    border-radius:var(--r-sm);
+    font:inherit; font-size:13px;
+    transition: all .15s ease;
+  }
+  .search input::placeholder{ color:var(--text-dim); }
+  .search input:focus{ outline:none; border-color:var(--gxo-orange); box-shadow:0 0 0 3px rgba(255,58,0,.15); }
+  .search svg{ position:absolute; left:13px; top:50%; transform:translateY(-50%); color:var(--text-mute); }
+  .search kbd{
+    position:absolute; right:10px; top:50%; transform:translateY(-50%);
+    background:var(--surface-2); border:1px solid var(--line-strong);
+    border-radius:4px; padding:2px 6px; font-size:10px; color:var(--text-mute);
+    font-family:inherit;
+  }
+
+  .select{
+    background:var(--surface);
+    border:1px solid var(--line-strong);
+    color:var(--text);
+    padding:10px 32px 10px 12px;
+    border-radius:var(--r-sm);
+    font:inherit; font-size:13px;
+    appearance:none; -webkit-appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238A8E94' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat:no-repeat; background-position:right 10px center;
+    cursor:pointer;
+  }
+  .select:focus{ outline:none; border-color:var(--gxo-orange); }
+
+  .seg{
+    display:inline-flex; background:var(--surface); border:1px solid var(--line-strong);
+    border-radius:var(--r-sm); padding:3px; gap:2px;
+  }
+  .seg button{
+    background:transparent; border:none; color:var(--text-mute);
+    padding:6px 10px; border-radius:4px; font:inherit; font-size:12px; cursor:pointer;
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  .seg button.active{ background:var(--surface-3); color:var(--text); }
+
+  /* ───── Grid of instance cards ───── */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(420px, 1fr));
+    gap:14px;
+  }
+
+  .card{
+    position:relative;
+    background:linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,0) 40%), var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--r-lg);
+    padding:18px 18px 16px;
+    box-shadow:var(--shadow-card);
+    transition: border-color .15s ease, transform .15s ease;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .card:hover{ border-color:var(--line-strong); }
+  .card::before{
+    content:""; position:absolute; left:0; top:18px; bottom:18px;
+    width:3px; border-radius:3px;
+    background:var(--gxo-orange);
+    opacity:0;
+  }
+  .card.live::before{ opacity:1; }
+
+  .c-head{ display:flex; align-items:flex-start; gap:12px; }
+  .c-title{ font-size:15px; font-weight:700; letter-spacing:-.01em; line-height:1.3; color:var(--gxo-orange); }
+  .c-sub{ font-size:12px; color:var(--text-mute); margin-top:3px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .c-sub .mono{ color:var(--gxo-orange); font-weight:500; }
+
+  .pill{
+    display:inline-flex; align-items:center; gap:5px;
+    padding:3px 8px; border-radius:99px;
+    font-size:10.5px; font-weight:600; letter-spacing:.04em;
+    background:rgba(255,255,255,.06); border:1px solid var(--line-strong);
+    color:var(--text-mute); text-transform:uppercase;
+  }
+  .pill .dot{ width:6px; height:6px; border-radius:50%; background:currentColor; }
+
+  .live-pill{ background:rgba(34,197,94,.10); border-color:rgba(34,197,94,.30); color:var(--ok); animation:live-blink 1.4s ease-in-out infinite; }
+  .live-pill .dot{ background:var(--ok); box-shadow:0 0 0 4px rgba(34,197,94,.18); animation:pulse 1.8s infinite; }
+  .down-pill{ background:rgba(239,68,68,.10); border-color:rgba(239,68,68,.30); color:var(--err); }
+  .down-pill .dot{ background:var(--err); }
+
+  @keyframes pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(34,197,94,.18); } 50%{ box-shadow:0 0 0 8px rgba(34,197,94,0); } }
+  @keyframes live-blink{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
+
+  .flag{
+    display:inline-block; padding:2px 7px; border-radius:4px;
+    background:rgba(255,58,0,.12); color:var(--gxo-orange);
+    border:1px solid rgba(255,58,0,.30);
+    font-size:10px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
+  }
+
+  /* meta grid */
+  .meta{ display:grid; grid-template-columns:repeat(2, 1fr); gap:6px 16px; }
+  .meta-item{ display:flex; flex-direction:column; gap:1px; min-width:0; }
+  .meta-k{ font-size:10px; color:var(--text-dim); text-transform:uppercase; letter-spacing:.08em; }
+  .meta-v{ font-size:12.5px; color:var(--text); font-weight:500; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+  .sep{ height:1px; background:var(--line); }
+
+  /* Environments table */
+  .env-block .lbl, .conn-block .lbl, .contact-block .lbl{
+    font-size:10px; letter-spacing:.12em; color:var(--text-dim); text-transform:uppercase; margin-bottom:8px;
+  }
+  .env-table{ width:100%; border-collapse:collapse; }
+  .env-table th{ font-size:10px; color:var(--text-dim); text-transform:uppercase; letter-spacing:.08em; text-align:left; padding:0 6px 6px 0; font-weight:500; }
+  .env-table td{ padding:4px 6px 4px 0; font-size:12px; vertical-align:middle; }
+  .env-table tr + tr td{ border-top:1px dashed var(--line); }
+  .env-tag{
+    display:inline-flex; padding:2px 6px; border-radius:4px; font-size:10px; font-weight:700;
+    letter-spacing:.06em;
+  }
+  .env-tag.np{ background:rgba(34,197,94,.12); color:var(--ok); }
+  .env-tag.pr{ background:rgba(255,58,0,.14); color:var(--gxo-orange); }
+  .env-tag.ar{ background:rgba(255,255,255,.08); color:var(--text-mute); }
+  .env-code{ color:var(--text); font-weight:500; }
+  .env-ver{ color:var(--text-mute); }
+  .env-realm{ color:var(--text-mute); }
+  .env-empty{ color:var(--text-dim); }
+
+  /* Connectivity */
+  .conn-row{ display:grid; grid-template-columns:80px 1fr 1fr; gap:8px; align-items:center; margin-bottom:6px; }
+  .conn-label{ font-size:11px; color:var(--text-mute); display:flex; align-items:center; gap:6px; }
+  .conn-label svg{ color:var(--gxo-orange); }
+  .conn-btn{
+    width:100%;
+    padding:7px 10px; border-radius:6px;
+    border:1px solid var(--line-strong);
+    background:transparent; color:var(--text-mute);
+    font:inherit; font-size:11.5px; font-weight:600; letter-spacing:.04em;
+    cursor:pointer; text-align:center; text-decoration:none;
+    display:inline-flex; align-items:center; justify-content:center; gap:6px;
+    transition:all .12s ease;
+    text-transform:uppercase;
+  }
+  .conn-btn:hover{ border-color:var(--gxo-orange); color:#fff; background:rgba(255,58,0,.08); }
+  .conn-btn.np{ color:#86EFAC; border-color:rgba(34,197,94,.30); }
+  .conn-btn.np:hover{ background:rgba(34,197,94,.10); border-color:var(--ok); }
+  .conn-btn.pr{ color:#FCA5A5; border-color:rgba(239,68,68,.30); }
+  .conn-btn.pr:hover{ background:rgba(239,68,68,.10); border-color:var(--err); }
+  .conn-btn.disabled{ opacity:.35; pointer-events:none; }
+
+  /* Contact */
+  .contact-row{ display:flex; align-items:center; gap:10px; font-size:12px; margin-bottom:4px; }
+  .contact-row svg{ color:var(--text-dim); flex-shrink:0; }
+  .contact-row b{ color:var(--text-mute); font-weight:500; min-width:84px; }
+  .contact-row span{ color:var(--text); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+  /* Footer button */
+  .ext-btn{
+    margin-top:auto;
+    background:var(--gxo-orange);
+    border:1px solid var(--gxo-orange);
+    color:#fff;
+    padding:10px 12px; border-radius:8px;
+    font:inherit; font-size:12.5px; font-weight:600;
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    cursor:pointer; transition:all .15s ease;
+    text-decoration:none;
+    box-shadow:0 4px 14px rgba(255,58,0,.30);
+  }
+  .ext-btn:hover{ background:var(--gxo-orange-soft); border-color:var(--gxo-orange-soft); }
+  .ext-btn.disabled{
+    background:var(--surface-2);
+    border-color:var(--line-strong);
+    color:var(--text-dim);
+    cursor:not-allowed; pointer-events:none;
+    box-shadow:none;
+  }
+
+  /* Empty + loading */
+  .loading{ padding:60px; text-align:center; color:var(--text-mute); }
+  .empty{ padding:60px; text-align:center; color:var(--text-mute); border:1px dashed var(--line-strong); border-radius:var(--r-lg); }
+
+  /* Toast */
+  .toast{
+    position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:var(--gxo-black); color:#fff; border:1px solid var(--line-strong);
+    padding:10px 18px; border-radius:8px; font-size:13px; font-weight:500;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+    opacity:0; transition:opacity .2s, transform .2s; z-index:9999;
+  }
+  .toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+
+  /* Responsive */
+  @media (max-width: 980px){
+    .app{ grid-template-columns:1fr; }
+    .side{ position:relative; height:auto; flex-direction:row; align-items:center; justify-content:space-between; padding:14px 18px; }
+    .side-foot, .nav-section.is-secondary { display:none; }
+    .kpis{ grid-template-columns:repeat(2,1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ───── Sidebar ───── -->
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-logo">GXO</div>
+      <div>
+        <div class="brand-name">GXO Logistics</div>
+        <div class="brand-sub">Instance Manager</div>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-label">Workspace</div>
+      <div class="nav-item active">
+        <span class="dot"></span> BY WMS Instances
+        <span class="nav-count" id="navCountAll">—</span>
+      </div>
+      <div class="nav-item"><span class="dot"></span> Deployments</div>
+      <div class="nav-item"><span class="dot"></span> Change requests</div>
+      <div class="nav-item"><span class="dot"></span> Runbooks</div>
+    </div>
+
+    <div class="nav-section is-secondary">
+      <div class="nav-label">Monitoring</div>
+      <div class="nav-item"><span class="dot"></span> Health</div>
+      <div class="nav-item"><span class="dot"></span> Incidents</div>
+      <div class="nav-item"><span class="dot"></span> Audit log</div>
+    </div>
+
+    <div class="side-foot">
+      <div class="row">
+        <div class="avatar">XP</div>
+        <div>
+          <div class="name">Xavier P.</div>
+          <div class="role">Platform · EMEA</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ───── Main ───── -->
+  <main class="main">
+
+    <div class="topbar">
+      <div class="crumbs">Platform &nbsp;/&nbsp; <b>BY WMS Instances</b></div>
+    </div>
+
+    <div class="page-head">
+      <div>
+        <div class="page-title">BY WMS INSTANCE MANAGER</div>
+        <div class="page-sub">Monitor and manage every Blue Yonder WMS deployment across the GXO estate.</div>
+      </div>
+      <div class="head-actions">
+        <button class="btn btn-ghost" id="themeToggle" title="Toggle light / dark">
+          <svg id="themeIconDark" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg id="themeIconLight" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span id="themeLabel">Light</span>
+        </button>
+        <button class="btn btn-ghost">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export
+        </button>
+      </div>
+    </div>
+
+    <!-- KPI strip -->
+    <div class="kpis" id="kpis"></div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <div class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchInput" placeholder="Search client, site, instance, realm, version…">
+        <kbd>⌘ K</kbd>
+      </div>
+      <select class="select" id="filterLive">
+        <option value="all">All status</option>
+        <option value="true">Live</option>
+        <option value="false">Not live</option>
+      </select>
+      <select class="select" id="filterRegion">
+        <option value="all">All regions</option>
+      </select>
+      <div class="seg" role="tablist">
+        <button class="active" data-view="grid">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          Grid
+        </button>
+        <button data-view="compact">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          Compact
+        </button>
+      </div>
+    </div>
+
+    <div id="loadingIndicator" class="loading">Loading instances…</div>
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty" style="display:none;">No instances match your filters.</div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const CONFIG = {
+  path: 'data/instances.json',
+  owner: 'xavierpvgxo',
+  repo: 'instances-manager',
+  branch: 'main'
+};
+let instancesData = [];
+let viewMode = 'grid';
+
+async function loadInstances() {
+  const local = CONFIG.path;
+  const remote = `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/${CONFIG.path}`;
+  let lastErr;
+  for (const url of [local, remote]) {
+    try {
+      const r = await fetch(url, { cache: 'no-store' });
+      if (r.ok) return await r.json();
+      lastErr = new Error('HTTP ' + r.status);
+    } catch (e) { lastErr = e; }
+  }
+  throw lastErr || new Error('No data source reachable');
+}
+
+function esc(v){
+  if (v === null || v === undefined) return '';
+  return String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(()=>t.classList.remove('show'), 1800);
+}
+
+function copyText(text){
+  navigator.clipboard.writeText(text).then(
+    ()=>showToast('Copied · ' + text.slice(0, 36) + (text.length>36?'…':'')),
+    ()=>showToast('Could not copy')
+  );
+}
+
+function fillFilters(){
+  const regions = new Set();
+  instancesData.forEach(i => { if (i.region) regions.add(i.region); });
+  const el = document.getElementById('filterRegion');
+  [...regions].sort().forEach(r => {
+    const opt = document.createElement('option');
+    opt.value = r; opt.textContent = r;
+    el.appendChild(opt);
+  });
+}
+
+function envRow(label, env, css){
+  env = env || {};
+  if (!env.code && !env.version && !env.realm) {
+    return `<tr><td><span class="env-tag ${css}">${label}</span></td><td colspan="3" class="env-empty">— not deployed</td></tr>`;
+  }
+  return `<tr>
+    <td><span class="env-tag ${css}">${label}</span></td>
+    <td class="env-code mono">${esc(env.code) || '—'}</td>
+    <td class="env-ver mono">${esc(env.version) || '—'}</td>
+    <td class="env-realm mono" title="${esc(env.realm)||''}">${esc(env.realm) || '—'}</td>
+  </tr>`;
+}
+
+function connButton(url, kind, mode){
+  const tag = kind === 'np' ? 'NP' : 'PROD';
+  if (!url) return `<span class="conn-btn ${kind} disabled">${tag} —</span>`;
+  if (mode === 'copy') {
+    return `<button type="button" class="conn-btn ${kind}" data-copy="${esc(url)}">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      ${tag}
+    </button>`;
+  }
+  return `<a class="conn-btn ${kind}" href="${esc(url)}" target="_blank" rel="noopener">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    ${tag}
+  </a>`;
+}
+
+function connRow(iconSvg, label, np, prod, mode){
+  return `<div class="conn-row">
+    <div class="conn-label">${iconSvg}${label}</div>
+    ${connButton(np, 'np', mode)}
+    ${connButton(prod, 'pr', mode)}
+  </div>`;
+}
+
+function render(){
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const liveF = document.getElementById('filterLive').value;
+  const regionF = document.getElementById('filterRegion').value;
+
+  const filtered = instancesData.filter(i => {
+    const e = i.environments || {};
+    const haystack = [
+      i.card_title, i.client, i.client_id, i.id, i.instance,
+      i.site, i.region, i.location, i.operating_hours,
+      (i.flags || []).join(' '),
+      e.np?.code, e.np?.version, e.np?.realm,
+      e.prod?.code, e.prod?.version, e.prod?.realm,
+      e.arch?.code,
+      i.contact?.poc, i.contact?.site_contact, i.contact?.site_distribution
+    ].filter(Boolean).join(' ').toLowerCase();
+    const matchSearch = haystack.includes(search);
+    const matchLive = liveF === 'all' || String(i.live) === liveF;
+    const matchRegion = regionF === 'all' || i.region === regionF;
+    return matchSearch && matchLive && matchRegion;
+  });
+
+  // KPIs
+  const total = instancesData.length;
+  const live = instancesData.filter(x => x.live).length;
+  const onboarding = instancesData.filter(x => (x.flags||[]).includes('Onboarding')).length;
+  const regions = new Set(instancesData.map(x=>x.region).filter(Boolean)).size;
+
+  document.getElementById('navCountAll').textContent = total;
+
+  document.getElementById('kpis').innerHTML = `
+    <div class="kpi"><div class="kpi-label">Total instances</div><div class="kpi-value">${total}<span class="kpi-delta">+2 this Q</span></div></div>
+    <div class="kpi is-ok"><div class="kpi-label">Live in production</div><div class="kpi-value">${live}</div></div>
+    <div class="kpi is-warn"><div class="kpi-label">Onboarding</div><div class="kpi-value">${onboarding}</div></div>
+    <div class="kpi is-orange"><div class="kpi-label">Regions covered</div><div class="kpi-value">${regions}</div></div>
+  `;
+
+  const gridEl = document.getElementById('grid');
+  const emptyEl = document.getElementById('empty');
+
+  if (filtered.length === 0) {
+    gridEl.innerHTML = '';
+    emptyEl.style.display = 'block';
+    return;
+  }
+  emptyEl.style.display = 'none';
+
+  gridEl.innerHTML = filtered.map(it => {
+    const e = it.environments || {};
+    const u = it.urls || {};
+    const c = it.contact || {};
+
+    const flags = (it.flags || []).map(f => `<span class="flag">${esc(f)}</span>`).join('');
+    const livePill = it.live
+      ? `<span class="pill live-pill"><span class="dot"></span>LIVE</span>`
+      : `<span class="pill down-pill"><span class="dot"></span>NOT LIVE</span>`;
+
+    const webIcon = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`;
+    const appIcon = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>`;
+    const consoleIcon = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>`;
+
+    const extBtn = it.extensions_repo
+      ? `<a class="ext-btn" href="${esc(it.extensions_repo)}" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          Extensions repository
+        </a>`
+      : `<span class="ext-btn disabled">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+          No extensions repo
+        </span>`;
+
+    return `
+    <article class="card ${it.live ? 'live' : ''}">
+      <div class="c-head">
+        <div style="flex:1; min-width:0;">
+          <div class="c-title">${esc(it.card_title)}</div>
+          <div class="c-sub">
+            <span>${esc(it.client)}</span>
+            <span class="mono">${esc(it.instance) || '—'}</span>
+            ${flags}
+          </div>
+        </div>
+        ${livePill}
+      </div>
+
+      <div class="meta">
+        <div class="meta-item"><div class="meta-k">Client ID</div><div class="meta-v mono">${esc(it.client_id) || '—'}</div></div>
+        <div class="meta-item"><div class="meta-k">Region</div><div class="meta-v">${esc(it.region) || '—'}</div></div>
+        <div class="meta-item"><div class="meta-k">Site</div><div class="meta-v">${esc(it.site) || '—'}</div></div>
+        <div class="meta-item"><div class="meta-k">Location</div><div class="meta-v">${esc(it.location) || '—'}</div></div>
+        <div class="meta-item"><div class="meta-k">Operating hours</div><div class="meta-v">${esc(it.operating_hours) || '—'}</div></div>
+        <div class="meta-item"><div class="meta-k">Go‑live</div><div class="meta-v">${esc(it.go_live) || '—'}</div></div>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="env-block">
+        <div class="lbl">Environments</div>
+        <table class="env-table">
+          <thead><tr><th></th><th>Code</th><th>Version</th><th>Realm</th></tr></thead>
+          <tbody>
+            ${envRow('NP', e.np, 'np')}
+            ${envRow('PR', e.prod, 'pr')}
+            ${envRow('AR', e.arch, 'ar')}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="contact-block">
+        <div class="lbl">Contact</div>
+        <div class="contact-row"><b>POC</b><span>${esc(c.poc) || '—'}</span></div>
+        <div class="contact-row"><b>Site</b><span>${esc(c.site_contact) || '—'}</span></div>
+        <div class="contact-row"><b>Dist. list</b><span>${esc(c.site_distribution) || '—'}</span></div>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="conn-block">
+        <div class="lbl">Connectivity</div>
+        ${connRow(webIcon, 'WEB', u.web?.np, u.web?.prod, 'link')}
+        ${connRow(appIcon, 'APP', u.app?.np, u.app?.prod, 'copy')}
+        ${connRow(consoleIcon, 'CONSOLE', u.console?.np, u.console?.prod, 'link')}
+      </div>
+
+      ${extBtn}
+    </article>`;
+  }).join('');
+
+  // wire copy buttons
+  gridEl.querySelectorAll('[data-copy]').forEach(b => {
+    b.addEventListener('click', () => copyText(b.getAttribute('data-copy')));
+  });
+}
+
+function setupEvents(){
+  document.getElementById('searchInput').addEventListener('input', render);
+  document.getElementById('filterLive').addEventListener('change', render);
+  document.getElementById('filterRegion').addEventListener('change', render);
+  document.querySelectorAll('.seg button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.seg button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      viewMode = btn.dataset.view;
+      document.getElementById('grid').style.gridTemplateColumns =
+        viewMode === 'compact' ? 'repeat(auto-fill, minmax(340px, 1fr))' : 'repeat(auto-fill, minmax(420px, 1fr))';
+    });
+  });
+
+  // Theme toggle (light / dark)
+  const themeBtn = document.getElementById('themeToggle');
+  const iconDark = document.getElementById('themeIconDark');
+  const iconLight = document.getElementById('themeIconLight');
+  const themeLabel = document.getElementById('themeLabel');
+  function applyTheme(theme){
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      iconDark.style.display = 'none';
+      iconLight.style.display = '';
+      themeLabel.textContent = 'Dark';
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      iconDark.style.display = '';
+      iconLight.style.display = 'none';
+      themeLabel.textContent = 'Light';
+    }
+  }
+  const savedTheme = localStorage.getItem('gxo-im-theme') || 'dark';
+  applyTheme(savedTheme);
+  themeBtn.addEventListener('click', () => {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    localStorage.setItem('gxo-im-theme', next);
+    applyTheme(next);
+  });
+}
+
+(async function init(){
+  try {
+    const data = await loadInstances();
+    instancesData = data.instances || [];
+    document.getElementById('loadingIndicator').style.display = 'none';
+    fillFilters();
+    render();
+    setupEvents();
+  } catch (err) {
+    document.getElementById('loadingIndicator').innerHTML =
+      '⚠️ Could not load data: ' + esc(err.message) +
+      '<br><small>Serve the folder over HTTP so <code>data/instances.json</code> is reachable.</small>';
+  }
+})();
+</script>
+</body>
+</html>
+
+<style id="__om-edit-overrides">
+#grid >article:nth-child(1) >:is(h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,label,span,a,em,strong,small,td,th,caption) { background-color: rgb(4, 4, 4) !important }
+</style>

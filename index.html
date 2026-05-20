@@ -1,414 +1,838 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GXO Instances Manager</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GXO · BY WMS Instance Manager</title>
+<script>
+  // Apply saved theme before paint to avoid flash
+  try {
+    if (localStorage.getItem('gxo-im2-theme') === 'dark')
+      document.documentElement.setAttribute('data-theme','dark');
+  } catch(e){}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gxo-orange:#FF3A00;
+    --gxo-orange-dk:#D62F00;
+    --gxo-black:#1C1C1C;
+    --gxo-dark:#2E3033;
+    --gxo-light:#F0F0F0;
+    --gxo-white:#FFFFFF;
 
-        :root {
-            --gxo-blue: #003DA5;
-            --gxo-orange: #FF3A00;
-            --gxo-gray: #6D6E71;
-            --gxo-light-gray: #E5E5E5;
-            --gxo-white: #FFFFFF;
-        }
+    --bg:#F7F7F8;
+    --surface:#FFFFFF;
+    --line:#E5E5E8;
+    --line-2:#D8D9DC;
+    --text:#1C1C1C;
+    --text-2:#4A4D52;
+    --text-3:#7A7E84;
+    --text-4:#A0A4AA;
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--gxo-light-gray);
-            color: var(--gxo-gray);
-        }
+    --ok:#1F8A4C;
+    --ok-bg:#E8F4ED;
+    --warn:#B45309;
+    --warn-bg:#FEF3E2;
+    --err:#B91C1C;
+    --err-bg:#FBE9E9;
 
-        .header {
-            background: linear-gradient(135deg, var(--gxo-orange) 0%, var(--gxo-blue) 100%);
-            color: var(--gxo-white);
-            padding: 20px 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+    --r-sm:4px; --r-md:6px; --r-lg:8px;
+    --shadow-card:0 1px 2px rgba(28,28,28,.04), 0 0 0 1px var(--line);
+    --shadow-pop:0 8px 24px rgba(28,28,28,.08), 0 0 0 1px var(--line);
 
-        .container { max-width: 1400px; margin: 0 auto; padding: 30px 40px; }
+    --topbar-bg:#1C1C1C;
+    --topbar-text:#FFFFFF;
+    --topbar-muted:rgba(255,255,255,.7);
+    --topbar-hover:rgba(255,255,255,.08);
+    --topbar-divider:rgba(255,255,255,.18);
+  }
 
-        .stats-bar {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
-        }
+  [data-theme="dark"]{
+    --bg:#0F1011;
+    --surface:#1C1C1C;
+    --line:#2E3033;
+    --line-2:#3A3D42;
+    --text:#F0F0F0;
+    --text-2:#C2C5CA;
+    --text-3:#8A8E94;
+    --text-4:#5E6268;
 
-        .stat-card {
-            background: var(--gxo-white);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            text-align: center;
-        }
+    --gxo-light:#2E3033;
 
-        .tab, .tab-link {
-            padding: 12px 24px;
-            background: transparent;
-            border: none;
-            color: #FF3A00;
-            font-size: 16px;
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s;
-            font-weight: 500;
-            text-decoration: none;
-            display: inline-block;
-        }
+    --ok:#22C55E;
+    --ok-bg:rgba(34,197,94,.12);
+    --warn:#F59E0B;
+    --warn-bg:rgba(245,158,11,.12);
+    --err:#EF4444;
+    --err-bg:rgba(239,68,68,.12);
 
-        .tab:hover, .tab-link:hover { color: var(--gxo-blue); }
+    --shadow-card:0 1px 2px rgba(0,0,0,.30), 0 0 0 1px rgba(255,255,255,.04);
+    --shadow-pop:0 8px 24px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.06);
 
-        .tab.active {
-            color: var(--gxo-blue);
-            border-bottom-color: var(--gxo-blue);
-        }
+    --topbar-bg:#0A0A0B;
+    --topbar-text:#FFFFFF;
+    --topbar-muted:rgba(255,255,255,.7);
+    --topbar-hover:rgba(255,255,255,.08);
+    --topbar-divider:rgba(255,255,255,.18);
+  }
 
-        .stat-value { font-size: 35px; font-weight: 700; display: block; }
-        .stat-label { color: var(--gxo-gray); font-size: 15px; margin-top: 5px; text-transform: uppercase; }
+  /* dark-mode element overrides */
+  [data-theme="dark"] .subbar{ background:var(--surface); border-color:var(--line); }
+  [data-theme="dark"] .toolbar{ background:var(--surface); }
+  [data-theme="dark"] .kpi{ background:var(--surface); }
+  [data-theme="dark"] .card{ background:var(--surface); }
+  [data-theme="dark"] .card:hover{ box-shadow:0 4px 14px rgba(0,0,0,.4); }
+  [data-theme="dark"] .card-head{ background:linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,0)); }
+  [data-theme="dark"] .card-foot{ background:rgba(255,255,255,.025); }
+  [data-theme="dark"] .env-table thead th{ background:rgba(255,255,255,.025); }
+  [data-theme="dark"] .env-tag.ar{ background:rgba(255,255,255,.08); color:var(--text-2); }
+  [data-theme="dark"] .env-tag.pr{ background:rgba(255,58,0,.18); color:#FF8A5C; }
+  [data-theme="dark"] .env-tag.np{ background:rgba(34,197,94,.15); color:#86EFAC; }
+  [data-theme="dark"] .btn{ background:var(--surface); color:var(--text); }
+  [data-theme="dark"] .btn:hover{ background:var(--gxo-light); }
+  [data-theme="dark"] .search input{ background:var(--surface); color:var(--text); }
+  [data-theme="dark"] .select{ background:var(--surface); color:var(--text); background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238A8E94' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>"); background-repeat:no-repeat; background-position:right 10px center; }
+  [data-theme="dark"] .seg{ background:var(--surface); }
+  [data-theme="dark"] .seg button.active{ background:var(--gxo-orange); color:#fff; }
+  [data-theme="dark"] .empty{ background:var(--surface); }
+  [data-theme="dark"] .tab.active .badge{ color:#fff; }
+  [data-theme="dark"] .conn-btn{ background:var(--surface); color:var(--text-2); }
+  [data-theme="dark"] .conn-btn.np{ color:#86EFAC; border-color:rgba(34,197,94,.3); }
+  [data-theme="dark"] .conn-btn.pr{ color:#FF8A5C; border-color:rgba(255,58,0,.35); }
+  [data-theme="dark"] .c-sub .mono{ background:rgba(255,255,255,.08); color:var(--text); }
+  [data-theme="dark"] .c-sub .flag{ background:rgba(255,58,0,.15); color:#FF8A5C; border-color:rgba(255,58,0,.35); }
 
-        .results-color { color: var(--gxo-orange); }
-        .live-color { color: #00b818; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    font-family:'IBM Plex Sans','Inter',-apple-system,system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    font-size:14px; line-height:1.45;
+    -webkit-font-smoothing:antialiased;
+  }
+  code, .mono { font-family:'IBM Plex Mono', ui-monospace, monospace; }
 
-        .search-box { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;}
-        .search-input { flex: 1; min-width: 250px; padding: 12px 20px; border: 2px solid #FF3A00; border-radius: 6px; font-size: 16px; color: #FF3A00;}
-        .filter-select { padding: 12px 20px; border: 2px solid #FF3A00; color:#FF3A00; border-radius: 6px; background: white; min-width: 150px; }
+  /* ─── Top header ─── */
+  .topbar{
+    background:var(--topbar-bg);
+    color:var(--topbar-text);
+    height:56px; padding:0 24px;
+    display:flex; align-items:center; gap:24px;
+    border-bottom:3px solid var(--gxo-orange);
+    position:sticky; top:0; z-index:50;
+  }
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand-logo{
+    min-width:40px; height:32px; padding:0 8px; background:var(--gxo-orange);
+    display:grid; place-items:center;
+    color:#fff; font-weight:800; font-size:12px; letter-spacing:.5px;
+  }
+  .brand-name{ font-weight:700; font-size:15px; letter-spacing:-.01em; }
+  .brand-divider{ width:1px; height:24px; background:rgba(255,255,255,.18); }
+  .brand-sub{ font-size:13px; color:rgba(255,255,255,.7); font-weight:400; }
 
-        .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #FF3A00; }
+  .top-nav{ display:flex; gap:2px; margin-left:8px; }
+  .top-nav a{
+    color:rgba(255,255,255,.7); text-decoration:none;
+    padding:8px 14px; font-size:13px; font-weight:500;
+    border-radius:4px; transition:background .12s;
+  }
+  .top-nav a:hover{ color:#fff; background:rgba(255,255,255,.08); }
+  .top-nav a.active{ color:#fff; background:rgba(255,255,255,.10); }
 
-        .instances-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 20px; }
-        .instance-card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s; }
-        .instance-card:hover { transform: translateY(-4px); box-shadow: 0 4px 16px rgba(0,61,165,0.15); }
+  .top-spacer{ flex:1; }
+  .top-user{ display:flex; align-items:center; gap:10px; color:#fff; font-size:13px; }
+  .top-user .avatar{ width:30px; height:30px; border-radius:50%; background:var(--gxo-orange); display:grid; place-items:center; font-weight:600; font-size:12px; }
+  .top-btn{ background:transparent !important; border:1px solid transparent !important; color:var(--topbar-muted) !important; padding:7px 10px; }
+  .top-btn:hover{ background:var(--topbar-hover) !important; color:#fff !important; border-color:transparent !important; }
 
-        .instance-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 2px solid var(--gxo-light-gray); }
-        .instance-name { font-size: 19px; font-weight: 700; color: var(--gxo-orange); }
+  /* ─── Page header / subnav ─── */
+  .subbar{
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    padding:18px 28px 0;
+  }
+  .crumbs{ font-size:12px; color:var(--text-3); margin-bottom:6px; }
+  .crumbs a{ color:var(--text-3); text-decoration:none; }
+  .crumbs b{ color:var(--text); font-weight:600; }
+  .page-head{ display:flex; align-items:flex-end; gap:18px; justify-content:space-between; flex-wrap:wrap; padding-bottom:14px; }
+  .page-title{ font-size:22px; font-weight:600; letter-spacing:-.01em; }
+  .page-sub{ font-size:13px; color:var(--text-3); margin-top:2px; }
+  .head-actions{ display:flex; gap:8px; }
 
-        .live-badge { padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; color: white; white-space: nowrap; }
-        .live-badge.yes { background: #00b818; animation: blink 1.3s infinite; }
-        .live-badge.no { background: #ff5252; }
+  .tabs{ display:flex; gap:0; }
+  .tab{
+    padding:10px 18px; background:transparent; border:none;
+    color:var(--text-3); font:inherit; font-size:13px; font-weight:500;
+    cursor:pointer; position:relative; border-bottom:2px solid transparent;
+    margin-bottom:-1px;
+  }
+  .tab:hover{ color:var(--text); }
+  .tab.active{ color:var(--gxo-orange); border-bottom-color:var(--gxo-orange); font-weight:600; }
+  .tab .badge{
+    display:inline-block; margin-left:6px;
+    background:var(--gxo-light); color:var(--text-2);
+    border-radius:99px; padding:1px 8px; font-size:11px; font-weight:600;
+  }
+  .tab.active .badge{ background:var(--gxo-orange); color:#fff; }
 
-        .flag-tag { display: inline-block; background: var(--gxo-blue); color: white; padding: 3px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px; font-weight: 600; vertical-align: middle; }
+  /* ─── Buttons ─── */
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:8px 14px; border-radius:var(--r-sm);
+    background:#fff; border:1px solid var(--line-2);
+    color:var(--text); font:inherit; font-size:13px; font-weight:500;
+    cursor:pointer; transition:all .12s;
+  }
+  .btn:hover{ background:var(--gxo-light); border-color:var(--text-4); }
+  .btn-primary{ background:var(--gxo-orange); border-color:var(--gxo-orange); color:#fff; }
+  .btn-primary:hover{ background:var(--gxo-orange-dk); border-color:var(--gxo-orange-dk); }
+  .btn-ghost{ background:transparent; border-color:transparent; color:var(--text-2); }
+  .btn-ghost:hover{ background:var(--gxo-light); color:var(--text); }
 
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.2; }
-        }
+  /* ─── Page body ─── */
+  .container{ padding:24px 28px 60px; }
 
-        .info-row { display: flex; font-size: 14px; margin-bottom: 8px; }
-        .info-label { font-weight: 600; color: var(--gxo-blue); min-width: 130px; flex-shrink: 0; }
-        .info-row span:last-child { word-break: break-word; }
+  /* KPI strip */
+  .kpis{ display:grid; grid-template-columns:repeat(5, 1fr); gap:12px; margin-bottom:20px; }
+  .kpi{
+    background:var(--surface); border:1px solid var(--line);
+    border-left:4px solid var(--gxo-orange);
+    border-top:1px solid var(--line);
+    border-radius:var(--r-md); padding:14px 16px 14px 18px;
+    position:relative;
+    box-shadow:inset 0 -2px 0 rgba(255,58,0,.12);
+  }
+  .kpi-label{ font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--text-3); font-weight:600; }
+  .kpi-value{ font-size:26px; font-weight:600; margin-top:4px; letter-spacing:-.02em; }
+  .kpi-foot{ font-size:11px; color:var(--text-3); margin-top:4px; }
+  .kpi-foot .up{ color:var(--ok); font-weight:600; }
+  .kpi-accent{ position:absolute; left:0; top:14px; bottom:14px; width:3px; background:var(--gxo-orange); border-radius:0 3px 3px 0; }
+  .kpi.is-ok .kpi-value{ color:var(--ok); }
+  .kpi.is-warn .kpi-value{ color:var(--warn); }
 
-        .section { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--gxo-light-gray); }
-        .section-title { font-size: 12px; font-weight: 700; color: var(--gxo-orange); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 10px; }
+  /* ─── Toolbar ─── */
+  .toolbar{
+    background:#fff; border:1px solid var(--line); border-radius:var(--r-md);
+    padding:12px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+    margin-bottom:14px;
+  }
+  .search{ position:relative; flex:1; min-width:280px; }
+  .search input{
+    width:100%;
+    background:#fff;
+    border:1px solid var(--line-2);
+    color:var(--text);
+    padding:9px 14px 9px 36px;
+    border-radius:var(--r-sm);
+    font:inherit; font-size:13px;
+  }
+  .search input::placeholder{ color:var(--text-4); }
+  .search input:focus{ outline:none; border-color:var(--gxo-orange); box-shadow:0 0 0 3px rgba(255,58,0,.12); }
+  .search svg{ position:absolute; left:11px; top:50%; transform:translateY(-50%); color:var(--text-4); }
 
-        .env-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        .env-table th { text-align: left; font-size: 10px; text-transform: uppercase; color: var(--gxo-gray); letter-spacing: 0.5px; padding: 0 10px 5px 0; font-weight: 700; }
-        .env-table td { padding: 4px 10px 4px 0; vertical-align: top; }
-        .env-name { font-weight: 700; color: var(--gxo-blue); }
-        .env-code { font-weight: 600; color: var(--gxo-orange); }
+  .select{
+    background:#fff; border:1px solid var(--line-2); color:var(--text);
+    padding:8px 30px 8px 12px; border-radius:var(--r-sm);
+    font:inherit; font-size:13px; appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237A7E84' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat:no-repeat; background-position:right 10px center;
+    cursor:pointer;
+  }
+  .seg{ display:inline-flex; background:#fff; border:1px solid var(--line-2); border-radius:var(--r-sm); padding:2px; }
+  .seg button{
+    background:transparent; border:none; color:var(--text-3);
+    padding:6px 10px; border-radius:3px; font:inherit; font-size:12px; cursor:pointer;
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  .seg button.active{ background:var(--gxo-black); color:#fff; }
 
-        .url-group { margin-bottom: 10px; }
-        .url-label { font-size: 12px; font-weight: 600; color: var(--gxo-blue); margin-bottom: 4px; }
-        .url-links { display: flex; gap: 10px; }
+  /* ─── Card grid ─── */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(440px, 1fr));
+    gap:14px;
+  }
 
-        .conn-btn {
-            flex: 1; padding: 7px 6px;
-            background: var(--gxo-light-gray);
-            border: none; border-radius: 4px;
-            font-family: inherit; font-size: 14px; font-weight: 600;
-            text-align: center; text-decoration: none; cursor: pointer;
-            transition: background 0.15s, color 0.15s;
-        }
-        .conn-btn--np { color: #17a52a; }
-        .conn-btn--prod { color: #ff5252; }
-        .conn-btn:hover:not(.conn-btn--disabled) { background: var(--gxo-blue); color: white; }
-        .conn-btn--disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+  .card{
+    background:#fff; border:1px solid var(--line); border-radius:var(--r-md);
+    box-shadow:0 1px 2px rgba(28,28,28,.03);
+    display:flex; flex-direction:column;
+    overflow:hidden;
+    transition:box-shadow .15s, border-color .15s;
+  }
+  .card:hover{ box-shadow:0 4px 14px rgba(28,28,28,.06); border-color:var(--line-2); }
 
-        .extensions-btn { width: 100%; margin-top: 16px; padding: 12px; background: #FF3A00; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 15px; }
-        .extensions-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .card-head{
+    padding:14px 16px;
+    background:linear-gradient(180deg, #FAFAFB, #FFFFFF);
+    border-bottom:1px solid var(--line);
+    display:flex; align-items:flex-start; gap:12px;
+  }
+  .card-head-l{ flex:1; min-width:0; }
+  .c-title{ font-size:15px; font-weight:700; letter-spacing:-.01em; color:var(--gxo-orange); line-height:1.3; }
+  .c-sub{ font-size:12px; color:var(--text-3); margin-top:3px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .c-sub .mono{ background:var(--gxo-light); padding:1px 6px; border-radius:3px; color:var(--gxo-black); font-weight:500; font-size:11px; }
+  .c-sub .flag{
+    background:#FFE8DF; color:var(--gxo-orange-dk);
+    border:1px solid #FFD0BB; padding:1px 6px; border-radius:3px;
+    font-size:10px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
+  }
+  .status{
+    display:inline-flex; align-items:center; gap:6px;
+    padding:4px 9px; border-radius:99px;
+    font-size:11px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
+    flex-shrink:0;
+  }
+  .status.live{ background:var(--ok-bg); color:var(--ok); animation:live-blink 1.4s ease-in-out infinite; }
+  .status.live .dot{ width:6px; height:6px; border-radius:50%; background:var(--ok); animation:pulse 2s infinite; }
+  .status.down{ background:var(--err-bg); color:var(--err); }
+  .status.down .dot{ width:6px; height:6px; border-radius:50%; background:var(--err); }
+  @keyframes pulse{ 0%,100%{ box-shadow:0 0 0 0 rgba(31,138,76,.4);} 50%{ box-shadow:0 0 0 5px rgba(31,138,76,0);} }
+  @keyframes live-blink{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
 
-        .loading { text-align: center; padding: 60px; color: var(--gxo-blue); font-weight: bold; }
+  .card-body{ padding:14px 16px; display:flex; flex-direction:column; gap:14px; }
 
-        .toast {
-            position: fixed; bottom: 32px; left: 50%;
-            transform: translateX(-50%) translateY(20px);
-            background: var(--gxo-blue); color: white;
-            padding: 12px 26px; border-radius: 8px;
-            font-weight: 600; font-size: 14px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-            opacity: 0; pointer-events: none;
-            transition: opacity 0.25s, transform 0.25s;
-            z-index: 9999;
-        }
-        .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-    </style>
+  .meta-table{ display:grid; grid-template-columns:1fr 1fr; gap:8px 18px; }
+  .meta-item{ display:flex; flex-direction:column; gap:1px; min-width:0; }
+  .meta-k{ font-size:10.5px; color:var(--text-3); text-transform:uppercase; letter-spacing:.06em; font-weight:600; }
+  .meta-v{ font-size:13px; color:var(--text); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:500;}
+
+  .section{ }
+  .section-head{
+    display:flex; align-items:center; gap:8px;
+    margin-bottom:8px;
+  }
+  .section-title{ font-size:10.5px; font-weight:700; color:var(--text-2); text-transform:uppercase; letter-spacing:.08em; }
+  .section-line{ flex:1; height:1px; background:var(--line); }
+
+  /* env table */
+  .env-table{ width:100%; border-collapse:collapse; font-size:12.5px; }
+  .env-table thead th{
+    text-align:left; font-size:10px; text-transform:uppercase; letter-spacing:.06em;
+    color:var(--text-3); padding:6px 8px; font-weight:600;
+    border-bottom:1px solid var(--line); background:#FAFAFB;
+  }
+  .env-table tbody td{ padding:7px 8px; border-bottom:1px solid var(--line); vertical-align:middle; }
+  .env-table tbody tr:last-child td{ border-bottom:none; }
+  .env-tag{
+    display:inline-flex; padding:2px 6px; border-radius:3px;
+    font-size:10px; font-weight:700; letter-spacing:.06em;
+  }
+  .env-tag.np{ background:#E8F4ED; color:var(--ok); }
+  .env-tag.pr{ background:#FFE8DF; color:var(--gxo-orange-dk); }
+  .env-tag.ar{ background:#EEF1F5; color:var(--text-2); }
+  .env-cell{ color:var(--text); font-weight:500; }
+  .env-cell.muted{ color:var(--text-4); font-style:italic; }
+
+  /* contact */
+  .contact-row{ display:grid; grid-template-columns:90px 1fr; gap:10px; font-size:13px; margin-bottom:5px; }
+  .contact-row b{ color:var(--text-3); font-weight:500; font-size:12px; }
+  .contact-row span{ color:var(--text); }
+
+  /* connectivity */
+  .conn-row{ display:grid; grid-template-columns:90px 1fr 1fr; gap:8px; align-items:center; margin-bottom:6px; }
+  .conn-label{ font-size:12px; color:var(--text-2); display:flex; align-items:center; gap:6px; font-weight:500; }
+  .conn-label svg{ color:var(--gxo-orange); }
+  .conn-btn{
+    padding:6px 10px; border-radius:var(--r-sm);
+    background:#fff; border:1px solid var(--line-2);
+    color:var(--text-2); font:inherit; font-size:11.5px; font-weight:600;
+    cursor:pointer; text-align:center; text-decoration:none;
+    display:inline-flex; align-items:center; justify-content:center; gap:6px;
+    transition:all .12s; letter-spacing:.04em;
+  }
+  .conn-btn:hover{ background:var(--gxo-black); color:#fff; border-color:var(--gxo-black); }
+  .conn-btn.np{ color:var(--ok); border-color:#C8E2D2; }
+  .conn-btn.np:hover{ background:var(--ok); border-color:var(--ok); color:#fff; }
+  .conn-btn.pr{ color:var(--gxo-orange-dk); border-color:#FFD0BB; }
+  .conn-btn.pr:hover{ background:var(--gxo-orange); border-color:var(--gxo-orange); color:#fff; }
+  .conn-btn.disabled{ opacity:.4; pointer-events:none; }
+
+  /* footer */
+  .card-foot{
+    padding:12px 16px;
+    background:#FAFAFB;
+    border-top:1px solid var(--line);
+    display:flex; gap:8px;
+  }
+  .card-foot .btn{ flex:1; justify-content:center; }
+  .card-foot .btn-primary{ background:var(--gxo-black); border-color:var(--gxo-black); color:#fff; }
+  .card-foot .btn-primary:hover{ background:var(--gxo-orange); border-color:var(--gxo-orange); }
+  .card-foot .btn.disabled{ opacity:.4; pointer-events:none; }
+
+  /* empty / loading */
+  .loading{ padding:60px; text-align:center; color:var(--text-3); }
+  .empty{ padding:60px; text-align:center; color:var(--text-3); background:#fff; border:1px dashed var(--line-2); border-radius:var(--r-md); }
+
+  /* toast */
+  .toast{
+    position:fixed; bottom:24px; left:50%;
+    transform:translateX(-50%) translateY(20px);
+    background:var(--gxo-black); color:#fff;
+    padding:10px 18px; border-radius:var(--r-sm);
+    font-size:13px; font-weight:500;
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+    opacity:0; transition:opacity .2s, transform .2s; z-index:9999;
+  }
+  .toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+  .toast::before{
+    content:""; display:inline-block; width:8px; height:8px; border-radius:50%;
+    background:var(--gxo-orange); margin-right:8px; vertical-align:middle;
+  }
+
+  @media (max-width: 900px){
+    .kpis{ grid-template-columns:repeat(2,1fr); }
+    .top-nav{ display:none; }
+  }
+</style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>GXO Logistics - Instance Manager</h1>
-        <p>Management and Monitoring BY WMS Instances</p>
+<!-- ─── Top header ─── -->
+<div class="topbar">
+  <div class="brand">
+    <div class="brand-logo">GXO</div>
+    <div class="brand-name">GXO</div>
+  </div>
+  <div class="brand-divider"></div>
+  <div class="brand-sub">Instance Manager</div>
+
+  <nav class="top-nav">
+    <a href="#" class="active">Instances</a>
+  </nav>
+
+  <div class="top-spacer"></div>
+
+  <button class="btn btn-ghost top-btn" id="themeToggle" title="Toggle light / dark">
+    <svg id="themeIconLight" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    <svg id="themeIconDark" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span id="themeLabel">Dark</span>
+  </button>
+  <div class="top-user">
+    <div class="avatar">XP</div>
+    <span>Xavier P.</span>
+  </div>
+</div>
+
+<!-- ─── Subbar ─── -->
+<div class="subbar">
+  <div class="crumbs"><a href="#">Platform</a> &nbsp;/&nbsp; <b>BY WMS Instances</b></div>
+  <div class="page-head">
+    <div>
+      <div class="page-title">BY WMS Instances Manager</div>
+      <div class="page-sub">Manage every Blue Yonder WMS deployment across GXO.</div>
     </div>
+    <div class="head-actions">
+      <button class="btn" id="btnExport">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Export CSV
+      </button>
+      <button class="btn" id="btnRefresh">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        Refresh
+      </button>
+    </div>
+  </div>
+  <div class="tabs">
+    <button class="tab active" data-status="all">All instances <span class="badge" id="badgeAll">—</span></button>
+    <button class="tab" data-status="true">Live <span class="badge" id="badgeLive">—</span></button>
+    <button class="tab" data-status="false">Not live <span class="badge" id="badgeDown">—</span></button>
+  </div>
+</div>
 
-    <div class="container">
-        <div id="loadingIndicator" class="loading">Loading data from GitHub...</div>
-        <div id="mainContent" style="display: none;">
+<div class="container">
 
-            <div class="stats-bar" id="statsBar"></div>
+  <!-- KPI strip -->
+  <div class="kpis" id="kpis"></div>
 
-            <div class="search-box">
-                <input type="text" class="search-input" id="searchInput" placeholder="Find by client, site, instance, env, realm...">
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Search by client, site, instance ID, realm, version…">
+    </div>
+    <select class="select" id="filterRegion">
+      <option value="all">All regions</option>
+    </select>
+    <div class="seg">
+      <button class="active" data-view="grid">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Cards
+      </button>
+      <button data-view="compact">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        Compact
+      </button>
+    </div>
+  </div>
 
-                <select class="filter-select" id="filterLive">
-                    <option value="all">All status</option>
-                    <option value="true">Live</option>
-                    <option value="false">No Live</option>
-                </select>
+  <div id="loadingIndicator" class="loading">Loading instances…</div>
+  <div id="grid" class="grid"></div>
+  <div id="empty" class="empty" style="display:none;">No instances match your filters.</div>
+</div>
 
-                <select class="filter-select" id="filterRegion">
-                    <option value="all">All Regions</option>
-                </select>
-            </div>
+<div class="toast" id="toast"></div>
 
-            <div class="tabs">
-                <button class="tab active" data-tab="all">GXO BY WMS Instances</button>
-            </div>
+<script>
+const CONFIG = {
+  path: 'data/instances.json',
+  owner: 'xavierpvgxo',
+  repo: 'instances-manager',
+  branch: 'main'
+};
+let instancesData = [];
+let currentView = [];
+let activeStatus = 'all';
 
-            <div class="instances-grid" id="instancesGrid"></div>
+// Carga el JSON local primero (refleja el estado actual del repo al servirse
+// por http: servidor local o GitHub Pages). Si no es accesible (p.ej. file://),
+// usa GitHub raw con los datos ya publicados en la rama main.
+async function loadInstances() {
+  const local = CONFIG.path;
+  const remote = `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/${CONFIG.path}`;
+  let lastErr;
+  for (const url of [local, remote]) {
+    try {
+      const r = await fetch(url, { cache: 'no-store' });
+      if (r.ok) return await r.json();
+      lastErr = new Error('HTTP ' + r.status);
+    } catch (e) { lastErr = e; }
+  }
+  throw lastErr || new Error('No data source reachable');
+}
+
+function esc(v){
+  if (v === null || v === undefined) return '';
+  return String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(()=>t.classList.remove('show'), 1800);
+}
+
+function copyText(text){
+  navigator.clipboard.writeText(text).then(
+    ()=>showToast('Copied · ' + text.slice(0, 36) + (text.length>36?'…':'')),
+    ()=>showToast('Could not copy')
+  );
+}
+
+function fillFilters(){
+  const el = document.getElementById('filterRegion');
+  const current = el.value;
+  el.innerHTML = '<option value="all">All regions</option>';
+  [...new Set(instancesData.map(i => i.region).filter(Boolean))].sort().forEach(r => {
+    const opt = document.createElement('option');
+    opt.value = r; opt.textContent = r;
+    el.appendChild(opt);
+  });
+  if ([...el.options].some(o => o.value === current)) el.value = current;
+}
+
+function envRow(label, env, css){
+  env = env || {};
+  if (!env.code && !env.version && !env.realm) {
+    return `<tr>
+      <td><span class="env-tag ${css}">${label}</span></td>
+      <td colspan="3" class="env-cell muted">— not deployed</td>
+    </tr>`;
+  }
+  return `<tr>
+    <td><span class="env-tag ${css}">${label}</span></td>
+    <td class="env-cell mono">${esc(env.code) || '—'}</td>
+    <td class="env-cell mono">${esc(env.version) || '—'}</td>
+    <td class="env-cell mono" title="${esc(env.realm)||''}">${esc(env.realm) || '—'}</td>
+  </tr>`;
+}
+
+function connButton(url, kind, mode){
+  const tag = kind === 'np' ? 'NP' : 'PROD';
+  if (!url) return `<span class="conn-btn ${kind} disabled">${tag} —</span>`;
+  if (mode === 'copy') {
+    return `<button type="button" class="conn-btn ${kind}" data-copy="${esc(url)}">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      ${tag}
+    </button>`;
+  }
+  return `<a class="conn-btn ${kind}" href="${esc(url)}" target="_blank" rel="noopener">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    ${tag}
+  </a>`;
+}
+
+function connRow(iconSvg, label, np, prod, mode){
+  return `<div class="conn-row">
+    <div class="conn-label">${iconSvg}${label}</div>
+    ${connButton(np, 'np', mode)}
+    ${connButton(prod, 'pr', mode)}
+  </div>`;
+}
+
+function render(){
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const regionF = document.getElementById('filterRegion').value;
+
+  const matchSR = i => {
+    const e = i.environments || {};
+    const haystack = [
+      i.card_title, i.client, i.client_id, i.id, i.instance,
+      i.site, i.region, i.location, i.operating_hours,
+      (i.flags || []).join(' '),
+      e.np?.code, e.np?.version, e.np?.realm,
+      e.prod?.code, e.prod?.version, e.prod?.realm,
+      e.arch?.code,
+      i.contact?.poc, i.contact?.site_contact, i.contact?.site_distribution
+    ].filter(Boolean).join(' ').toLowerCase();
+    return haystack.includes(search) && (regionF === 'all' || i.region === regionF);
+  };
+  // base = búsqueda + región (sin filtro de estado); alimenta los contadores de pestañas
+  const base = instancesData.filter(matchSR);
+  const filtered = base.filter(i => activeStatus === 'all' || String(i.live) === activeStatus);
+  currentView = filtered;
+
+  const total = instancesData.length;
+  const live = instancesData.filter(x => x.live).length;
+  const notLive = total - live;
+  const clients = new Set(instancesData.map(x => x.client).filter(Boolean)).size;
+  const regionList = [...new Set(instancesData.map(x => x.region).filter(Boolean))].sort();
+  const pctLive = total ? Math.round(live / total * 100) : 0;
+
+  document.getElementById('badgeAll').textContent = base.length;
+  document.getElementById('badgeLive').textContent = base.filter(x => x.live).length;
+  document.getElementById('badgeDown').textContent = base.filter(x => !x.live).length;
+
+  document.getElementById('kpis').innerHTML = `
+    <div class="kpi"><div class="kpi-accent"></div>
+      <div class="kpi-label">Total instances</div>
+      <div class="kpi-value">${total}</div>
+      <div class="kpi-foot">Across ${clients} clients</div>
+    </div>
+    <div class="kpi is-ok"><div class="kpi-label">Live in production</div>
+      <div class="kpi-value">${live}</div>
+      <div class="kpi-foot">${pctLive}% of estate</div>
+    </div>
+    <div class="kpi is-warn"><div class="kpi-label">Not live</div>
+      <div class="kpi-value">${notLive}</div>
+      <div class="kpi-foot">${100 - pctLive}% of estate</div>
+    </div>
+    <div class="kpi"><div class="kpi-label">Active clients</div>
+      <div class="kpi-value">${clients}</div>
+      <div class="kpi-foot">BY WMS estate</div>
+    </div>
+    <div class="kpi"><div class="kpi-label">Regions covered</div>
+      <div class="kpi-value">${regionList.length}</div>
+      <div class="kpi-foot">${regionList.join(' / ') || '—'}</div>
+    </div>
+  `;
+
+  const gridEl = document.getElementById('grid');
+  const emptyEl = document.getElementById('empty');
+
+  if (filtered.length === 0) {
+    gridEl.innerHTML = '';
+    emptyEl.style.display = 'block';
+    return;
+  }
+  emptyEl.style.display = 'none';
+
+  gridEl.innerHTML = filtered.map(it => {
+    const e = it.environments || {};
+    const u = it.urls || {};
+    const c = it.contact || {};
+
+    const flags = (it.flags || []).map(f => `<span class="flag">${esc(f)}</span>`).join('');
+    const status = it.live
+      ? `<span class="status live"><span class="dot"></span>Live</span>`
+      : `<span class="status down"><span class="dot"></span>Not live</span>`;
+
+    const webIcon = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`;
+    const appIcon = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>`;
+    const consoleIcon = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>`;
+
+    const extBtn = it.extensions_repo
+      ? `<a class="btn btn-primary" href="${esc(it.extensions_repo)}" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          Extensions repo
+        </a>`
+      : `<span class="btn btn-primary disabled">No extensions repo</span>`;
+
+    return `
+    <article class="card">
+      <div class="card-head">
+        <div class="card-head-l">
+          <div class="c-title">${esc(it.card_title)}</div>
+          <div class="c-sub">
+            <span>${esc(it.client)}</span>
+            <span class="mono">${esc(it.instance) || '—'}</span>
+            ${flags}
+          </div>
         </div>
-    </div>
+        ${status}
+      </div>
 
-    <div class="toast" id="toast"></div>
+      <div class="card-body">
+        <div class="meta-table">
+          <div class="meta-item"><div class="meta-k">Client ID</div><div class="meta-v mono">${esc(it.client_id) || '—'}</div></div>
+          <div class="meta-item"><div class="meta-k">Region</div><div class="meta-v">${esc(it.region) || '—'}</div></div>
+          <div class="meta-item"><div class="meta-k">Site</div><div class="meta-v">${esc(it.site) || '—'}</div></div>
+          <div class="meta-item"><div class="meta-k">Location</div><div class="meta-v">${esc(it.location) || '—'}</div></div>
+          <div class="meta-item"><div class="meta-k">Operating hours</div><div class="meta-v">${esc(it.operating_hours) || '—'}</div></div>
+          <div class="meta-item"><div class="meta-k">Go‑live</div><div class="meta-v">${esc(it.go_live) || '—'}</div></div>
+        </div>
 
-    <script>
-        const CONFIG = {
-            owner: 'xavierpvgxo',
-            repo: 'instances-manager',
-            branch: 'main',
-            path: 'data/instances.json'
-        };
+        <div class="section">
+          <div class="section-head"><div class="section-title">Environments</div><div class="section-line"></div></div>
+          <table class="env-table">
+            <thead><tr><th></th><th>Code</th><th>Version</th><th>Realm</th></tr></thead>
+            <tbody>
+              ${envRow('NP', e.np, 'np')}
+              ${envRow('PR', e.prod, 'pr')}
+              ${envRow('AR', e.arch, 'ar')}
+            </tbody>
+          </table>
+        </div>
 
-        let instancesData = [];
+        <div class="section">
+          <div class="section-head"><div class="section-title">Contact</div><div class="section-line"></div></div>
+          <div class="contact-row"><b>POC</b><span>${esc(c.poc) || '—'}</span></div>
+          <div class="contact-row"><b>Site contact</b><span>${esc(c.site_contact) || '—'}</span></div>
+          <div class="contact-row"><b>Distribution</b><span>${esc(c.site_distribution) || '—'}</span></div>
+        </div>
 
-        // Carga el JSON priorizando el archivo local (refleja el estado actual del
-        // repo cuando se sirve por http: servidor local o GitHub Pages). Si no es
-        // accesible, usa GitHub raw (rama main, datos ya publicados).
-        async function loadInstances() {
-            const local = CONFIG.path;
-            const remote = `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/${CONFIG.path}`;
-            let lastErr;
-            for (const url of [local, remote]) {
-                try {
-                    const r = await fetch(url, { cache: 'no-store' });
-                    if (r.ok) return await r.json();
-                    lastErr = new Error('HTTP ' + r.status);
-                } catch (e) { lastErr = e; }
-            }
-            throw lastErr || new Error('No data source reachable');
-        }
+        <div class="section">
+          <div class="section-head"><div class="section-title">Connectivity</div><div class="section-line"></div></div>
+          ${connRow(webIcon, 'WEB', u.web?.np, u.web?.prod, 'link')}
+          ${connRow(appIcon, 'APP', u.app?.np, u.app?.prod, 'copy')}
+          ${connRow(consoleIcon, 'CONSOLE', u.console?.np, u.console?.prod, 'link')}
+        </div>
+      </div>
 
-        async function init() {
-            try {
-                const data = await loadInstances();
-                instancesData = data.instances || [];
+      <div class="card-foot">
+        ${extBtn}
+      </div>
+    </article>`;
+  }).join('');
 
-                document.getElementById('loadingIndicator').style.display = 'none';
-                document.getElementById('mainContent').style.display = 'block';
+  gridEl.querySelectorAll('[data-copy]').forEach(b => {
+    b.addEventListener('click', () => copyText(b.getAttribute('data-copy')));
+  });
+}
 
-                fillFilters();
-                render();
-                setupEvents();
-            } catch (err) {
-                const isFile = location.protocol === 'file:';
-                document.getElementById('loadingIndicator').innerHTML = isFile
-                    ? '⚠️ Para previsualizar los cambios locales, sirve la carpeta con un servidor:<br><br>'
-                      + '<code>python -m http.server 8000</code><br><br>'
-                      + 'y abre <a href="http://localhost:8000">http://localhost:8000</a><br><br>'
-                      + '<small>Al abrir el HTML con doble clic (file://) el navegador bloquea la carga de data/instances.json.</small>'
-                    : 'Error loading data: ' + err.message;
-            }
-        }
+function exportCSV(){
+  if (!currentView.length) { showToast('Nothing to export'); return; }
+  const cols = [
+    ['ID', i=>i.id], ['Card title', i=>i.card_title], ['Client', i=>i.client],
+    ['Client ID', i=>i.client_id], ['Instance', i=>i.instance], ['Site', i=>i.site],
+    ['Region', i=>i.region], ['Live', i=>i.live], ['Go-live', i=>i.go_live],
+    ['NP code', i=>i.environments?.np?.code], ['NP version', i=>i.environments?.np?.version], ['NP realm', i=>i.environments?.np?.realm],
+    ['PR code', i=>i.environments?.prod?.code], ['PR version', i=>i.environments?.prod?.version], ['PR realm', i=>i.environments?.prod?.realm],
+    ['ARCH code', i=>i.environments?.arch?.code],
+    ['Location', i=>i.location], ['Operating hours', i=>i.operating_hours],
+    ['POC', i=>i.contact?.poc], ['Site contact', i=>i.contact?.site_contact], ['Distribution', i=>i.contact?.site_distribution],
+    ['Extensions repo', i=>i.extensions_repo]
+  ];
+  const cell = v => '"' + String(v ?? '').replace(/"/g, '""') + '"';
+  const lines = [cols.map(c => cell(c[0])).join(',')];
+  currentView.forEach(it => lines.push(cols.map(c => cell(c[1](it))).join(',')));
+  const blob = new Blob(['﻿' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'gxo-instances-' + new Date().toISOString().slice(0, 10) + '.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('Exported ' + currentView.length + ' instances');
+}
 
-        function esc(v) {
-            if (v === null || v === undefined) return '';
-            return String(v).replace(/[&<>"']/g, c => (
-                { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
-            ));
-        }
+async function refreshData(){
+  const btn = document.getElementById('btnRefresh');
+  btn.disabled = true;
+  try {
+    const data = await loadInstances();
+    instancesData = data.instances || [];
+    fillFilters();
+    render();
+    showToast('Data refreshed · ' + instancesData.length + ' instances');
+  } catch (e) {
+    showToast('Refresh failed');
+  } finally {
+    btn.disabled = false;
+  }
+}
 
-        function showToast(msg) {
-            const t = document.getElementById('toast');
-            t.textContent = msg;
-            t.classList.add('show');
-            clearTimeout(t._timer);
-            t._timer = setTimeout(() => t.classList.remove('show'), 2200);
-        }
+function setupEvents(){
+  document.getElementById('searchInput').addEventListener('input', render);
+  document.getElementById('filterRegion').addEventListener('change', render);
+  document.getElementById('btnExport').addEventListener('click', exportCSV);
+  document.getElementById('btnRefresh').addEventListener('click', refreshData);
+  document.querySelectorAll('.tab').forEach(t=>{
+    t.addEventListener('click', ()=>{
+      document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      activeStatus = t.dataset.status || 'all';
+      render();
+    });
+  });
+  document.querySelectorAll('.seg button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.seg button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const v = btn.dataset.view;
+      document.getElementById('grid').style.gridTemplateColumns =
+        v === 'compact' ? 'repeat(auto-fill, minmax(350px, 1fr))' : 'repeat(auto-fill, minmax(440px, 1fr))';
+    });
+  });
 
-        function copyAppUrl(url) {
-            navigator.clipboard.writeText(url).then(
-                () => showToast('APP URL copied'),
-                () => showToast('Could not copy URL')
-            );
-        }
+  // Theme toggle (light / dark)
+  const themeBtn = document.getElementById('themeToggle');
+  const iconLight = document.getElementById('themeIconLight');
+  const iconDark = document.getElementById('themeIconDark');
+  const themeLabel = document.getElementById('themeLabel');
+  function applyTheme(theme){
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      iconLight.style.display = 'none';
+      iconDark.style.display = '';
+      themeLabel.textContent = 'Light';
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      iconLight.style.display = '';
+      iconDark.style.display = 'none';
+      themeLabel.textContent = 'Dark';
+    }
+  }
+  const saved = localStorage.getItem('gxo-im2-theme') || 'light';
+  applyTheme(saved);
+  themeBtn.addEventListener('click', () => {
+    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('gxo-im2-theme', next);
+    applyTheme(next);
+  });
+}
 
-        function fillFilters() {
-            const regions = new Set();
-            instancesData.forEach(i => { if (i.region) regions.add(i.region); });
-
-            const regionEl = document.getElementById('filterRegion');
-            [...regions].sort().forEach(r => {
-                regionEl.innerHTML += `<option value="${esc(r)}">${esc(r)}</option>`;
-            });
-        }
-
-        function envRow(name, env) {
-            env = env || {};
-            return `<tr>
-                <td class="env-name">${name}</td>
-                <td class="env-code">${esc(env.code) || '—'}</td>
-                <td>${esc(env.version) || '—'}</td>
-                <td>${esc(env.realm) || '—'}</td>
-            </tr>`;
-        }
-
-        // kind: 'np' | 'prod'   mode: 'link' | 'copy'
-        function connButton(url, kind, mode) {
-            const cls = kind === 'np' ? 'conn-btn--np' : 'conn-btn--prod';
-            const tag = kind === 'np' ? 'NP' : 'PROD';
-            if (!url) {
-                const label = mode === 'copy' ? `⧉ Copy ${tag}` : `Link to ${tag}`;
-                return `<span class="conn-btn ${cls} conn-btn--disabled">${label}</span>`;
-            }
-            if (mode === 'copy') {
-                return `<button type="button" class="conn-btn ${cls}" onclick="copyAppUrl('${url}')">⧉ Copy ${tag}</button>`;
-            }
-            return `<a class="conn-btn ${cls}" href="${url}" target="_blank" rel="noopener">Link to ${tag}</a>`;
-        }
-
-        function connRow(icon, label, np, prod, mode) {
-            return `<div class="url-group">
-                <div class="url-label">${icon} ${label}</div>
-                <div class="url-links">
-                    ${connButton(np, 'np', mode)}
-                    ${connButton(prod, 'prod', mode)}
-                </div>
-            </div>`;
-        }
-
-        function render() {
-            const search = document.getElementById('searchInput').value.toLowerCase();
-            const liveF = document.getElementById('filterLive').value;
-            const regionF = document.getElementById('filterRegion').value;
-
-            const filtered = instancesData.filter(i => {
-                const e = i.environments || {};
-                const haystack = [
-                    i.card_title, i.client, i.client_id, i.id, i.instance,
-                    i.site, i.region, i.location, i.operating_hours,
-                    (i.flags || []).join(' '),
-                    e.np?.code, e.np?.version, e.np?.realm,
-                    e.prod?.code, e.prod?.version, e.prod?.realm,
-                    e.arch?.code,
-                    i.contact?.poc, i.contact?.site_contact, i.contact?.site_distribution
-                ].filter(Boolean).join(' ').toLowerCase();
-
-                const matchesSearch = haystack.includes(search);
-                const matchesLive = liveF === 'all' || String(i.live) === liveF;
-                const matchesRegion = regionF === 'all' || i.region === regionF;
-
-                return matchesSearch && matchesLive && matchesRegion;
-            });
-
-            document.getElementById('statsBar').innerHTML = `
-                <div class="stat-card">
-                    <span class="stat-value results-color">${filtered.length}</span>
-                    <span class="stat-label">Results</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-value live-color">${filtered.filter(x => x.live).length}</span>
-                    <span class="stat-label">Live</span>
-                </div>
-            `;
-
-            document.getElementById('instancesGrid').innerHTML = filtered.map(it => {
-                const e = it.environments || {};
-                const u = it.urls || {};
-                const c = it.contact || {};
-
-                const goLiveRow = it.go_live
-                    ? `<div class="info-row"><span class="info-label">Go-Live:</span><span>${esc(it.go_live)}</span></div>`
-                    : '';
-
-                const extBtn = it.extensions_repo
-                    ? `<button class="extensions-btn" onclick="window.open('${it.extensions_repo}','_blank')">🛠️ Extensions repository</button>`
-                    : `<button class="extensions-btn" disabled>🛠️ Extensions repository</button>`;
-
-                return `
-                <div class="instance-card">
-                    <div class="instance-header">
-                        <div class="instance-name">${esc(it.card_title)}${(it.flags || []).map(f => `<span class="flag-tag">${esc(f)}</span>`).join('')}</div>
-                        <div class="live-badge ${it.live ? 'yes' : 'no'}">${it.live ? '● LIVE' : '○ NO LIVE'}</div>
-                    </div>
-
-                    <div class="instance-info">
-                        <div class="info-row"><span class="info-label">Instance:</span><span>${esc(it.instance) || '—'}</span></div>
-                        <div class="info-row"><span class="info-label">Client ID:</span><span>${esc(it.client_id) || '—'}</span></div>
-                        <div class="info-row"><span class="info-label">Site:</span><span>${esc(it.site) || '—'}</span></div>
-                        <div class="info-row"><span class="info-label">Region:</span><span>${esc(it.region) || '—'}</span></div>
-                        <div class="info-row"><span class="info-label">Location:</span><span>${esc(it.location) || '—'}</span></div>
-                        <div class="info-row"><span class="info-label">Operating Hours:</span><span>${esc(it.operating_hours) || '—'}</span></div>
-                        ${goLiveRow}
-                    </div>
-
-                    <div class="section">
-                        <div class="section-title">Environments</div>
-                        <table class="env-table">
-                            <thead>
-                                <tr><th>Env</th><th>Code</th><th>Version</th><th>Realm</th></tr>
-                            </thead>
-                            <tbody>
-                                ${envRow('NP', e.np)}
-                                ${envRow('PR', e.prod)}
-                                ${envRow('ARCH', e.arch)}
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="section">
-                        <div class="section-title">Contact</div>
-                        <div class="info-row"><span class="info-label">POC:</span><span>${esc(c.poc) || '—'}</span></div>
-                        <div class="info-row"><span class="info-label">Site Contact:</span><span>${esc(c.site_contact) || '—'}</span></div>
-                        <div class="info-row"><span class="info-label">Site Distribution:</span><span>${esc(c.site_distribution) || '—'}</span></div>
-                    </div>
-
-                    <div class="section">
-                        <div class="section-title">Connectivity</div>
-                        ${connRow('💻', 'WEB', u.web?.np, u.web?.prod, 'link')}
-                        ${connRow('⚙️', 'APP', u.app?.np, u.app?.prod, 'copy')}
-                        ${connRow('🖥️', 'CONSOLE', u.console?.np, u.console?.prod, 'link')}
-                    </div>
-
-                    ${extBtn}
-                </div>`;
-            }).join('');
-        }
-
-        function setupEvents() {
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.addEventListener('click', () => {
-                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-                });
-            });
-
-            document.getElementById('searchInput').addEventListener('input', render);
-            document.getElementById('filterLive').addEventListener('change', render);
-            document.getElementById('filterRegion').addEventListener('change', render);
-        }
-
-        init();
-    </script>
+(async function init(){
+  try {
+    const data = await loadInstances();
+    instancesData = data.instances || [];
+    document.getElementById('loadingIndicator').style.display = 'none';
+    fillFilters();
+    render();
+    setupEvents();
+  } catch (err) {
+    document.getElementById('loadingIndicator').innerHTML =
+      '⚠️ Could not load data: ' + esc(err.message) +
+      '<br><small>Serve the folder over HTTP so <code>data/instances.json</code> is reachable.</small>';
+  }
+})();
+</script>
 </body>
 </html>
