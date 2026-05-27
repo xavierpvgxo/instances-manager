@@ -677,8 +677,8 @@ function render(){
           <div class="meta-item"><div class="meta-k">Client ID</div><div class="meta-v mono">${esc(it.client_id) || '—'}</div></div>
           <div class="meta-item"><div class="meta-k">Region</div><div class="meta-v">${esc(it.region) || '—'}</div></div>
           <div class="meta-item"><div class="meta-k">Site</div><div class="meta-v">${esc(it.site) || '—'}</div></div>
-          <div class="meta-item"><div class="meta-k">Location</div><div class="meta-v">${esc(it.location) || '—'}</div></div>
-          <div class="meta-item"><div class="meta-k">Operating hours</div><div class="meta-v">${esc(it.operating_hours) || '—'}</div></div>
+          <div class="meta-item"><div class="meta-k">Location</div><div class="meta-v" title="${esc(it.location || '')}">${esc(it.location) || '—'}</div></div>
+          <div class="meta-item"><div class="meta-k">Operating hours</div><div class="meta-v" title="${esc(it.operating_hours || '')}">${esc(it.operating_hours) || '—'}</div></div>
           <div class="meta-item"><div class="meta-k">Go‑live</div><div class="meta-v">${esc(it.go_live) || '—'}</div></div>
         </div>
 
