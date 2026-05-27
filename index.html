@@ -328,6 +328,10 @@
   .contact-row b{ color:var(--text-3); font-weight:500; font-size:12px; }
   .contact-row span{ color:var(--text); }
 
+  /* inline clickable values (address -> google maps, email -> mailto) */
+  .link-inline{ color:inherit; text-decoration:none; }
+  .link-inline:hover{ color:var(--gxo-orange); text-decoration:underline; }
+
   /* connectivity */
   .conn-row{ display:grid; grid-template-columns:90px 1fr 1fr; gap:8px; align-items:center; margin-bottom:6px; }
   .conn-label{ font-size:12px; color:var(--text-2); display:flex; align-items:center; gap:6px; font-weight:500; }
@@ -504,6 +508,22 @@ function esc(v){
   return String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 
+function mapLink(addr){
+  if (!addr) return '—';
+  const url = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(addr);
+  return `<a class="link-inline" target="_blank" rel="noopener" href="${esc(url)}" title="${esc(addr)}">${esc(addr)}</a>`;
+}
+
+function emailLinks(v){
+  if (!v) return '—';
+  const parts = String(v).split(/[,;]/).map(s => s.trim()).filter(Boolean);
+  return parts.map(p => {
+    const addr = p.replace(/^mailto:/i, '').trim();
+    if (!addr.includes('@')) return esc(p);
+    return `<a class="link-inline" href="mailto:${esc(addr)}" title="${esc(addr)}">${esc(addr)}</a>`;
+  }).join(', ');
+}
+
 function showToast(msg){
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -677,7 +697,7 @@ function render(){
           <div class="meta-item"><div class="meta-k">Client ID</div><div class="meta-v mono">${esc(it.client_id) || '—'}</div></div>
           <div class="meta-item"><div class="meta-k">Region</div><div class="meta-v">${esc(it.region) || '—'}</div></div>
           <div class="meta-item"><div class="meta-k">Site</div><div class="meta-v">${esc(it.site) || '—'}</div></div>
-          <div class="meta-item"><div class="meta-k">Location</div><div class="meta-v" title="${esc(it.location || '')}">${esc(it.location) || '—'}</div></div>
+          <div class="meta-item"><div class="meta-k">Location</div><div class="meta-v" title="${esc(it.location || '')}">${mapLink(it.location)}</div></div>
           <div class="meta-item"><div class="meta-k">Operating hours</div><div class="meta-v" title="${esc(it.operating_hours || '')}">${esc(it.operating_hours) || '—'}</div></div>
           <div class="meta-item"><div class="meta-k">Go‑live</div><div class="meta-v">${esc(it.go_live) || '—'}</div></div>
         </div>
@@ -696,9 +716,9 @@ function render(){
 
         <div class="section">
           <div class="section-head"><div class="section-title">Contact</div><div class="section-line"></div></div>
-          <div class="contact-row"><b>POC</b><span>${esc(c.poc) || '—'}</span></div>
-          <div class="contact-row"><b>Site contact</b><span>${esc(c.site_contact) || '—'}</span></div>
-          <div class="contact-row"><b>Distribution</b><span>${esc(c.site_distribution) || '—'}</span></div>
+          <div class="contact-row"><b>POC</b><span>${emailLinks(c.poc)}</span></div>
+          <div class="contact-row"><b>Site contact</b><span>${emailLinks(c.site_contact)}</span></div>
+          <div class="contact-row"><b>Distribution</b><span>${emailLinks(c.site_distribution)}</span></div>
         </div>
 
         <div class="section">
