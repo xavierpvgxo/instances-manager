@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-28T10:00:07.042572",
+    "generated_at": "2026-07-10T18:43:53.588634",
     "total_instances": 34,
     "source_file": "data/instances.xlsx",
     "source_sheet": "Client Info"
@@ -57,7 +57,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-romeoville-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.026761"
+        "last_updated": "2026-07-10T18:43:53.576628"
       }
     },
     {
@@ -111,7 +111,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-savannah-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.026761"
+        "last_updated": "2026-07-10T18:43:53.576628"
       }
     },
     {
@@ -145,7 +145,7 @@
         }
       },
       "contact": {
-        "poc": null,
+        "poc": "Shawn",
         "site_contact": "todd.pearce@gxo.com",
         "site_distribution": null
       },
@@ -165,7 +165,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-loewe-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.028067"
+        "last_updated": "2026-07-10T18:43:53.576628"
       }
     },
     {
@@ -219,7 +219,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.029083"
+        "last_updated": "2026-07-10T18:43:53.576628"
       }
     },
     {
@@ -253,7 +253,7 @@
         }
       },
       "contact": {
-        "poc": "Shawn",
+        "poc": "Jeff/Shawn",
         "site_contact": "john.ozmon@gxo.com",
         "site_distribution": null
       },
@@ -273,7 +273,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.029083"
+        "last_updated": "2026-07-10T18:43:53.576628"
       }
     },
     {
@@ -307,7 +307,7 @@
         }
       },
       "contact": {
-        "poc": "Mike/Lisa",
+        "poc": null,
         "site_contact": "john.ozmon@gxo.com",
         "site_distribution": null
       },
@@ -327,7 +327,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-darigold-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.029083"
+        "last_updated": "2026-07-10T18:43:53.577630"
       }
     },
     {
@@ -381,7 +381,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-alpargata-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.029083"
+        "last_updated": "2026-07-10T18:43:53.577630"
       }
     },
     {
@@ -415,7 +415,7 @@
         }
       },
       "contact": {
-        "poc": "Mike/Heather",
+        "poc": null,
         "site_contact": "rafa.duenas@gxo.com   , Ron.biggs@gxo.com",
         "site_distribution": "SodaStreamManteca@gxo.com"
       },
@@ -435,7 +435,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-west-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.029083"
+        "last_updated": "2026-07-10T18:43:53.577630"
       }
     },
     {
@@ -469,7 +469,7 @@
         }
       },
       "contact": {
-        "poc": "Lisa/Linda",
+        "poc": "Shawn",
         "site_contact": "chris.menges@gxo.com",
         "site_distribution": null
       },
@@ -489,7 +489,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-east-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.029083"
+        "last_updated": "2026-07-10T18:43:53.577630"
       }
     },
     {
@@ -523,7 +523,7 @@
         }
       },
       "contact": {
-        "poc": "Lisa/Linda",
+        "poc": "Mike/Lisa",
         "site_contact": "rick.kusimoto@gxo.com",
         "site_distribution": null
       },
@@ -543,7 +543,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-starbucks-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.029083"
+        "last_updated": "2026-07-10T18:43:53.577630"
       }
     },
     {
@@ -577,7 +577,7 @@
         }
       },
       "contact": {
-        "poc": "Colleen/Jeff",
+        "poc": "Mike/Lisa",
         "site_contact": "TBD",
         "site_distribution": null
       },
@@ -597,7 +597,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-lg-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.029083"
+        "last_updated": "2026-07-10T18:43:53.577630"
       }
     },
     {
@@ -651,7 +651,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-peloton-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.029083"
+        "last_updated": "2026-07-10T18:43:53.577630"
       }
     },
     {
@@ -685,7 +685,7 @@
         }
       },
       "contact": {
-        "poc": "Michael",
+        "poc": "Mike/Heather",
         "site_contact": "jeremy.hoppe@gxo.com, levale.williams@gxo.com,savy.phauk@gxo.com",
         "site_distribution": null
       },
@@ -705,7 +705,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.029083"
+        "last_updated": "2026-07-10T18:43:53.578628"
       }
     },
     {
@@ -739,7 +739,7 @@
         }
       },
       "contact": {
-        "poc": "Heather",
+        "poc": "Lisa/Linda",
         "site_contact": "rafa.duenas@gxo.com",
         "site_distribution": "CorsairSoCal@gxo.com"
       },
@@ -759,7 +759,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-california-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.029083"
+        "last_updated": "2026-07-10T18:43:53.578628"
       }
     },
     {
@@ -793,7 +793,7 @@
         }
       },
       "contact": {
-        "poc": "Colleen",
+        "poc": "Lisa/Linda",
         "site_contact": null,
         "site_distribution": null
       },
@@ -813,7 +813,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-canada-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.029083"
+        "last_updated": "2026-07-10T18:43:53.578628"
       }
     },
     {
@@ -847,8 +847,8 @@
         }
       },
       "contact": {
-        "poc": "Mike/Shawn",
-        "site_contact": "mailto:brandon.conner@gxo.com",
+        "poc": null,
+        "site_contact": null,
         "site_distribution": null
       },
       "urls": {
@@ -867,7 +867,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-amiri-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.030589"
+        "last_updated": "2026-07-10T18:43:53.578628"
       }
     },
     {
@@ -903,7 +903,7 @@
         }
       },
       "contact": {
-        "poc": "Michael/Shawn",
+        "poc": "Heather",
         "site_contact": "steve.charnes@gxo.com, tim.serfess@gxo.com",
         "site_distribution": null
       },
@@ -923,7 +923,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-food52-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.030589"
+        "last_updated": "2026-07-10T18:43:53.578628"
       }
     },
     {
@@ -957,7 +957,7 @@
         }
       },
       "contact": {
-        "poc": null,
+        "poc": "Heather/Shawn",
         "site_contact": null,
         "site_distribution": null
       },
@@ -977,7 +977,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toast-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.030589"
+        "last_updated": "2026-07-10T18:43:53.578628"
       }
     },
     {
@@ -1011,7 +1011,7 @@
         }
       },
       "contact": {
-        "poc": null,
+        "poc": "Mike/Shawn",
         "site_contact": null,
         "site_distribution": null
       },
@@ -1031,7 +1031,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-on-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.030589"
+        "last_updated": "2026-07-10T18:43:53.578628"
       }
     },
     {
@@ -1065,8 +1065,8 @@
         }
       },
       "contact": {
-        "poc": "Mike/Jeff",
-        "site_contact": null,
+        "poc": "Mike/Shawn",
+        "site_contact": "mailto:brandon.conner@gxo.com",
         "site_distribution": null
       },
       "urls": {
@@ -1085,7 +1085,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-castore-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.030589"
+        "last_updated": "2026-07-10T18:43:53.578628"
       }
     },
     {
@@ -1119,8 +1119,8 @@
         }
       },
       "contact": {
-        "poc": null,
-        "site_contact": null,
+        "poc": "Mike/Shawn",
+        "site_contact": "mailto:brandon.conner@gxo.com",
         "site_distribution": null
       },
       "urls": {
@@ -1139,7 +1139,331 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-mw-les\nexec-wms-gxo-mt-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.030589"
+        "last_updated": "2026-07-10T18:43:53.578628"
+      }
+    },
+    {
+      "id": "TBD-XNE",
+      "card_title": "WH Smith - NP24",
+      "client": "WH Smith",
+      "client_id": "3033",
+      "instance": "be40",
+      "site": "XNE",
+      "region": "AMAPAC",
+      "location": "2353 US Highway 130\nDayton, NJ 08810",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP24",
+          "version": "2023.1.0.45.0",
+          "realm": "bh10-002-euw"
+        },
+        "prod": {
+          "code": "TBD",
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "Mike/Shawn",
+        "site_contact": "mailto:brandon.conner@gxo.com",
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP24.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP24.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP24.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-wh-smith-les",
+      "metadata": {
+        "last_updated": "2026-07-10T18:43:53.578628"
+      }
+    },
+    {
+      "id": "PR21-PIR",
+      "card_title": "RJR Plainfield - NP29",
+      "client": "RJR Plainfield",
+      "client_id": "3035",
+      "instance": "be40",
+      "site": "PIR",
+      "region": "AMAPAC",
+      "location": "600 S Perry Rd\nPlainfield, IN 46168\nUSA",
+      "operating_hours": null,
+      "live": true,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP29",
+          "version": "2023.1.0.45.0",
+          "realm": "be40-02n-eus2"
+        },
+        "prod": {
+          "code": "PR21",
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": "PR21A",
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "Michael/Shawn",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP29.jdadelivers.com/portal",
+          "prod": "https://be40-gxo-wms-web-PR21.jdadelivers.com/portal"
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP29.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR21.jdadelivers.com/service"
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP29.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR21.jdadelivers.com"
+        }
+      },
+      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-plainfield-les",
+      "metadata": {
+        "last_updated": "2026-07-10T18:43:53.578628"
+      }
+    },
+    {
+      "id": "PR23-OFR",
+      "card_title": "RJR Orlando - NP32",
+      "client": "RJR Orlando",
+      "client_id": "3035",
+      "instance": "be40",
+      "site": "OFR",
+      "region": "AMAPAC",
+      "location": "7469 PRESIDENTS DRIVE\nORLANDO, FL 32809\nUSA",
+      "operating_hours": null,
+      "live": true,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP32",
+          "version": "2023.1.0.45.0",
+          "realm": "be40-02p-eus2"
+        },
+        "prod": {
+          "code": "PR23",
+          "version": "2023.1.0.45.0",
+          "realm": "be40-02i-eus2"
+        },
+        "arch": {
+          "code": "PR23A",
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "Michael",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP32.jdadelivers.com/portal",
+          "prod": "https://be40-gxo-wms-web-PR23.jdadelivers.com/portal"
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP32.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR23.jdadelivers.com/service"
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP32.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR23.jdadelivers.com"
+        }
+      },
+      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-orlando-les",
+      "metadata": {
+        "last_updated": "2026-07-10T18:43:53.578628"
+      }
+    },
+    {
+      "id": "PR24-RPO",
+      "card_title": "RJR Portland - NP31",
+      "client": "RJR Portland",
+      "client_id": "3035",
+      "instance": "be40",
+      "site": "RPO",
+      "region": "AMAPAC",
+      "location": "3591 YEON AVE\nPORTLAND, OR 97210\nUSA",
+      "operating_hours": null,
+      "live": true,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP31",
+          "version": "2023.1.0.45.0",
+          "realm": "be40-02p-eus2"
+        },
+        "prod": {
+          "code": "PR24",
+          "version": "2023.1.0.45.0",
+          "realm": "be40-02q-eus2"
+        },
+        "arch": {
+          "code": "PR24A",
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": null,
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP31.jdadelivers.com/portal",
+          "prod": "https://be40-gxo-wms-web-PR24.jdadelivers.com/portal"
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP31.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR24.jdadelivers.com/service"
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP31.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR24.jdadelivers.com"
+        }
+      },
+      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-portland-les",
+      "metadata": {
+        "last_updated": "2026-07-10T18:43:53.578628"
+      }
+    },
+    {
+      "id": "PR22-RHN",
+      "card_title": "RJR  Rural Hall, NC - NP34",
+      "client": "RJR  Rural Hall, NC",
+      "client_id": "3035",
+      "instance": "be40",
+      "site": "RHN",
+      "region": "AMAPAC",
+      "location": "RJR\n200 FORUM PARKWAY\nRURAL HALL, NC 27045\nUSA",
+      "operating_hours": null,
+      "live": true,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP34",
+          "version": "2023.1.0.45.0",
+          "realm": "be40-02w-eus2"
+        },
+        "prod": {
+          "code": "PR22",
+          "version": "2023.1.0.45.0",
+          "realm": null
+        },
+        "arch": {
+          "code": "PR22A",
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": null,
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP34.jdadelivers.com/portal",
+          "prod": "https://be40-gxo-wms-web-PR22.jdadelivers.com/portal"
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP34.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR22.jdadelivers.com/service"
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP34.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR22.jdadelivers.com"
+        }
+      },
+      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-ruralhall-les",
+      "metadata": {
+        "last_updated": "2026-07-10T18:43:53.579632"
+      }
+    },
+    {
+      "id": "PR18-FT1",
+      "card_title": "Span.IO - NP22",
+      "client": "Span.IO",
+      "client_id": "3031",
+      "instance": "be40",
+      "site": "FT1",
+      "region": "AMAPAC",
+      "location": "1401 EVERMAN PARKWAY, FORT WORTH, TX 76140",
+      "operating_hours": null,
+      "live": true,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP22",
+          "version": "2023.1.0.30.0",
+          "realm": "bh10-004-euw"
+        },
+        "prod": {
+          "code": "PR18",
+          "version": "2023.1.0.30.0",
+          "realm": "be40-029-eus2"
+        },
+        "arch": {
+          "code": "PR18A",
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": null,
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP22.jdadelivers.com/portal",
+          "prod": "https://be40-gxo-wms-web-PR18.jdadelivers.com/portal"
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP22.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR18.jdadelivers.com/service"
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP22.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR18.jdadelivers.com"
+        }
+      },
+      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-span-les",
+      "metadata": {
+        "last_updated": "2026-07-10T18:43:53.579632"
       }
     },
     {
@@ -1193,7 +1517,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toolstation-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.032604"
+        "last_updated": "2026-07-10T18:43:53.580634"
       }
     },
     {
@@ -1247,35 +1571,35 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-passenger-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.032604"
+        "last_updated": "2026-07-10T18:43:53.580634"
       }
     },
     {
-      "id": "TBD-XNE",
-      "card_title": "WH Smith - NP24",
-      "client": "WH Smith",
-      "client_id": "3033",
+      "id": "PR27-FTR",
+      "card_title": "RJR Fort Worth, TX - NP36",
+      "client": "RJR Fort Worth, TX",
+      "client_id": "3035",
       "instance": "be40",
-      "site": "XNE",
+      "site": "FTR",
       "region": "AMAPAC",
-      "location": "2353 US Highway 130\nDayton, NJ 08810",
+      "location": "4801 Mercantile Dr\nFt Worth, TX 76137\nUSA",
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
         "np": {
-          "code": "NP24",
-          "version": "2023.1.0.45.0",
-          "realm": "bh10-002-euw"
+          "code": "NP36",
+          "version": null,
+          "realm": null
         },
         "prod": {
-          "code": "TBD",
+          "code": "PR27",
           "version": null,
           "realm": null
         },
         "arch": {
-          "code": null,
+          "code": "PR27A",
           "version": null,
           "realm": null
         }
@@ -1287,183 +1611,21 @@
       },
       "urls": {
         "web": {
-          "np": "https://be40-gxo-wms-web-NP24.jdadelivers.com/portal",
-          "prod": null
+          "np": "https://be40-gxo-wms-web-NP36.jdadelivers.com/portal",
+          "prod": "https://be40-gxo-wms-web-PR27.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP24.jdadelivers.com/service",
-          "prod": null
+          "np": "https://be40-gxo-wms-app-NP36.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR27.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP24.jdadelivers.com",
-          "prod": null
+          "np": "https://be40-gxo-wms-con-NP36.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR27.jdadelivers.com"
         }
       },
-      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-wh-smith-les",
+      "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.032604"
-      }
-    },
-    {
-      "id": "PR4-WNL",
-      "card_title": "Project Phoenix Prenatal - NP6",
-      "client": "Project Phoenix Prenatal",
-      "client_id": "3034",
-      "instance": "bh10",
-      "site": "WNL",
-      "region": "EUROPE",
-      "location": "GXO Op Den Dries 1\n6019 RA Wessem, Netherlands",
-      "operating_hours": "NP13 (PRENTAL AUTOMATION)",
-      "live": true,
-      "go_live": null,
-      "flags": [],
-      "environments": {
-        "np": {
-          "code": "NP6",
-          "version": "2023.1.0.42.0",
-          "realm": "bh10-006-euw"
-        },
-        "prod": {
-          "code": "PR4",
-          "version": "2023.1.0.42.0",
-          "realm": "bh10-009-euw"
-        },
-        "arch": {
-          "code": "PR4A",
-          "version": null,
-          "realm": null
-        }
-      },
-      "contact": {
-        "poc": "EMEA",
-        "site_contact": null,
-        "site_distribution": null
-      },
-      "urls": {
-        "web": {
-          "np": "https://bh10-gxo-wms-web-NP6.jdadelivers.com/portal",
-          "prod": "https://bh10-gxo-wms-web-PR4.jdadelivers.com/portal"
-        },
-        "app": {
-          "np": "https://bh10-gxo-wms-app-NP6.jdadelivers.com/service",
-          "prod": "https://bh10-gxo-wms-app-PR4.jdadelivers.com/service"
-        },
-        "console": {
-          "np": "https://bh10-gxo-wms-con-NP6.jdadelivers.com",
-          "prod": "https://bh10-gxo-wms-con-PR4.jdadelivers.com"
-        }
-      },
-      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-prenatal-les\nexec-wms-gxo-phoenix-les",
-      "metadata": {
-        "last_updated": "2026-05-28T10:00:07.032604"
-      }
-    },
-    {
-      "id": "PR21-PIR",
-      "card_title": "RJR Plainfield - NP29",
-      "client": "RJR Plainfield",
-      "client_id": "3035",
-      "instance": "be40",
-      "site": "PIR",
-      "region": "AMAPAC",
-      "location": "600 S Perry Rd\nPlainfield, IN 46168\nUSA",
-      "operating_hours": null,
-      "live": true,
-      "go_live": null,
-      "flags": [],
-      "environments": {
-        "np": {
-          "code": "NP29",
-          "version": "2023.1.0.45.0",
-          "realm": "be40-02n-eus2"
-        },
-        "prod": {
-          "code": "PR21",
-          "version": null,
-          "realm": null
-        },
-        "arch": {
-          "code": "PR21A",
-          "version": null,
-          "realm": null
-        }
-      },
-      "contact": {
-        "poc": "US",
-        "site_contact": null,
-        "site_distribution": null
-      },
-      "urls": {
-        "web": {
-          "np": "https://be40-gxo-wms-web-NP29.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-web-PR21.jdadelivers.com/portal"
-        },
-        "app": {
-          "np": "https://be40-gxo-wms-app-NP29.jdadelivers.com/service",
-          "prod": "https://be40-gxo-wms-app-PR21.jdadelivers.com/service"
-        },
-        "console": {
-          "np": "https://be40-gxo-wms-con-NP29.jdadelivers.com",
-          "prod": "https://be40-gxo-wms-con-PR21.jdadelivers.com"
-        }
-      },
-      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-plainfield-les",
-      "metadata": {
-        "last_updated": "2026-05-28T10:00:07.032604"
-      }
-    },
-    {
-      "id": "PR23-OFR",
-      "card_title": "RJR Orlando - NP32",
-      "client": "RJR Orlando",
-      "client_id": "3035",
-      "instance": "be40",
-      "site": "OFR",
-      "region": "AMAPAC",
-      "location": "7469 PRESIDENTS DRIVE\nORLANDO, FL 32809\nUSA",
-      "operating_hours": null,
-      "live": true,
-      "go_live": null,
-      "flags": [],
-      "environments": {
-        "np": {
-          "code": "NP32",
-          "version": "2023.1.0.45.0",
-          "realm": "be40-02p-eus2"
-        },
-        "prod": {
-          "code": "PR23",
-          "version": "2023.1.0.45.0",
-          "realm": "be40-02i-eus2"
-        },
-        "arch": {
-          "code": "PR23A",
-          "version": null,
-          "realm": null
-        }
-      },
-      "contact": {
-        "poc": "US",
-        "site_contact": null,
-        "site_distribution": null
-      },
-      "urls": {
-        "web": {
-          "np": "https://be40-gxo-wms-web-NP32.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-web-PR23.jdadelivers.com/portal"
-        },
-        "app": {
-          "np": "https://be40-gxo-wms-app-NP32.jdadelivers.com/service",
-          "prod": "https://be40-gxo-wms-app-PR23.jdadelivers.com/service"
-        },
-        "console": {
-          "np": "https://be40-gxo-wms-con-NP32.jdadelivers.com",
-          "prod": "https://be40-gxo-wms-con-PR23.jdadelivers.com"
-        }
-      },
-      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-orlando-les",
-      "metadata": {
-        "last_updated": "2026-05-28T10:00:07.032604"
+        "last_updated": "2026-07-10T18:43:53.580634"
       }
     },
     {
@@ -1517,11 +1679,11 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-kumho-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.033597"
+        "last_updated": "2026-07-10T18:43:53.580634"
       }
     },
     {
-      "id": "TBD-VEE",
+      "id": "PR5-VEE",
       "card_title": "Commscope - NP7",
       "client": "Commscope",
       "client_id": "3037",
@@ -1530,7 +1692,7 @@
       "region": "EUROPE",
       "location": "GXO Veenendaal\nArsenaal 2, 3905 Veenendaal, NL",
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -1540,12 +1702,12 @@
           "realm": "bh10-00d-euw"
         },
         "prod": {
-          "code": "TBD",
+          "code": "PR5",
           "version": null,
           "realm": null
         },
         "arch": {
-          "code": null,
+          "code": "PR5A",
           "version": null,
           "realm": null
         }
@@ -1558,20 +1720,20 @@
       "urls": {
         "web": {
           "np": "https://bh10-gxo-wms-web-NP7.jdadelivers.com/portal",
-          "prod": null
+          "prod": "https://bh10-gxo-wms-web-PR5.jdadelivers.com/portal"
         },
         "app": {
           "np": "https://bh10-gxo-wms-app-NP7.jdadelivers.com/service",
-          "prod": null
+          "prod": "https://bh10-gxo-wms-app-PR5.jdadelivers.com/service"
         },
         "console": {
           "np": "https://bh10-gxo-wms-con-NP7.jdadelivers.com",
-          "prod": null
+          "prod": "https://bh10-gxo-wms-con-PR5.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-commscope-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.033597"
+        "last_updated": "2026-07-10T18:43:53.580634"
       }
     },
     {
@@ -1625,223 +1787,61 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.033597"
+        "last_updated": "2026-07-10T18:43:53.580634"
       }
     },
     {
-      "id": "PR24-RPO",
-      "card_title": "RJR Portland - NP31",
-      "client": "RJR Portland",
-      "client_id": "3035",
-      "instance": "be40",
-      "site": "RPO",
-      "region": "AMAPAC",
-      "location": "3591 YEON AVE\nPORTLAND, OR 97210\nUSA",
+      "id": "PR1-DN1-2",
+      "card_title": "Nodor - NP3",
+      "client": "Nodor",
+      "client_id": "3067",
+      "instance": "bh10",
+      "site": "DN1",
+      "region": "EUROPE",
+      "location": "Düsseldorfer str. 85 -41541 Dormagen, Germany",
       "operating_hours": null,
       "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
         "np": {
-          "code": "NP31",
-          "version": "2023.1.0.45.0",
-          "realm": "be40-02p-eus2"
+          "code": "NP3",
+          "version": "2023.1.0.37.0",
+          "realm": "bh10-003-euw"
         },
         "prod": {
-          "code": "PR24",
-          "version": "2023.1.0.45.0",
-          "realm": "be40-02q-eus2"
+          "code": "PR1",
+          "version": "2023.1.0.37",
+          "realm": "bh10-002-euw"
         },
         "arch": {
-          "code": "PR24A",
+          "code": "PR1A",
           "version": null,
           "realm": null
         }
       },
       "contact": {
-        "poc": "US",
+        "poc": "EMEA",
         "site_contact": null,
         "site_distribution": null
       },
       "urls": {
         "web": {
-          "np": "https://be40-gxo-wms-web-NP31.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-web-PR24.jdadelivers.com/portal"
+          "np": "https://bh10-gxo-wms-web-NP3.jdadelivers.com/portal",
+          "prod": "https://bh10-gxo-wms-web-PR1.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP31.jdadelivers.com/service",
-          "prod": "https://be40-gxo-wms-app-PR24.jdadelivers.com/service"
+          "np": "https://bh10-gxo-wms-app-NP3.jdadelivers.com/service",
+          "prod": "https://bh10-gxo-wms-app-PR1.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP31.jdadelivers.com",
-          "prod": "https://be40-gxo-wms-con-PR24.jdadelivers.com"
+          "np": "https://bh10-gxo-wms-con-NP3.jdadelivers.com",
+          "prod": "https://bh10-gxo-wms-con-PR1.jdadelivers.com"
         }
       },
-      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-portland-les",
+      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-passenger-les",
       "metadata": {
-        "last_updated": "2026-05-28T10:00:07.033597"
-      }
-    },
-    {
-      "id": "PR22-RHN",
-      "card_title": "RJR  Rural Hall, NC - NP34",
-      "client": "RJR  Rural Hall, NC",
-      "client_id": "3035",
-      "instance": "be40",
-      "site": "RHN",
-      "region": "AMAPAC",
-      "location": "RJR\n200 FORUM PARKWAY\nRURAL HALL, NC 27045\nUSA",
-      "operating_hours": null,
-      "live": true,
-      "go_live": null,
-      "flags": [],
-      "environments": {
-        "np": {
-          "code": "NP34",
-          "version": "2023.1.0.45.0",
-          "realm": "be40-02w-eus2"
-        },
-        "prod": {
-          "code": "PR22",
-          "version": "2023.1.0.45.0",
-          "realm": null
-        },
-        "arch": {
-          "code": "PR22A",
-          "version": null,
-          "realm": null
-        }
-      },
-      "contact": {
-        "poc": "US",
-        "site_contact": null,
-        "site_distribution": null
-      },
-      "urls": {
-        "web": {
-          "np": "https://be40-gxo-wms-web-NP34.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-web-PR22.jdadelivers.com/portal"
-        },
-        "app": {
-          "np": "https://be40-gxo-wms-app-NP34.jdadelivers.com/service",
-          "prod": "https://be40-gxo-wms-app-PR22.jdadelivers.com/service"
-        },
-        "console": {
-          "np": "https://be40-gxo-wms-con-NP34.jdadelivers.com",
-          "prod": "https://be40-gxo-wms-con-PR22.jdadelivers.com"
-        }
-      },
-      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-ruralhall-les",
-      "metadata": {
-        "last_updated": "2026-05-28T10:00:07.033597"
-      }
-    },
-    {
-      "id": "PR18-FT1",
-      "card_title": "Span.IO - NP22",
-      "client": "Span.IO",
-      "client_id": "3031",
-      "instance": "be40",
-      "site": "FT1",
-      "region": "AMAPAC",
-      "location": "1401 EVERMAN PARKWAY, FORT WORTH, TX 76140",
-      "operating_hours": null,
-      "live": true,
-      "go_live": null,
-      "flags": [],
-      "environments": {
-        "np": {
-          "code": "NP22",
-          "version": "2023.1.0.30.0",
-          "realm": "bh10-004-euw"
-        },
-        "prod": {
-          "code": "PR18",
-          "version": "2023.1.0.30.0",
-          "realm": "be40-029-eus2"
-        },
-        "arch": {
-          "code": "PR18A",
-          "version": null,
-          "realm": null
-        }
-      },
-      "contact": {
-        "poc": "Heather",
-        "site_contact": null,
-        "site_distribution": null
-      },
-      "urls": {
-        "web": {
-          "np": "https://be40-gxo-wms-web-NP22.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-web-PR18.jdadelivers.com/portal"
-        },
-        "app": {
-          "np": "https://be40-gxo-wms-app-NP22.jdadelivers.com/service",
-          "prod": "https://be40-gxo-wms-app-PR18.jdadelivers.com/service"
-        },
-        "console": {
-          "np": "https://be40-gxo-wms-con-NP22.jdadelivers.com",
-          "prod": "https://be40-gxo-wms-con-PR18.jdadelivers.com"
-        }
-      },
-      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-span-les",
-      "metadata": {
-        "last_updated": "2026-05-28T10:00:07.033597"
-      }
-    },
-    {
-      "id": "PR27-FTR",
-      "card_title": "RJR Fort Worth, TX - NP36",
-      "client": "RJR Fort Worth, TX",
-      "client_id": "3035",
-      "instance": "be40",
-      "site": "FTR",
-      "region": "AMAPAC",
-      "location": "4801 Mercantile Dr\nFt Worth, TX 76137\nUSA",
-      "operating_hours": null,
-      "live": true,
-      "go_live": null,
-      "flags": [],
-      "environments": {
-        "np": {
-          "code": "NP36",
-          "version": null,
-          "realm": null
-        },
-        "prod": {
-          "code": "PR27",
-          "version": null,
-          "realm": null
-        },
-        "arch": {
-          "code": "PR27A",
-          "version": null,
-          "realm": null
-        }
-      },
-      "contact": {
-        "poc": "US",
-        "site_contact": null,
-        "site_distribution": null
-      },
-      "urls": {
-        "web": {
-          "np": "https://be40-gxo-wms-web-NP36.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-web-PR27.jdadelivers.com/portal"
-        },
-        "app": {
-          "np": "https://be40-gxo-wms-app-NP36.jdadelivers.com/service",
-          "prod": "https://be40-gxo-wms-app-PR27.jdadelivers.com/service"
-        },
-        "console": {
-          "np": "https://be40-gxo-wms-con-NP36.jdadelivers.com",
-          "prod": "https://be40-gxo-wms-con-PR27.jdadelivers.com"
-        }
-      },
-      "extensions_repo": null,
-      "metadata": {
-        "last_updated": "2026-05-28T10:00:07.033597"
+        "last_updated": "2026-07-10T18:43:53.581633"
       }
     }
   ]
