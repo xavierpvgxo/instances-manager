@@ -39,6 +39,7 @@ Reglas:
 """
 
 import json
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -46,6 +47,20 @@ from pathlib import Path
 import pandas as pd
 
 SOURCE_SHEET = "Client Info"
+
+# Entornos internos que no son clientes. Se publican igual, pero categorizados
+# aparte para que no se mezclen con las instancias de cliente en la web.
+DEV_SANDBOX_RE = re.compile(r"dev|test|sandbox", re.I)
+QL_TEMPLATE_RE = re.compile(r"^\s*QL\b", re.I)
+
+
+def classify(client):
+    """'client' | 'dev-sandbox' | 'ql-template' segun el nombre de la fila."""
+    if DEV_SANDBOX_RE.search(client):
+        return "dev-sandbox"
+    if QL_TEMPLATE_RE.match(client):
+        return "ql-template"
+    return "client"
 
 REGION_BY_INSTANCE = {
     "be40": "AMAPAC",
@@ -61,7 +76,9 @@ def normalize_str(v):
         return None
     if isinstance(v, float) and pd.isna(v):
         return None
-    s = str(v).strip()
+    # Algunas celdas traen saltos de linea (p.ej. Site Code "PIN\nJMS\nWTN"),
+    # que romperian ids y maquetacion. Se colapsa todo el blanco a un espacio.
+    s = " ".join(str(v).split())
     if not s or s.lower() == "nan" or s == "----":
         return None
     return s
@@ -77,13 +94,18 @@ def normalize_prod_env(raw):
     return head, flags
 
 
+# Un codigo de entorno real es NP/PR + numero (+ sufijo de arch): NP5, PR26, PR18A.
+# La columna trae tambien texto libre ('TBD', 'GXO funded', 'Not Setup') que NO es
+# un entorno: si se cuela, se acaban construyendo URLs invalidas con espacios.
+ENV_CODE_RE = re.compile(r"^(?:NP|PR)\d+[A-Za-z]?$", re.I)
+
+
 def env_for_url(code):
     """Codigo de entorno valido para construir una URL, o None."""
     if not code:
         return None
-    if code.strip().upper() == "TBD":
-        return None
-    return code.strip()
+    code = code.strip()
+    return code if ENV_CODE_RE.match(code) else None
 
 
 def build_url(instance, env_code, kind):
@@ -119,7 +141,10 @@ def convert_excel_to_json(input_file, output_file="data/instances.json"):
         prod_env_raw = normalize_str(row.get("Prod Env"))
         client = normalize_str(row.get("Client"))
         site_code = normalize_str(row.get("Site Code"))
-        if not prod_env_raw or not client:
+        # Basta con tener cliente: una instancia solo-NP (aun sin produccion) es
+        # real y debe publicarse. Las filas hueco del Excel (IDs pre-reservados,
+        # sin nombre) se descartan aqui.
+        if not client:
             continue
         if client.lower().startswith("do not use"):
             continue
@@ -133,7 +158,10 @@ def convert_excel_to_json(input_file, output_file="data/instances.json"):
         # En PROD si Prod Env tiene un valor real (TBD no cuenta como entorno).
         in_prod = env_for_url(display_prod) is not None
 
-        unique_id = f"{display_prod}-{site_code}" if site_code else display_prod
+        # Sin Prod Env util el identificador cae al codigo NP (y de ahi al cliente),
+        # para no acabar generando ids del tipo "None-WNL" o "TBD-GE1".
+        base_code = env_for_url(display_prod) or env_for_url(np_env) or client
+        unique_id = f"{base_code}-{site_code}" if site_code else base_code
         if unique_id in seen_ids:
             n = 2
             while f"{unique_id}-{n}" in seen_ids:
@@ -142,7 +170,7 @@ def convert_excel_to_json(input_file, output_file="data/instances.json"):
         seen_ids.add(unique_id)
 
         # Cabecera de tarjeta: "<Client> - <NP Env>" (fallback a Prod Env / Site Code)
-        title_suffix = np_env or display_prod or site_code
+        title_suffix = env_for_url(np_env) or env_for_url(display_prod) or site_code
         card_title = f"{client} - {title_suffix}" if title_suffix else client
 
         region = REGION_BY_INSTANCE.get((instance or "").lower())
@@ -151,6 +179,7 @@ def convert_excel_to_json(input_file, output_file="data/instances.json"):
             "id": unique_id,
             "card_title": card_title,
             "client": client,
+            "category": classify(client),
             "client_id": normalize_str(row.get("Client ID")),
             "instance": instance,
             "site": site_code,

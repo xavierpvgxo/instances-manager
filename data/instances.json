@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generated_at": "2026-07-10T18:43:53.588634",
-    "total_instances": 34,
-    "source_file": "data/instances.xlsx",
+    "generated_at": "2026-07-13T13:07:14.630786",
+    "total_instances": 72,
+    "source_file": "C:/Users/xavier.parro/GXO/GXO Blue Yonder - Documentos/BY Client Tracker/Client ID list.xlsx",
     "source_sheet": "Client Info"
   },
   "instances": [
@@ -10,6 +10,7 @@
       "id": "PR1-RI3",
       "card_title": "Hasbro - NP2",
       "client": "Hasbro",
+      "category": "client",
       "client_id": "1722",
       "instance": "be40",
       "site": "RI3",
@@ -57,13 +58,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-romeoville-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.576628"
+        "last_updated": "2026-07-13T13:07:14.614869"
       }
     },
     {
       "id": "PR26-MGO",
       "card_title": "Hasbro - NP28",
       "client": "Hasbro",
+      "category": "client",
       "client_id": "1722",
       "instance": "be40",
       "site": "MGO",
@@ -111,13 +113,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-savannah-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.576628"
+        "last_updated": "2026-07-13T13:07:14.614869"
       }
     },
     {
       "id": "PR3-DJ1",
       "card_title": "LVMH - Loewe - NP3",
       "client": "LVMH - Loewe",
+      "category": "client",
       "client_id": "3001",
       "instance": "be40",
       "site": "DJ1",
@@ -165,13 +168,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-loewe-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.576628"
+        "last_updated": "2026-07-13T13:07:14.614869"
       }
     },
     {
       "id": "PR2-HMA",
       "card_title": "Amyris - NP5",
       "client": "Amyris",
+      "category": "client",
       "client_id": "3005",
       "instance": "be40",
       "site": "HMA",
@@ -219,13 +223,14 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.576628"
+        "last_updated": "2026-07-13T13:07:14.614869"
       }
     },
     {
       "id": "PR4-BI1",
       "card_title": "Darigold - PR4",
       "client": "Darigold",
+      "category": "client",
       "client_id": "3006",
       "instance": "be40",
       "site": "BI1",
@@ -273,13 +278,14 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.576628"
+        "last_updated": "2026-07-13T13:07:14.614869"
       }
     },
     {
       "id": "PR5-NI1",
       "card_title": "Darigold - NP6",
       "client": "Darigold",
+      "category": "client",
       "client_id": "3006",
       "instance": "be40",
       "site": "NI1",
@@ -327,13 +333,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-darigold-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.577630"
+        "last_updated": "2026-07-13T13:07:14.614869"
       }
     },
     {
       "id": "PR6-GO1",
       "card_title": "Alpargatas - NP9",
       "client": "Alpargatas",
+      "category": "client",
       "client_id": "3008",
       "instance": "be40",
       "site": "GO1",
@@ -381,13 +388,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-alpargata-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.577630"
+        "last_updated": "2026-07-13T13:07:14.614869"
       }
     },
     {
       "id": "PR10-MC1",
       "card_title": "Soda Stream - NP10",
       "client": "Soda Stream",
+      "category": "client",
       "client_id": "3009",
       "instance": "be40",
       "site": "MC1",
@@ -416,7 +424,7 @@
       },
       "contact": {
         "poc": null,
-        "site_contact": "rafa.duenas@gxo.com   , Ron.biggs@gxo.com",
+        "site_contact": "rafa.duenas@gxo.com , Ron.biggs@gxo.com",
         "site_distribution": "SodaStreamManteca@gxo.com"
       },
       "urls": {
@@ -435,13 +443,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-west-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.577630"
+        "last_updated": "2026-07-13T13:07:14.614869"
       }
     },
     {
       "id": "PR13-CPO",
       "card_title": "Soda Stream - NP12",
       "client": "Soda Stream",
+      "category": "client",
       "client_id": "3009",
       "instance": "be40",
       "site": "CPO",
@@ -489,18 +498,19 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-east-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.577630"
+        "last_updated": "2026-07-13T13:07:14.614869"
       }
     },
     {
       "id": "PR14-LV1",
       "card_title": "Starbucks - NP14",
       "client": "Starbucks",
+      "category": "client",
       "client_id": "3010",
       "instance": "be40",
       "site": "LV1",
       "region": "AMAPAC",
-      "location": "2401 N Chain Drive\nFG8: F CDC Simi Valley, CA  93065",
+      "location": "2401 N Chain Drive FG8: F CDC Simi Valley, CA 93065",
       "operating_hours": null,
       "live": true,
       "go_live": "2025-03-17",
@@ -543,13 +553,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-starbucks-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.577630"
+        "last_updated": "2026-07-13T13:07:14.614869"
       }
     },
     {
       "id": "PR16-FTL",
       "card_title": "LG - NP19",
       "client": "LG",
+      "category": "client",
       "client_id": "3011",
       "instance": "be40",
       "site": "FTL",
@@ -597,13 +608,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-lg-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.577630"
+        "last_updated": "2026-07-13T13:07:14.616385"
       }
     },
     {
       "id": "PR8-MP2",
       "card_title": "Peloton Apparel & Acc. - NP7",
       "client": "Peloton Apparel & Acc.",
+      "category": "client",
       "client_id": "3014",
       "instance": "be40",
       "site": "MP2",
@@ -651,19 +663,20 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-peloton-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.577630"
+        "last_updated": "2026-07-13T13:07:14.616385"
       }
     },
     {
       "id": "PR9-BC1",
       "card_title": "Peloton Apparel & Acc. - NP8",
       "client": "Peloton Apparel & Acc.",
+      "category": "client",
       "client_id": "3014",
       "instance": "be40",
       "site": "BC1",
       "region": "AMAPAC",
       "location": "3520 Cactus Ave, Bloomington, CA",
-      "operating_hours": "6:00am - 6:00pm during Peak; 8:am-4:30pm Normal non-peak.  CST",
+      "operating_hours": "6:00am - 6:00pm during Peak; 8:am-4:30pm Normal non-peak. CST",
       "live": true,
       "go_live": "2023-10-02",
       "flags": [],
@@ -705,18 +718,19 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.578628"
+        "last_updated": "2026-07-13T13:07:14.616385"
       }
     },
     {
       "id": "PR11-XS1",
       "card_title": "Corsair - NP11",
       "client": "Corsair",
+      "category": "client",
       "client_id": "3016",
       "instance": "be40",
       "site": "XS1",
       "region": "AMAPAC",
-      "location": "7140 N. CAJON BLVD.  San Bernandino, CA",
+      "location": "7140 N. CAJON BLVD. San Bernandino, CA",
       "operating_hours": "7:00 am to 3:30 pm PST",
       "live": true,
       "go_live": "2024-03-15",
@@ -759,13 +773,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-california-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.578628"
+        "last_updated": "2026-07-13T13:07:14.616385"
       }
     },
     {
       "id": "PR20-MON",
       "card_title": "Corsair - NP27",
       "client": "Corsair",
+      "category": "client",
       "client_id": "3016",
       "instance": "be40",
       "site": "MON",
@@ -813,18 +828,294 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-canada-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.578628"
+        "last_updated": "2026-07-13T13:07:14.616385"
+      }
+    },
+    {
+      "id": "Tobacco - Altria-PIN JMS WTN",
+      "card_title": "Tobacco - Altria - PIN JMS WTN",
+      "client": "Tobacco - Altria",
+      "category": "client",
+      "client_id": "3017",
+      "instance": "be40",
+      "site": "PIN JMS WTN",
+      "region": "AMAPAC",
+      "location": "Multi",
+      "operating_hours": null,
+      "live": false,
+      "go_live": "2025-01-20",
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "Colleen/Jeff",
+        "site_contact": "brandon.conner@gxo.com",
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": null,
+          "prod": null
+        },
+        "app": {
+          "np": null,
+          "prod": null
+        },
+        "console": {
+          "np": null,
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.616385"
+      }
+    },
+    {
+      "id": "Tobacco - ITG-PIN JMS WTN",
+      "card_title": "Tobacco - ITG - PIN JMS WTN",
+      "client": "Tobacco - ITG",
+      "category": "client",
+      "client_id": "3018",
+      "instance": "be40",
+      "site": "PIN JMS WTN",
+      "region": "AMAPAC",
+      "location": "Multi",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "GXO funded",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": null,
+        "site_contact": "brandon.conner@gxo.com",
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": null,
+          "prod": null
+        },
+        "app": {
+          "np": null,
+          "prod": null
+        },
+        "console": {
+          "np": null,
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.616385"
+      }
+    },
+    {
+      "id": "Tobacco - CJ Logistics-PIN JMS WTN",
+      "card_title": "Tobacco - CJ Logistics - PIN JMS WTN",
+      "client": "Tobacco - CJ Logistics",
+      "category": "client",
+      "client_id": "3019",
+      "instance": "be40",
+      "site": "PIN JMS WTN",
+      "region": "AMAPAC",
+      "location": "Multi",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "GXO funded",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": null,
+        "site_contact": "brandon.conner@gxo.com",
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": null,
+          "prod": null
+        },
+        "app": {
+          "np": null,
+          "prod": null
+        },
+        "console": {
+          "np": null,
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.616385"
+      }
+    },
+    {
+      "id": "Tobacco - JTI-PIN JMS WTN",
+      "card_title": "Tobacco - JTI - PIN JMS WTN",
+      "client": "Tobacco - JTI",
+      "category": "client",
+      "client_id": "3020",
+      "instance": "be40",
+      "site": "PIN JMS WTN",
+      "region": "AMAPAC",
+      "location": "Multi",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "GXO funded",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": null,
+        "site_contact": "brandon.conner@gxo.com",
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": null,
+          "prod": null
+        },
+        "app": {
+          "np": null,
+          "prod": null
+        },
+        "console": {
+          "np": null,
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.616385"
+      }
+    },
+    {
+      "id": "Tobacco - Liggett-PIN JMS WTN",
+      "card_title": "Tobacco - Liggett - PIN JMS WTN",
+      "client": "Tobacco - Liggett",
+      "category": "client",
+      "client_id": "3021",
+      "instance": "be40",
+      "site": "PIN JMS WTN",
+      "region": "AMAPAC",
+      "location": "Multi",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "GXO funded",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "Michael",
+        "site_contact": "brandon.conner@gxo.com",
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": null,
+          "prod": null
+        },
+        "app": {
+          "np": null,
+          "prod": null
+        },
+        "console": {
+          "np": null,
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.616385"
       }
     },
     {
       "id": "PR2-FBG",
       "card_title": "AMIRI - NP5",
       "client": "AMIRI",
+      "category": "client",
       "client_id": "3022",
       "instance": "be40",
       "site": "FBG",
       "region": "AMAPAC",
-      "location": "4020 Falcon Parkway\nFlowery Branch, GA",
+      "location": "4020 Falcon Parkway Flowery Branch, GA",
       "operating_hours": "7am EST - 7pm EST",
       "live": true,
       "go_live": "2024-04-15",
@@ -867,13 +1158,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-amiri-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.578628"
+        "last_updated": "2026-07-13T13:07:14.617406"
       }
     },
     {
       "id": "PR12-HM1",
       "card_title": "Food52 - NP13",
       "client": "Food52",
+      "category": "client",
       "client_id": "3023",
       "instance": "be40",
       "site": "HM1",
@@ -923,18 +1215,74 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-food52-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.578628"
+        "last_updated": "2026-07-13T13:07:14.617406"
+      }
+    },
+    {
+      "id": "NP18-RVA",
+      "card_title": "Dupont - NP18",
+      "client": "Dupont",
+      "category": "client",
+      "client_id": "3024",
+      "instance": "be40",
+      "site": "RVA",
+      "region": "AMAPAC",
+      "location": "1500 Bellwood Road, Richmond, VA, 23237",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP18",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": "NOT ACTIVE",
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "Colleen",
+        "site_contact": "dexter.sallet@gxo.com",
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP18.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP18.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP18.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.617406"
       }
     },
     {
       "id": "PR25-XS1002",
       "card_title": "Toast - NP30",
       "client": "Toast",
+      "category": "client",
       "client_id": "3025",
       "instance": "be40",
       "site": "XS1002",
       "region": "AMAPAC",
-      "location": "7140 N. CAJON BLVD\nSAN BERNARDINO, CA 92407\nUSA",
+      "location": "7140 N. CAJON BLVD SAN BERNARDINO, CA 92407 USA",
       "operating_hours": "NEW TBD",
       "live": true,
       "go_live": null,
@@ -977,13 +1325,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toast-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.578628"
+        "last_updated": "2026-07-13T13:07:14.617406"
       }
     },
     {
       "id": "PR49-LGL",
-      "card_title": "PROJECT Bolt/Moonstone - NP26 / NP35",
+      "card_title": "PROJECT Bolt/Moonstone - PR49",
       "client": "PROJECT Bolt/Moonstone",
+      "category": "client",
       "client_id": "3026",
       "instance": "be40",
       "site": "LGL",
@@ -1017,27 +1366,28 @@
       },
       "urls": {
         "web": {
-          "np": "https://be40-gxo-wms-web-NP26 / NP35.jdadelivers.com/portal",
+          "np": null,
           "prod": "https://be40-gxo-wms-web-PR49.jdadelivers.com/portal"
         },
         "app": {
-          "np": "https://be40-gxo-wms-app-NP26 / NP35.jdadelivers.com/service",
+          "np": null,
           "prod": "https://be40-gxo-wms-app-PR49.jdadelivers.com/service"
         },
         "console": {
-          "np": "https://be40-gxo-wms-con-NP26 / NP35.jdadelivers.com",
+          "np": null,
           "prod": "https://be40-gxo-wms-con-PR49.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-on-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.578628"
+        "last_updated": "2026-07-13T13:07:14.618401"
       }
     },
     {
       "id": "PR15-XNI",
       "card_title": "Castore - NP17",
       "client": "Castore",
+      "category": "client",
       "client_id": "3027",
       "instance": "be40",
       "site": "XNI",
@@ -1066,7 +1416,7 @@
       },
       "contact": {
         "poc": "Mike/Shawn",
-        "site_contact": "mailto:brandon.conner@gxo.com",
+        "site_contact": null,
         "site_distribution": null
       },
       "urls": {
@@ -1085,13 +1435,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-castore-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.578628"
+        "last_updated": "2026-07-13T13:07:14.618401"
       }
     },
     {
       "id": "PR17-GPA",
       "card_title": "Mountain Warehouse - NP21",
       "client": "Mountain Warehouse",
+      "category": "client",
       "client_id": "3028",
       "instance": "be40",
       "site": "GPA",
@@ -1120,7 +1471,7 @@
       },
       "contact": {
         "poc": "Mike/Shawn",
-        "site_contact": "mailto:brandon.conner@gxo.com",
+        "site_contact": null,
         "site_distribution": null
       },
       "urls": {
@@ -1137,20 +1488,76 @@
           "prod": "https://be40-gxo-wms-con-PR17.jdadelivers.com"
         }
       },
-      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-mw-les\nexec-wms-gxo-mt-les",
+      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-mw-les exec-wms-gxo-mt-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.578628"
+        "last_updated": "2026-07-13T13:07:14.618401"
       }
     },
     {
-      "id": "TBD-XNE",
+      "id": "NP37-OMS",
+      "card_title": "HP Enterprise (HPE) - NP37",
+      "client": "HP Enterprise (HPE)",
+      "category": "client",
+      "client_id": "4025",
+      "instance": "be40",
+      "site": "OMS",
+      "region": "AMAPAC",
+      "location": "6701 Legacy Blvd, Ste 101 Olive Branch, MS 38654 USA",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP37",
+          "version": "2023.1.0.50",
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "Mike/Shawn",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP37.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP37.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP37.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.618401"
+      }
+    },
+    {
+      "id": "NP24-XNE",
       "card_title": "WH Smith - NP24",
       "client": "WH Smith",
+      "category": "client",
       "client_id": "3033",
       "instance": "be40",
       "site": "XNE",
       "region": "AMAPAC",
-      "location": "2353 US Highway 130\nDayton, NJ 08810",
+      "location": "2353 US Highway 130 Dayton, NJ 08810",
       "operating_hours": null,
       "live": false,
       "go_live": null,
@@ -1174,7 +1581,7 @@
       },
       "contact": {
         "poc": "Mike/Shawn",
-        "site_contact": "mailto:brandon.conner@gxo.com",
+        "site_contact": null,
         "site_distribution": null
       },
       "urls": {
@@ -1193,18 +1600,19 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-wh-smith-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.578628"
+        "last_updated": "2026-07-13T13:07:14.618401"
       }
     },
     {
       "id": "PR21-PIR",
       "card_title": "RJR Plainfield - NP29",
       "client": "RJR Plainfield",
+      "category": "client",
       "client_id": "3035",
       "instance": "be40",
       "site": "PIR",
       "region": "AMAPAC",
-      "location": "600 S Perry Rd\nPlainfield, IN 46168\nUSA",
+      "location": "600 S Perry Rd Plainfield, IN 46168 USA",
       "operating_hours": null,
       "live": true,
       "go_live": null,
@@ -1247,18 +1655,19 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-plainfield-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.578628"
+        "last_updated": "2026-07-13T13:07:14.618401"
       }
     },
     {
       "id": "PR23-OFR",
       "card_title": "RJR Orlando - NP32",
       "client": "RJR Orlando",
+      "category": "client",
       "client_id": "3035",
       "instance": "be40",
       "site": "OFR",
       "region": "AMAPAC",
-      "location": "7469 PRESIDENTS DRIVE\nORLANDO, FL 32809\nUSA",
+      "location": "7469 PRESIDENTS DRIVE ORLANDO, FL 32809 USA",
       "operating_hours": null,
       "live": true,
       "go_live": null,
@@ -1301,18 +1710,19 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-orlando-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.578628"
+        "last_updated": "2026-07-13T13:07:14.618401"
       }
     },
     {
       "id": "PR24-RPO",
       "card_title": "RJR Portland - NP31",
       "client": "RJR Portland",
+      "category": "client",
       "client_id": "3035",
       "instance": "be40",
       "site": "RPO",
       "region": "AMAPAC",
-      "location": "3591 YEON AVE\nPORTLAND, OR 97210\nUSA",
+      "location": "3591 YEON AVE PORTLAND, OR 97210 USA",
       "operating_hours": null,
       "live": true,
       "go_live": null,
@@ -1355,18 +1765,19 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-portland-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.578628"
+        "last_updated": "2026-07-13T13:07:14.618401"
       }
     },
     {
       "id": "PR22-RHN",
-      "card_title": "RJR  Rural Hall, NC - NP34",
-      "client": "RJR  Rural Hall, NC",
+      "card_title": "RJR Rural Hall, NC - NP34",
+      "client": "RJR Rural Hall, NC",
+      "category": "client",
       "client_id": "3035",
       "instance": "be40",
       "site": "RHN",
       "region": "AMAPAC",
-      "location": "RJR\n200 FORUM PARKWAY\nRURAL HALL, NC 27045\nUSA",
+      "location": "RJR 200 FORUM PARKWAY RURAL HALL, NC 27045 USA",
       "operating_hours": null,
       "live": true,
       "go_live": null,
@@ -1409,13 +1820,69 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-ruralhall-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.579632"
+        "last_updated": "2026-07-13T13:07:14.618401"
+      }
+    },
+    {
+      "id": "NP25",
+      "card_title": "QL Template (AMAPAC) - NP25",
+      "client": "QL Template (AMAPAC)",
+      "category": "ql-template",
+      "client_id": "3042",
+      "instance": "be40",
+      "site": null,
+      "region": "AMAPAC",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP25",
+          "version": "2023.1.0.50.0",
+          "realm": "be40-02j-eus2"
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "Mike/Jeff",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP25.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP25.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP25.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-les",
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.618401"
       }
     },
     {
       "id": "PR18-FT1",
       "card_title": "Span.IO - NP22",
       "client": "Span.IO",
+      "category": "client",
       "client_id": "3031",
       "instance": "be40",
       "site": "FT1",
@@ -1463,18 +1930,74 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-span-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.579632"
+        "last_updated": "2026-07-13T13:07:14.618401"
+      }
+    },
+    {
+      "id": "NP38-WIL",
+      "card_title": "Riviana - NP38",
+      "client": "Riviana",
+      "category": "client",
+      "client_id": "3056",
+      "instance": "be40",
+      "site": "WIL",
+      "region": "AMAPAC",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP38",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": null,
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP38.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP38.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP38.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.618401"
       }
     },
     {
       "id": "PR2-BNL",
       "card_title": "Toolstation - NP2",
       "client": "Toolstation",
+      "category": "client",
       "client_id": "3030",
       "instance": "bh10",
       "site": "BNL",
       "region": "EUROPE",
-      "location": "DC1 - Brandpuntlaan Zuid 12, 2665 NZ Bleiswijk, Netherlands\nDC2 - Prismalaan Oost, 2665 Bleiswijk, Netherlands",
+      "location": "DC1 - Brandpuntlaan Zuid 12, 2665 NZ Bleiswijk, Netherlands DC2 - Prismalaan Oost, 2665 Bleiswijk, Netherlands",
       "operating_hours": null,
       "live": true,
       "go_live": null,
@@ -1517,13 +2040,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toolstation-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.580634"
+        "last_updated": "2026-07-13T13:07:14.619396"
       }
     },
     {
       "id": "PR1-DN1",
       "card_title": "Passenger Clothing Limited - NP3",
       "client": "Passenger Clothing Limited",
+      "category": "client",
       "client_id": "3032",
       "instance": "bh10",
       "site": "DN1",
@@ -1571,18 +2095,19 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-passenger-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.580634"
+        "last_updated": "2026-07-13T13:07:14.619396"
       }
     },
     {
       "id": "PR27-FTR",
       "card_title": "RJR Fort Worth, TX - NP36",
       "client": "RJR Fort Worth, TX",
+      "category": "client",
       "client_id": "3035",
       "instance": "be40",
       "site": "FTR",
       "region": "AMAPAC",
-      "location": "4801 Mercantile Dr\nFt Worth, TX 76137\nUSA",
+      "location": "4801 Mercantile Dr Ft Worth, TX 76137 USA",
       "operating_hours": null,
       "live": true,
       "go_live": null,
@@ -1625,18 +2150,184 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.580634"
+        "last_updated": "2026-07-13T13:07:14.619396"
       }
     },
     {
-      "id": "TBD-GE1",
+      "id": "NP6-WNL",
+      "card_title": "Project Phoenix Prenatal - NP6",
+      "client": "Project Phoenix Prenatal",
+      "category": "client",
+      "client_id": "3034",
+      "instance": "bh10",
+      "site": "WNL",
+      "region": "EUROPE",
+      "location": "GXO Op Den Dries 1 6019 RA Wessem, Netherlands",
+      "operating_hours": "NP13 (PRENTAL AUTOMATION)",
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP6",
+          "version": "2023.1.0.42.0",
+          "realm": "bh10-006-euw"
+        },
+        "prod": {
+          "code": null,
+          "version": "2023.1.0.42.0",
+          "realm": "bh10-009-euw"
+        },
+        "arch": {
+          "code": "A",
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP6.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP6.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP6.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-prenatal-les exec-wms-gxo-phoenix-les",
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.619396"
+      }
+    },
+    {
+      "id": "NP40-MP1",
+      "card_title": "Davine's Spa - NP40",
+      "client": "Davine's Spa",
+      "category": "client",
+      "client_id": "3057",
+      "instance": "be40",
+      "site": "MP1",
+      "region": "AMAPAC",
+      "location": "336 Heinz St Mechanicsburg, PA 17055 USA",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP40",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "US",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP40.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP40.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP40.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.619396"
+      }
+    },
+    {
+      "id": "NP41",
+      "card_title": "BOL - NP41",
+      "client": "BOL",
+      "category": "client",
+      "client_id": "1831",
+      "instance": "be40",
+      "site": null,
+      "region": "AMAPAC",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP41",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": "A",
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "US",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP41.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP41.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP41.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.619396"
+      }
+    },
+    {
+      "id": "NP4-GE1",
       "card_title": "Kumho (EU) - NP4",
       "client": "Kumho (EU)",
+      "category": "client",
       "client_id": "3036",
       "instance": "bh10",
       "site": "GE1",
       "region": "EUROPE",
-      "location": "GXO Marchamalo 2 \nCalle el Ventorro\n19180 Guadalajara, ES",
+      "location": "GXO Marchamalo 2 Calle el Ventorro 19180 Guadalajara, ES",
       "operating_hours": null,
       "live": false,
       "go_live": null,
@@ -1679,18 +2370,19 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-kumho-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.580634"
+        "last_updated": "2026-07-13T13:07:14.619396"
       }
     },
     {
       "id": "PR5-VEE",
       "card_title": "Commscope - NP7",
       "client": "Commscope",
+      "category": "client",
       "client_id": "3037",
       "instance": "bh10",
       "site": "VEE",
       "region": "EUROPE",
-      "location": "GXO Veenendaal\nArsenaal 2, 3905 Veenendaal, NL",
+      "location": "GXO Veenendaal Arsenaal 2, 3905 Veenendaal, NL",
       "operating_hours": null,
       "live": true,
       "go_live": null,
@@ -1733,13 +2425,14 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-commscope-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.580634"
+        "last_updated": "2026-07-13T13:07:14.620400"
       }
     },
     {
-      "id": "TBD-FEG",
+      "id": "NP8-FEG",
       "card_title": "Unilever - NP8",
       "client": "Unilever",
+      "category": "client",
       "client_id": "3038",
       "instance": "bh10",
       "site": "FEG",
@@ -1787,13 +2480,1444 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.580634"
+        "last_updated": "2026-07-13T13:07:14.620400"
+      }
+    },
+    {
+      "id": "NP42-TBD",
+      "card_title": "Oh Polly - NP42",
+      "client": "Oh Polly",
+      "category": "client",
+      "client_id": "3060",
+      "instance": "be40",
+      "site": "TBD",
+      "region": "AMAPAC",
+      "location": "202 Park West Dr West Jefferson, OH USA",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP42",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "US",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP42.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP42.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP42.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.620400"
+      }
+    },
+    {
+      "id": "NP43-MEV",
+      "card_title": "GXO (Multi Tenant) - NP43",
+      "client": "GXO (Multi Tenant)",
+      "category": "client",
+      "client_id": "3026",
+      "instance": "be40",
+      "site": "MEV",
+      "region": "AMAPAC",
+      "location": "Calle Guadalupana Manzana 015 54980 Santiago Teyahualco Estado de México",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP43",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": "A",
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "US",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP43.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP43.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP43.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.620400"
+      }
+    },
+    {
+      "id": "NP5",
+      "card_title": "QL Template (EU) - NP5",
+      "client": "QL Template (EU)",
+      "category": "ql-template",
+      "client_id": "3041",
+      "instance": "bh10",
+      "site": null,
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP5",
+          "version": "2023.1.0.42.0",
+          "realm": "Not Setup"
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": null,
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP5.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP5.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP5.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-les",
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.620400"
+      }
+    },
+    {
+      "id": "NP45-DJ1",
+      "card_title": "Nodor - NP45",
+      "client": "Nodor",
+      "category": "client",
+      "client_id": "3063",
+      "instance": "be40",
+      "site": "DJ1",
+      "region": "AMAPAC",
+      "location": "2353 US-130 Dayton, NJ 08810 USA",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP45",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": null,
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP45.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP45.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP45.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.620400"
+      }
+    },
+    {
+      "id": "NP10",
+      "card_title": "France - NP10",
+      "client": "France",
+      "category": "client",
+      "client_id": "3043",
+      "instance": "bh10",
+      "site": null,
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP10",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP10.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP10.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP10.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.620400"
+      }
+    },
+    {
+      "id": "NP11",
+      "card_title": "DEV-EU - NP11",
+      "client": "DEV-EU",
+      "category": "dev-sandbox",
+      "client_id": "3044",
+      "instance": "bh10",
+      "site": null,
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP11",
+          "version": "2023.1.0.42.0",
+          "realm": "bh10-00q-euw"
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": null,
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP11.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP11.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP11.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.620400"
+      }
+    },
+    {
+      "id": "NP12",
+      "card_title": "Bene - NP12",
+      "client": "Bene",
+      "category": "client",
+      "client_id": "3045",
+      "instance": "bh10",
+      "site": null,
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP12",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP12.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP12.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP12.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.621400"
+      }
+    },
+    {
+      "id": "NP9-ES01",
+      "card_title": "Castellbisbal multi client : GLOBAL - NP9",
+      "client": "Castellbisbal multi client : GLOBAL",
+      "category": "client",
+      "client_id": "3046",
+      "instance": "bh10",
+      "site": "ES01",
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP9",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP9.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP9.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP9.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.621400"
+      }
+    },
+    {
+      "id": "NP9-ES01-2",
+      "card_title": "Castellbisbal multi client : SYNTHESIA - NP9",
+      "client": "Castellbisbal multi client : SYNTHESIA",
+      "category": "client",
+      "client_id": "3047",
+      "instance": "bh10",
+      "site": "ES01",
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP9",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP9.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP9.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP9.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.621400"
+      }
+    },
+    {
+      "id": "NP9-ES01-3",
+      "card_title": "Castellbisbal multi client : INTERCOAT - NP9",
+      "client": "Castellbisbal multi client : INTERCOAT",
+      "category": "client",
+      "client_id": "3048",
+      "instance": "bh10",
+      "site": "ES01",
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP9",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP9.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP9.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP9.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.621400"
+      }
+    },
+    {
+      "id": "NP9-ES01-4",
+      "card_title": "Castellbisbal multi client : INTERFAT - NP9",
+      "client": "Castellbisbal multi client : INTERFAT",
+      "category": "client",
+      "client_id": "3049",
+      "instance": "bh10",
+      "site": "ES01",
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP9",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP9.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP9.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP9.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.621400"
+      }
+    },
+    {
+      "id": "NP9-ES01-5",
+      "card_title": "Castellbisbal multi client : DEMIX - NP9",
+      "client": "Castellbisbal multi client : DEMIX",
+      "category": "client",
+      "client_id": "3050",
+      "instance": "bh10",
+      "site": "ES01",
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP9",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP9.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP9.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP9.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.621400"
+      }
+    },
+    {
+      "id": "NP9-ES01-6",
+      "card_title": "Castellbisbal multi client : GACHES - NP9",
+      "client": "Castellbisbal multi client : GACHES",
+      "category": "client",
+      "client_id": "3051",
+      "instance": "bh10",
+      "site": "ES01",
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP9",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP9.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP9.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP9.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.621400"
+      }
+    },
+    {
+      "id": "NP9-ES01-7",
+      "card_title": "Castellbisbal multi client : MACDERMID - NP9",
+      "client": "Castellbisbal multi client : MACDERMID",
+      "category": "client",
+      "client_id": "3052",
+      "instance": "bh10",
+      "site": "ES01",
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP9",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP9.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP9.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP9.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.621400"
+      }
+    },
+    {
+      "id": "NP9-ES01-8",
+      "card_title": "Castellbisbal multi client : ENGIPLASTE - NP9",
+      "client": "Castellbisbal multi client : ENGIPLASTE",
+      "category": "client",
+      "client_id": "3053",
+      "instance": "bh10",
+      "site": "ES01",
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP9",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP9.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP9.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP9.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.621400"
+      }
+    },
+    {
+      "id": "NP9-ES01-9",
+      "card_title": "Castellbisbal multi client : GLOKEM - NP9",
+      "client": "Castellbisbal multi client : GLOKEM",
+      "category": "client",
+      "client_id": "3054",
+      "instance": "bh10",
+      "site": "ES01",
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP9",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP9.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP9.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP9.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.621400"
+      }
+    },
+    {
+      "id": "NP9-ES01-10",
+      "card_title": "Castellbisbal multi client : QUIMICALITE - NP9",
+      "client": "Castellbisbal multi client : QUIMICALITE",
+      "category": "client",
+      "client_id": "3055",
+      "instance": "bh10",
+      "site": "ES01",
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP9",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP9.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP9.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP9.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.621400"
+      }
+    },
+    {
+      "id": "NP14",
+      "card_title": "QL Dev/Test Env for NP5 - NP14",
+      "client": "QL Dev/Test Env for NP5",
+      "category": "dev-sandbox",
+      "client_id": null,
+      "instance": "bh10",
+      "site": null,
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP14",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": null,
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP14.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP14.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP14.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.621400"
+      }
+    },
+    {
+      "id": "NP15-NL01",
+      "card_title": "Hunkemoller - NP15",
+      "client": "Hunkemoller",
+      "category": "client",
+      "client_id": "3058",
+      "instance": "bh10",
+      "site": "NL01",
+      "region": "EUROPE",
+      "location": "Sterkenburg 3-5 1358 CG Almere Netherlands",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP15",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP15.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP15.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP15.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.621400"
+      }
+    },
+    {
+      "id": "NP16-NL02",
+      "card_title": "BOL - NP16",
+      "client": "BOL",
+      "category": "client",
+      "client_id": "3059",
+      "instance": "bh10",
+      "site": "NL02",
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP16",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP16.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP16.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP16.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.622406"
+      }
+    },
+    {
+      "id": "NP17-IT01",
+      "card_title": "DG Beauty - NP17",
+      "client": "DG Beauty",
+      "category": "client",
+      "client_id": "3061",
+      "instance": "bh10",
+      "site": "IT01",
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP17",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP17.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP17.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP17.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.622406"
+      }
+    },
+    {
+      "id": "NP18-PL01",
+      "card_title": "Oh Polly - NP18",
+      "client": "Oh Polly",
+      "category": "client",
+      "client_id": "3062",
+      "instance": "bh10",
+      "site": "PL01",
+      "region": "EUROPE",
+      "location": "Poznan, PL",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP18",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP18.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP18.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP18.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.622406"
+      }
+    },
+    {
+      "id": "NP39",
+      "card_title": "NP25 Dev/Test Env - NP39",
+      "client": "NP25 Dev/Test Env",
+      "category": "dev-sandbox",
+      "client_id": null,
+      "instance": null,
+      "site": null,
+      "region": null,
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP39",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "US",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": null,
+          "prod": null
+        },
+        "app": {
+          "np": null,
+          "prod": null
+        },
+        "console": {
+          "np": null,
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.622406"
+      }
+    },
+    {
+      "id": "NP19-FR01",
+      "card_title": "Affinity Petcare - NP19",
+      "client": "Affinity Petcare",
+      "category": "client",
+      "client_id": "3064",
+      "instance": "bh10",
+      "site": "FR01",
+      "region": "EUROPE",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP19",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP19.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP19.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP19.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.622406"
+      }
+    },
+    {
+      "id": "NP20-FR02",
+      "card_title": "Columbia Sportswear Distribution SaS - NP20",
+      "client": "Columbia Sportswear Distribution SaS",
+      "category": "client",
+      "client_id": "3065",
+      "instance": "bh10",
+      "site": "FR02",
+      "region": "EUROPE",
+      "location": "1542 Avenue des Deux Vallees Parc d'Activites Actipole de l'A25 9954 Raillencourt Sainte Olle France",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP20",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP20.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP20.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP20.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.622406"
+      }
+    },
+    {
+      "id": "NP21-IT02",
+      "card_title": "GXO (Multi Tenant) - NP21",
+      "client": "GXO (Multi Tenant)",
+      "category": "client",
+      "client_id": "3066",
+      "instance": "bh10",
+      "site": "IT02",
+      "region": "EUROPE",
+      "location": "Via della Libertà, 215 28043 Bellinzago Novarese NO Italy",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP21",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://bh10-gxo-wms-web-NP21.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://bh10-gxo-wms-app-NP21.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://bh10-gxo-wms-con-NP21.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-07-13T13:07:14.622406"
       }
     },
     {
       "id": "PR1-DN1-2",
       "card_title": "Nodor - NP3",
       "client": "Nodor",
+      "category": "client",
       "client_id": "3067",
       "instance": "bh10",
       "site": "DN1",
@@ -1841,7 +3965,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-passenger-les",
       "metadata": {
-        "last_updated": "2026-07-10T18:43:53.581633"
+        "last_updated": "2026-07-13T13:07:14.622406"
       }
     }
   ]

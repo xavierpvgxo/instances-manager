@@ -37,6 +37,9 @@
     --ok-bg:#E8F4ED;
     --warn:#B45309;
     --warn-bg:#FEF3E2;
+
+    --tab-ql:#1D4ED8;
+    --tab-dev:#7C3AED;
     --err:#B91C1C;
     --err-bg:#FBE9E9;
 
@@ -67,6 +70,9 @@
     --ok-bg:rgba(34,197,94,.12);
     --warn:#F59E0B;
     --warn-bg:rgba(245,158,11,.12);
+
+    --tab-ql:#60A5FA;
+    --tab-dev:#A78BFA;
     --err:#EF4444;
     --err-bg:rgba(239,68,68,.12);
 
@@ -175,6 +181,12 @@
     border-radius:99px; padding:1px 8px; font-size:11px; font-weight:600;
   }
   .tab.active .badge{ background:var(--gxo-orange); color:#fff; }
+  /* Las pestañas de entornos internos no son estado del estate: color propio para
+     que se lean como "otra cosa" y no se confundan con Live / Not live. */
+  .tab.tab-ql.active{ color:var(--tab-ql); border-bottom-color:var(--tab-ql); }
+  .tab.tab-ql.active .badge{ background:var(--tab-ql); color:#fff; }
+  .tab.tab-dev.active{ color:var(--tab-dev); border-bottom-color:var(--tab-dev); }
+  .tab.tab-dev.active .badge{ background:var(--tab-dev); color:#fff; }
 
   /* ─── Buttons ─── */
   .btn{
@@ -441,6 +453,8 @@
     <button class="tab active" data-status="all">All instances <span class="badge" id="badgeAll">—</span></button>
     <button class="tab" data-status="true">Live <span class="badge" id="badgeLive">—</span></button>
     <button class="tab" data-status="false">Not live <span class="badge" id="badgeDown">—</span></button>
+    <button class="tab tab-ql" data-category="ql-template">QL Templates <span class="badge" id="badgeQL">—</span></button>
+    <button class="tab tab-dev" data-category="dev-sandbox">DEV Sandboxes <span class="badge" id="badgeDev">—</span></button>
   </div>
 </div>
 
@@ -486,7 +500,9 @@ const CONFIG = {
 };
 let instancesData = [];
 let currentView = [];
-let activeStatus = 'all';
+// La barra de pestañas mezcla dos ejes: estado del estate (all/live/not live) y
+// categoría (plantillas QL, sandboxes DEV). Solo una está activa a la vez.
+let activeTab = { kind: 'status', value: 'all' };
 
 // Carga el JSON local primero (refleja el estado actual del repo al servirse
 // por http: servidor local o GitHub Pages). Si no es accesible (p.ej. file://),
@@ -610,9 +626,13 @@ function render(){
     ].filter(Boolean).join(' ').toLowerCase();
     return haystack.includes(search) && (regionF === 'all' || i.region === regionF);
   };
+  const categoryOf = i => i.category || 'client';
+  const matchTab = i => activeTab.kind === 'category'
+    ? categoryOf(i) === activeTab.value
+    : (activeTab.value === 'all' || String(i.live) === activeTab.value);
   // base = búsqueda + región (sin filtro de estado); alimenta los contadores de pestañas
   const base = instancesData.filter(matchSR);
-  const filtered = base.filter(i => activeStatus === 'all' || String(i.live) === activeStatus);
+  const filtered = base.filter(matchTab);
   currentView = filtered;
 
   const total = instancesData.length;
@@ -625,6 +645,8 @@ function render(){
   document.getElementById('badgeAll').textContent = base.length;
   document.getElementById('badgeLive').textContent = base.filter(x => x.live).length;
   document.getElementById('badgeDown').textContent = base.filter(x => !x.live).length;
+  document.getElementById('badgeQL').textContent = base.filter(x => categoryOf(x) === 'ql-template').length;
+  document.getElementById('badgeDev').textContent = base.filter(x => categoryOf(x) === 'dev-sandbox').length;
 
   document.getElementById('kpis').innerHTML = `
     <div class="kpi">
@@ -747,7 +769,7 @@ function exportCSV(){
   if (!currentView.length) { showToast('Nothing to export'); return; }
   const cols = [
     ['ID', i=>i.id], ['Card title', i=>i.card_title], ['Client', i=>i.client],
-    ['Client ID', i=>i.client_id], ['Instance', i=>i.instance], ['Site', i=>i.site],
+    ['Client ID', i=>i.client_id], ['Category', i=>i.category], ['Instance', i=>i.instance], ['Site', i=>i.site],
     ['Region', i=>i.region], ['Live', i=>i.live], ['Go-live', i=>i.go_live],
     ['NP code', i=>i.environments?.np?.code], ['NP version', i=>i.environments?.np?.version], ['NP realm', i=>i.environments?.np?.realm],
     ['PR code', i=>i.environments?.prod?.code], ['PR version', i=>i.environments?.prod?.version], ['PR realm', i=>i.environments?.prod?.realm],
@@ -794,7 +816,9 @@ function setupEvents(){
     t.addEventListener('click', ()=>{
       document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
       t.classList.add('active');
-      activeStatus = t.dataset.status || 'all';
+      activeTab = t.dataset.category
+        ? { kind: 'category', value: t.dataset.category }
+        : { kind: 'status', value: t.dataset.status || 'all' };
       render();
     });
   });
