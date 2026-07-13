@@ -18,7 +18,9 @@ Flags:
 
 import argparse
 import logging
+import logging.handlers
 import re
+import shutil
 import subprocess
 import sys
 from datetime import datetime
@@ -35,6 +37,10 @@ REPO_ROOT = Path(
 TARGET_XLSX = REPO_ROOT / "data" / "instances.xlsx"
 LOG_FILE = REPO_ROOT / "scripts" / "sync_from_sharepoint.log"
 CLIENT_INFO_SHEET = "Client Info"
+
+# A Scheduled Task runs with a minimal environment where git may not be on PATH,
+# so resolve it to an absolute path and fail loudly if it cannot be found.
+GIT = shutil.which("git") or r"C:\Program Files\Git\cmd\git.exe"
 
 # Only these column headers are operational and safe to publish. Anything else in
 # the source (T&E, invoices, GXO approvals, internal notes, salesforce cases, etc.)
@@ -60,15 +66,18 @@ KEEP_HEADERS = {
     "Go-Live",
 }
 
-logging.basicConfig(
-    filename=str(LOG_FILE),
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    encoding="utf-8",
+_FORMAT = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
+_rotating = logging.handlers.RotatingFileHandler(
+    str(LOG_FILE), maxBytes=1_000_000, backupCount=3, encoding="utf-8"
 )
-console = logging.StreamHandler(sys.stdout)
-console.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
-logging.getLogger().addHandler(console)
+_rotating.setFormatter(_FORMAT)
+_console = logging.StreamHandler(sys.stdout)
+_console.setFormatter(_FORMAT)
+logging.basicConfig(level=logging.INFO, handlers=[_rotating, _console])
+
+
+def git(*args):
+    return run([GIT, *args])
 
 
 def run(cmd):
@@ -130,7 +139,7 @@ def regenerate_json():
 
 
 def git_data_dirty():
-    result = run(["git", "status", "--porcelain", "data/"])
+    result = git("status", "--porcelain", "data/")
     return bool(result.stdout.strip())
 
 
@@ -145,7 +154,7 @@ def only_timestamp_changes_in_json():
     over-reports changes. We use the JSON diff (text, easy to inspect) as the
     source of truth for 'did real data change?'.
     """
-    result = run(["git", "diff", "--unified=0", "--", "data/instances.json"])
+    result = git("diff", "--unified=0", "--", "data/instances.json")
     if not result.stdout.strip():
         return True
     for line in result.stdout.splitlines():
@@ -158,24 +167,32 @@ def only_timestamp_changes_in_json():
 
 
 def commit_and_push():
-    run(
-        [
-            "git",
-            "add",
-            "data/instances.xlsx",
-            "data/instances.json",
-            "data/instances.min.json",
-        ]
+    git(
+        "add",
+        "data/instances.xlsx",
+        "data/instances.json",
+        "data/instances.min.json",
     )
     msg = f"Auto-sync from SharePoint - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-    commit = run(["git", "commit", "-m", msg])
+    commit = git("commit", "-m", msg)
     if commit.returncode != 0:
         if "nothing to commit" in (commit.stdout or "").lower():
             logging.info("Nothing to commit after staging")
             return
         raise RuntimeError(f"git commit failed (exit {commit.returncode})")
 
-    push = run(["git", "push", "origin", "main"])
+    # Edits made directly on github.com (index.html, styling, ...) land on origin/main
+    # without this clone ever seeing them, which makes the push a non-fast-forward.
+    # Replay our data commit on top of whatever is upstream before pushing.
+    rebase = git("pull", "--rebase", "origin", "main")
+    if rebase.returncode != 0:
+        git("rebase", "--abort")
+        raise RuntimeError(
+            f"git pull --rebase failed (exit {rebase.returncode}); "
+            "resolve the divergence manually"
+        )
+
+    push = git("push", "origin", "main")
     if push.returncode != 0:
         raise RuntimeError(f"git push failed (exit {push.returncode})")
     logging.info("Pushed to origin/main")
@@ -205,7 +222,7 @@ def main():
             logging.info(
                 "Only timestamp fields changed. Reverting data/ and skipping commit."
             )
-            run(["git", "checkout", "--", "data/"])
+            git("checkout", "--", "data/")
             return 0
 
         if args.dry_run:
