@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-08-14T10:00:10.254762",
+    "generated_at": "2026-09-07T08:42:41.087970",
     "total_instances": 78,
     "source_file": "data/instances.xlsx",
     "source_sheet": "Client Info"
@@ -58,7 +58,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-romeoville-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.234761"
+        "last_updated": "2026-09-07T08:42:41.043612"
       }
     },
     {
@@ -113,7 +113,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-savannah-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.234761"
+        "last_updated": "2026-09-07T08:42:41.043612"
       }
     },
     {
@@ -168,7 +168,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-loewe-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.235761"
+        "last_updated": "2026-09-07T08:42:41.045625"
       }
     },
     {
@@ -223,7 +223,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.235761"
+        "last_updated": "2026-09-07T08:42:41.046141"
       }
     },
     {
@@ -278,7 +278,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.235761"
+        "last_updated": "2026-09-07T08:42:41.047159"
       }
     },
     {
@@ -333,7 +333,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-darigold-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.235761"
+        "last_updated": "2026-09-07T08:42:41.047159"
       }
     },
     {
@@ -388,7 +388,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-alpargata-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.235761"
+        "last_updated": "2026-09-07T08:42:41.047159"
       }
     },
     {
@@ -443,7 +443,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-west-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.235761"
+        "last_updated": "2026-09-07T08:42:41.048156"
       }
     },
     {
@@ -498,7 +498,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-east-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.235761"
+        "last_updated": "2026-09-07T08:42:41.048156"
       }
     },
     {
@@ -553,7 +553,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-starbucks-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.235761"
+        "last_updated": "2026-09-07T08:42:41.048665"
       }
     },
     {
@@ -608,7 +608,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-lg-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.237264"
+        "last_updated": "2026-09-07T08:42:41.048665"
       }
     },
     {
@@ -663,7 +663,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-peloton-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.237264"
+        "last_updated": "2026-09-07T08:42:41.048665"
       }
     },
     {
@@ -718,7 +718,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.237264"
+        "last_updated": "2026-09-07T08:42:41.048665"
       }
     },
     {
@@ -773,7 +773,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-california-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.237264"
+        "last_updated": "2026-09-07T08:42:41.049676"
       }
     },
     {
@@ -828,7 +828,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-canada-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.237264"
+        "last_updated": "2026-09-07T08:42:41.049676"
       }
     },
     {
@@ -883,7 +883,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.237264"
+        "last_updated": "2026-09-07T08:42:41.049676"
       }
     },
     {
@@ -938,7 +938,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.237264"
+        "last_updated": "2026-09-07T08:42:41.049676"
       }
     },
     {
@@ -993,7 +993,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.237264"
+        "last_updated": "2026-09-07T08:42:41.049676"
       }
     },
     {
@@ -1048,7 +1048,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.237264"
+        "last_updated": "2026-09-07T08:42:41.049676"
       }
     },
     {
@@ -1103,7 +1103,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.237264"
+        "last_updated": "2026-09-07T08:42:41.049676"
       }
     },
     {
@@ -1158,7 +1158,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-amiri-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.237264"
+        "last_updated": "2026-09-07T08:42:41.050820"
       }
     },
     {
@@ -1215,7 +1215,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-food52-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.237264"
+        "last_updated": "2026-09-07T08:42:41.050820"
       }
     },
     {
@@ -1270,7 +1270,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.240776"
+        "last_updated": "2026-09-07T08:42:41.056806"
       }
     },
     {
@@ -1325,7 +1325,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toast-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.240776"
+        "last_updated": "2026-09-07T08:42:41.056806"
       }
     },
     {
@@ -1380,7 +1380,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-on-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.240776"
+        "last_updated": "2026-09-07T08:42:41.056806"
       }
     },
     {
@@ -1435,7 +1435,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-on-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.240776"
+        "last_updated": "2026-09-07T08:42:41.057804"
       }
     },
     {
@@ -1490,7 +1490,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-castore-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.240776"
+        "last_updated": "2026-09-07T08:42:41.057804"
       }
     },
     {
@@ -1545,7 +1545,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-mw-les exec-wms-gxo-mt-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.240776"
+        "last_updated": "2026-09-07T08:42:41.057804"
       }
     },
     {
@@ -1600,7 +1600,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.240776"
+        "last_updated": "2026-09-07T08:42:41.057804"
       }
     },
     {
@@ -1655,7 +1655,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-wh-smith-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.241777"
+        "last_updated": "2026-09-07T08:42:41.057804"
       }
     },
     {
@@ -1710,7 +1710,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-plainfield-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.241777"
+        "last_updated": "2026-09-07T08:42:41.057804"
       }
     },
     {
@@ -1765,7 +1765,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-orlando-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.241777"
+        "last_updated": "2026-09-07T08:42:41.058806"
       }
     },
     {
@@ -1820,7 +1820,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-portland-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.241777"
+        "last_updated": "2026-09-07T08:42:41.058806"
       }
     },
     {
@@ -1875,7 +1875,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-ruralhall-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.241777"
+        "last_updated": "2026-09-07T08:42:41.058806"
       }
     },
     {
@@ -1883,7 +1883,7 @@
       "card_title": "QL Template (AMAPAC) - NP25",
       "client": "QL Template (AMAPAC)",
       "category": "ql-template",
-      "client_id": "3042",
+      "client_id": null,
       "instance": "be40",
       "site": null,
       "region": "AMAPAC",
@@ -1910,7 +1910,7 @@
         }
       },
       "contact": {
-        "poc": "Mike/Jeff",
+        "poc": "QL",
         "site_contact": null,
         "site_distribution": null
       },
@@ -1930,7 +1930,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.241777"
+        "last_updated": "2026-09-07T08:42:41.059806"
       }
     },
     {
@@ -1985,62 +1985,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-span-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.241777"
-      }
-    },
-    {
-      "id": "NP38-WIL",
-      "card_title": "Riviana - NP38",
-      "client": "Riviana",
-      "category": "client",
-      "client_id": "3056",
-      "instance": "be40",
-      "site": "WIL",
-      "region": "AMAPAC",
-      "location": null,
-      "operating_hours": null,
-      "live": false,
-      "go_live": null,
-      "flags": [],
-      "environments": {
-        "np": {
-          "code": "NP38",
-          "version": null,
-          "realm": null
-        },
-        "prod": {
-          "code": null,
-          "version": null,
-          "realm": null
-        },
-        "arch": {
-          "code": null,
-          "version": null,
-          "realm": null
-        }
-      },
-      "contact": {
-        "poc": null,
-        "site_contact": null,
-        "site_distribution": null
-      },
-      "urls": {
-        "web": {
-          "np": "https://be40-gxo-wms-web-NP38.jdadelivers.com/portal",
-          "prod": null
-        },
-        "app": {
-          "np": "https://be40-gxo-wms-app-NP38.jdadelivers.com/service",
-          "prod": null
-        },
-        "console": {
-          "np": "https://be40-gxo-wms-con-NP38.jdadelivers.com",
-          "prod": null
-        }
-      },
-      "extensions_repo": null,
-      "metadata": {
-        "last_updated": "2026-08-14T10:00:10.241777"
+        "last_updated": "2026-09-07T08:42:41.059806"
       }
     },
     {
@@ -2095,7 +2040,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toolstation-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.242281"
+        "last_updated": "2026-09-07T08:42:41.060806"
       }
     },
     {
@@ -2150,7 +2095,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-passenger-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.242281"
+        "last_updated": "2026-09-07T08:42:41.060806"
       }
     },
     {
@@ -2205,7 +2150,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.242281"
+        "last_updated": "2026-09-07T08:42:41.060806"
       }
     },
     {
@@ -2260,62 +2205,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-prenatal-les exec-wms-gxo-phoenix-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.242281"
-      }
-    },
-    {
-      "id": "NP40-MP1",
-      "card_title": "Davine's Spa - NP40",
-      "client": "Davine's Spa",
-      "category": "client",
-      "client_id": "3057",
-      "instance": "be40",
-      "site": "MP1",
-      "region": "AMAPAC",
-      "location": "336 Heinz St Mechanicsburg, PA 17055 USA",
-      "operating_hours": null,
-      "live": false,
-      "go_live": null,
-      "flags": [],
-      "environments": {
-        "np": {
-          "code": "NP40",
-          "version": null,
-          "realm": null
-        },
-        "prod": {
-          "code": null,
-          "version": null,
-          "realm": null
-        },
-        "arch": {
-          "code": null,
-          "version": null,
-          "realm": null
-        }
-      },
-      "contact": {
-        "poc": "US",
-        "site_contact": null,
-        "site_distribution": null
-      },
-      "urls": {
-        "web": {
-          "np": "https://be40-gxo-wms-web-NP40.jdadelivers.com/portal",
-          "prod": null
-        },
-        "app": {
-          "np": "https://be40-gxo-wms-app-NP40.jdadelivers.com/service",
-          "prod": null
-        },
-        "console": {
-          "np": "https://be40-gxo-wms-con-NP40.jdadelivers.com",
-          "prod": null
-        }
-      },
-      "extensions_repo": null,
-      "metadata": {
-        "last_updated": "2026-08-14T10:00:10.242281"
+        "last_updated": "2026-09-07T08:42:41.060806"
       }
     },
     {
@@ -2370,7 +2260,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.242281"
+        "last_updated": "2026-09-07T08:42:41.061806"
       }
     },
     {
@@ -2425,7 +2315,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-kumho-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.242281"
+        "last_updated": "2026-09-07T08:42:41.061806"
       }
     },
     {
@@ -2480,7 +2370,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-commscope-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.242281"
+        "last_updated": "2026-09-07T08:42:41.061806"
       }
     },
     {
@@ -2535,62 +2425,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
-      }
-    },
-    {
-      "id": "PR6-TBD",
-      "card_title": "Oh Polly - NP42",
-      "client": "Oh Polly",
-      "category": "client",
-      "client_id": "3060",
-      "instance": "be40",
-      "site": "TBD",
-      "region": "AMAPAC",
-      "location": "202 Park West Dr West Jefferson, OH USA",
-      "operating_hours": null,
-      "live": true,
-      "go_live": null,
-      "flags": [],
-      "environments": {
-        "np": {
-          "code": "NP42",
-          "version": null,
-          "realm": null
-        },
-        "prod": {
-          "code": "PR6",
-          "version": null,
-          "realm": null
-        },
-        "arch": {
-          "code": "PR6A",
-          "version": null,
-          "realm": null
-        }
-      },
-      "contact": {
-        "poc": "US",
-        "site_contact": null,
-        "site_distribution": null
-      },
-      "urls": {
-        "web": {
-          "np": "https://be40-gxo-wms-web-NP42.jdadelivers.com/portal",
-          "prod": "https://be40-gxo-wms-web-PR6.jdadelivers.com/portal"
-        },
-        "app": {
-          "np": "https://be40-gxo-wms-app-NP42.jdadelivers.com/service",
-          "prod": "https://be40-gxo-wms-app-PR6.jdadelivers.com/service"
-        },
-        "console": {
-          "np": "https://be40-gxo-wms-con-NP42.jdadelivers.com",
-          "prod": "https://be40-gxo-wms-con-PR6.jdadelivers.com"
-        }
-      },
-      "extensions_repo": null,
-      "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.062807"
       }
     },
     {
@@ -2645,7 +2480,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.062807"
       }
     },
     {
@@ -2653,7 +2488,7 @@
       "card_title": "QL Template (EU) - NP5",
       "client": "QL Template (EU)",
       "category": "ql-template",
-      "client_id": "3041",
+      "client_id": null,
       "instance": "bh10",
       "site": null,
       "region": "EUROPE",
@@ -2680,7 +2515,7 @@
         }
       },
       "contact": {
-        "poc": null,
+        "poc": "QL",
         "site_contact": null,
         "site_distribution": null
       },
@@ -2700,62 +2535,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
-      }
-    },
-    {
-      "id": "NP45-DJ1",
-      "card_title": "Nodor - NP45",
-      "client": "Nodor",
-      "category": "client",
-      "client_id": "3063",
-      "instance": "be40",
-      "site": "DJ1",
-      "region": "AMAPAC",
-      "location": "2353 US-130 Dayton, NJ 08810 USA",
-      "operating_hours": null,
-      "live": false,
-      "go_live": null,
-      "flags": [],
-      "environments": {
-        "np": {
-          "code": "NP45",
-          "version": null,
-          "realm": null
-        },
-        "prod": {
-          "code": null,
-          "version": null,
-          "realm": null
-        },
-        "arch": {
-          "code": null,
-          "version": null,
-          "realm": null
-        }
-      },
-      "contact": {
-        "poc": null,
-        "site_contact": null,
-        "site_distribution": null
-      },
-      "urls": {
-        "web": {
-          "np": "https://be40-gxo-wms-web-NP45.jdadelivers.com/portal",
-          "prod": null
-        },
-        "app": {
-          "np": "https://be40-gxo-wms-app-NP45.jdadelivers.com/service",
-          "prod": null
-        },
-        "console": {
-          "np": "https://be40-gxo-wms-con-NP45.jdadelivers.com",
-          "prod": null
-        }
-      },
-      "extensions_repo": null,
-      "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.062807"
       }
     },
     {
@@ -2810,7 +2590,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.063810"
       }
     },
     {
@@ -2845,7 +2625,7 @@
         }
       },
       "contact": {
-        "poc": null,
+        "poc": "EMEA",
         "site_contact": null,
         "site_distribution": null
       },
@@ -2865,7 +2645,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.063810"
       }
     },
     {
@@ -2920,7 +2700,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.063810"
       }
     },
     {
@@ -2975,7 +2755,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.063810"
       }
     },
     {
@@ -3030,7 +2810,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.063810"
       }
     },
     {
@@ -3085,7 +2865,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.064809"
       }
     },
     {
@@ -3140,7 +2920,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.064809"
       }
     },
     {
@@ -3195,7 +2975,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.064809"
       }
     },
     {
@@ -3250,7 +3030,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.064809"
       }
     },
     {
@@ -3305,7 +3085,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.065810"
       }
     },
     {
@@ -3360,7 +3140,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.065810"
       }
     },
     {
@@ -3415,7 +3195,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.065810"
       }
     },
     {
@@ -3470,7 +3250,117 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.243287"
+        "last_updated": "2026-09-07T08:42:41.065810"
+      }
+    },
+    {
+      "id": "NP38-WIL",
+      "card_title": "Riviana - NP38",
+      "client": "Riviana",
+      "category": "client",
+      "client_id": "3056",
+      "instance": "be40",
+      "site": "WIL",
+      "region": "AMAPAC",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP38",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": null,
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP38.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP38.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP38.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-09-07T08:42:41.065810"
+      }
+    },
+    {
+      "id": "NP40-MP1",
+      "card_title": "Davine's Spa - NP40",
+      "client": "Davine's Spa",
+      "category": "client",
+      "client_id": "3057",
+      "instance": "be40",
+      "site": "MP1",
+      "region": "AMAPAC",
+      "location": "336 Heinz St Mechanicsburg, PA 17055 USA",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP40",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": "BY Case 05787176",
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "US",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP40.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP40.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP40.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-09-07T08:42:41.065810"
       }
     },
     {
@@ -3505,7 +3395,7 @@
         }
       },
       "contact": {
-        "poc": null,
+        "poc": "QL",
         "site_contact": null,
         "site_distribution": null
       },
@@ -3525,7 +3415,62 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.244285"
+        "last_updated": "2026-09-07T08:42:41.067154"
+      }
+    },
+    {
+      "id": "NP39",
+      "card_title": "QL DEV/Test Env for NP25 - NP39",
+      "client": "QL DEV/Test Env for NP25",
+      "category": "dev-sandbox",
+      "client_id": null,
+      "instance": "be40",
+      "site": null,
+      "region": "AMAPAC",
+      "location": null,
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP39",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": null,
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "QL",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP39.jdadelivers.com/portal",
+          "prod": null
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP39.jdadelivers.com/service",
+          "prod": null
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP39.jdadelivers.com",
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-09-07T08:42:41.067154"
       }
     },
     {
@@ -3580,7 +3525,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.244285"
+        "last_updated": "2026-09-07T08:42:41.067154"
       }
     },
     {
@@ -3635,7 +3580,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.244285"
+        "last_updated": "2026-09-07T08:42:41.067154"
       }
     },
     {
@@ -3690,11 +3635,11 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.244285"
+        "last_updated": "2026-09-07T08:42:41.067789"
       }
     },
     {
-      "id": "NP18-PL01",
+      "id": "PR6-PL01",
       "card_title": "Oh Polly - NP18",
       "client": "Oh Polly",
       "category": "client",
@@ -3704,7 +3649,7 @@
       "region": "EUROPE",
       "location": "Poznan, PL",
       "operating_hours": null,
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -3714,7 +3659,7 @@
           "realm": null
         },
         "prod": {
-          "code": null,
+          "code": "PR6",
           "version": null,
           "realm": null
         },
@@ -3732,39 +3677,39 @@
       "urls": {
         "web": {
           "np": "https://bh10-gxo-wms-web-NP18.jdadelivers.com/portal",
-          "prod": null
+          "prod": "https://bh10-gxo-wms-web-PR6.jdadelivers.com/portal"
         },
         "app": {
           "np": "https://bh10-gxo-wms-app-NP18.jdadelivers.com/service",
-          "prod": null
+          "prod": "https://bh10-gxo-wms-app-PR6.jdadelivers.com/service"
         },
         "console": {
           "np": "https://bh10-gxo-wms-con-NP18.jdadelivers.com",
-          "prod": null
+          "prod": "https://bh10-gxo-wms-con-PR6.jdadelivers.com"
         }
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.244285"
+        "last_updated": "2026-09-07T08:42:41.067789"
       }
     },
     {
-      "id": "NP39",
-      "card_title": "NP25 Dev/Test Env - NP39",
-      "client": "NP25 Dev/Test Env",
-      "category": "dev-sandbox",
-      "client_id": null,
-      "instance": null,
-      "site": null,
-      "region": null,
-      "location": null,
+      "id": "NP45-DJ1",
+      "card_title": "Nodor - NP45",
+      "client": "Nodor",
+      "category": "client",
+      "client_id": "3063",
+      "instance": "be40",
+      "site": "DJ1",
+      "region": "AMAPAC",
+      "location": "2353 US-130 Dayton, NJ 08810 USA",
       "operating_hours": null,
       "live": false,
       "go_live": null,
       "flags": [],
       "environments": {
         "np": {
-          "code": "NP39",
+          "code": "NP45",
           "version": null,
           "realm": null
         },
@@ -3780,27 +3725,27 @@
         }
       },
       "contact": {
-        "poc": "US",
+        "poc": null,
         "site_contact": null,
         "site_distribution": null
       },
       "urls": {
         "web": {
-          "np": null,
+          "np": "https://be40-gxo-wms-web-NP45.jdadelivers.com/portal",
           "prod": null
         },
         "app": {
-          "np": null,
+          "np": "https://be40-gxo-wms-app-NP45.jdadelivers.com/service",
           "prod": null
         },
         "console": {
-          "np": null,
+          "np": "https://be40-gxo-wms-con-NP45.jdadelivers.com",
           "prod": null
         }
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.244285"
+        "last_updated": "2026-09-07T08:42:41.067789"
       }
     },
     {
@@ -3855,7 +3800,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.244285"
+        "last_updated": "2026-09-07T08:42:41.067789"
       }
     },
     {
@@ -3910,7 +3855,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.244285"
+        "last_updated": "2026-09-07T08:42:41.067789"
       }
     },
     {
@@ -3965,7 +3910,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.244285"
+        "last_updated": "2026-09-07T08:42:41.068800"
       }
     },
     {
@@ -4020,19 +3965,19 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-passenger-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.244285"
+        "last_updated": "2026-09-07T08:42:41.068800"
       }
     },
     {
-      "id": "NP42",
+      "id": "NP42-WOH",
       "card_title": "Vuori - NP42",
       "client": "Vuori",
       "category": "client",
       "client_id": "3068",
-      "instance": null,
-      "site": null,
-      "region": null,
-      "location": null,
+      "instance": "be40",
+      "site": "WOH",
+      "region": "AMAPAC",
+      "location": "202 Park West Dr West Jefferson, OH USA",
       "operating_hours": null,
       "live": false,
       "go_live": null,
@@ -4061,50 +4006,105 @@
       },
       "urls": {
         "web": {
-          "np": null,
+          "np": "https://be40-gxo-wms-web-NP42.jdadelivers.com/portal",
           "prod": null
         },
         "app": {
-          "np": null,
+          "np": "https://be40-gxo-wms-app-NP42.jdadelivers.com/service",
           "prod": null
         },
         "console": {
-          "np": null,
+          "np": "https://be40-gxo-wms-con-NP42.jdadelivers.com",
           "prod": null
         }
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.244285"
+        "last_updated": "2026-09-07T08:42:41.068800"
       }
     },
     {
-      "id": "Allied Air",
-      "card_title": "Allied Air",
+      "id": "PR28-KAI",
+      "card_title": "Allied Air - NP46",
       "client": "Allied Air",
       "category": "client",
       "client_id": "3069",
-      "instance": null,
-      "site": null,
-      "region": null,
+      "instance": "be40",
+      "site": "KAI",
+      "region": "AMAPAC",
       "location": null,
+      "operating_hours": null,
+      "live": true,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "NP46",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": "PR28",
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": "PR28A",
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "US",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": "https://be40-gxo-wms-web-NP46.jdadelivers.com/portal",
+          "prod": "https://be40-gxo-wms-web-PR28.jdadelivers.com/portal"
+        },
+        "app": {
+          "np": "https://be40-gxo-wms-app-NP46.jdadelivers.com/service",
+          "prod": "https://be40-gxo-wms-app-PR28.jdadelivers.com/service"
+        },
+        "console": {
+          "np": "https://be40-gxo-wms-con-NP46.jdadelivers.com",
+          "prod": "https://be40-gxo-wms-con-PR28.jdadelivers.com"
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-09-07T08:42:41.068800"
+      }
+    },
+    {
+      "id": "Allied Air-KAO",
+      "card_title": "Allied Air - KAO",
+      "client": "Allied Air",
+      "category": "client",
+      "client_id": "3069",
+      "instance": "be40",
+      "site": "KAO",
+      "region": "AMAPAC",
+      "location": "319 Millennium Drive Orangeburg, SC 29115 USA",
       "operating_hours": null,
       "live": false,
       "go_live": null,
       "flags": [],
       "environments": {
         "np": {
-          "code": null,
+          "code": "BY Case 05787158",
           "version": null,
           "realm": null
         },
         "prod": {
-          "code": null,
+          "code": "BY Case 05787162",
           "version": null,
           "realm": null
         },
         "arch": {
-          "code": null,
+          "code": "BY Case 05787162A",
           "version": null,
           "realm": null
         }
@@ -4130,7 +4130,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.244285"
+        "last_updated": "2026-09-07T08:42:41.068800"
       }
     },
     {
@@ -4185,7 +4185,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.249251"
+        "last_updated": "2026-09-07T08:42:41.079173"
       }
     },
     {
@@ -4240,7 +4240,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.249251"
+        "last_updated": "2026-09-07T08:42:41.079173"
       }
     },
     {
@@ -4295,7 +4295,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-08-14T10:00:10.250255"
+        "last_updated": "2026-09-07T08:42:41.079173"
       }
     }
   ]
