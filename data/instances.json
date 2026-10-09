@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-09-30T16:00:13.197604",
+    "generated_at": "2026-10-09T16:00:12.523345",
     "total_instances": 82,
     "source_file": "data/instances.xlsx",
     "source_sheet": "Client Info"
@@ -58,7 +58,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-romeoville-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.130950"
+        "last_updated": "2026-10-09T16:00:12.473235"
       }
     },
     {
@@ -113,7 +113,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-savannah-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.130950"
+        "last_updated": "2026-10-09T16:00:12.474233"
       }
     },
     {
@@ -168,7 +168,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-loewe-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.130950"
+        "last_updated": "2026-10-09T16:00:12.476458"
       }
     },
     {
@@ -223,7 +223,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.132463"
+        "last_updated": "2026-10-09T16:00:12.477457"
       }
     },
     {
@@ -278,7 +278,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.133484"
+        "last_updated": "2026-10-09T16:00:12.477457"
       }
     },
     {
@@ -333,7 +333,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-darigold-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.134483"
+        "last_updated": "2026-10-09T16:00:12.478459"
       }
     },
     {
@@ -388,7 +388,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-alpargata-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.135482"
+        "last_updated": "2026-10-09T16:00:12.478459"
       }
     },
     {
@@ -443,7 +443,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-west-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.136676"
+        "last_updated": "2026-10-09T16:00:12.478459"
       }
     },
     {
@@ -498,7 +498,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-east-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.136676"
+        "last_updated": "2026-10-09T16:00:12.479458"
       }
     },
     {
@@ -553,7 +553,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-starbucks-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.137702"
+        "last_updated": "2026-10-09T16:00:12.479458"
       }
     },
     {
@@ -608,7 +608,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-lg-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.137702"
+        "last_updated": "2026-10-09T16:00:12.479458"
       }
     },
     {
@@ -663,7 +663,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-peloton-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.138693"
+        "last_updated": "2026-10-09T16:00:12.480459"
       }
     },
     {
@@ -718,7 +718,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.139691"
+        "last_updated": "2026-10-09T16:00:12.480459"
       }
     },
     {
@@ -773,7 +773,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-california-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.140205"
+        "last_updated": "2026-10-09T16:00:12.480459"
       }
     },
     {
@@ -828,7 +828,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-canada-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.140205"
+        "last_updated": "2026-10-09T16:00:12.480459"
       }
     },
     {
@@ -883,7 +883,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.140205"
+        "last_updated": "2026-10-09T16:00:12.481974"
       }
     },
     {
@@ -938,7 +938,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.140205"
+        "last_updated": "2026-10-09T16:00:12.481974"
       }
     },
     {
@@ -993,7 +993,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.140205"
+        "last_updated": "2026-10-09T16:00:12.481974"
       }
     },
     {
@@ -1048,7 +1048,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.140205"
+        "last_updated": "2026-10-09T16:00:12.481974"
       }
     },
     {
@@ -1103,7 +1103,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.141714"
+        "last_updated": "2026-10-09T16:00:12.481974"
       }
     },
     {
@@ -1158,7 +1158,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-amiri-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.141714"
+        "last_updated": "2026-10-09T16:00:12.481974"
       }
     },
     {
@@ -1215,7 +1215,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-food52-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.141714"
+        "last_updated": "2026-10-09T16:00:12.483526"
       }
     },
     {
@@ -1270,7 +1270,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.145732"
+        "last_updated": "2026-10-09T16:00:12.485556"
       }
     },
     {
@@ -1325,7 +1325,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toast-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.146734"
+        "last_updated": "2026-10-09T16:00:12.486540"
       }
     },
     {
@@ -1380,7 +1380,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-on-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.146734"
+        "last_updated": "2026-10-09T16:00:12.486540"
       }
     },
     {
@@ -1435,7 +1435,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-on-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.146734"
+        "last_updated": "2026-10-09T16:00:12.486540"
       }
     },
     {
@@ -1490,7 +1490,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-castore-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.147730"
+        "last_updated": "2026-10-09T16:00:12.486540"
       }
     },
     {
@@ -1545,7 +1545,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-mw-les exec-wms-gxo-mt-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.147730"
+        "last_updated": "2026-10-09T16:00:12.487543"
       }
     },
     {
@@ -1600,7 +1600,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.147730"
+        "last_updated": "2026-10-09T16:00:12.487543"
       }
     },
     {
@@ -1655,7 +1655,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-wh-smith-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.147730"
+        "last_updated": "2026-10-09T16:00:12.488543"
       }
     },
     {
@@ -1710,7 +1710,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-plainfield-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.148728"
+        "last_updated": "2026-10-09T16:00:12.488543"
       }
     },
     {
@@ -1765,7 +1765,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-orlando-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.148728"
+        "last_updated": "2026-10-09T16:00:12.488543"
       }
     },
     {
@@ -1820,7 +1820,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-portland-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.148728"
+        "last_updated": "2026-10-09T16:00:12.488543"
       }
     },
     {
@@ -1875,7 +1875,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-ruralhall-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.148728"
+        "last_updated": "2026-10-09T16:00:12.489817"
       }
     },
     {
@@ -1930,7 +1930,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.149729"
+        "last_updated": "2026-10-09T16:00:12.489817"
       }
     },
     {
@@ -1985,7 +1985,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-span-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.149729"
+        "last_updated": "2026-10-09T16:00:12.489817"
       }
     },
     {
@@ -2040,7 +2040,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toolstation-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.151757"
+        "last_updated": "2026-10-09T16:00:12.489817"
       }
     },
     {
@@ -2095,7 +2095,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-passenger-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.152779"
+        "last_updated": "2026-10-09T16:00:12.491327"
       }
     },
     {
@@ -2150,11 +2150,11 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.152779"
+        "last_updated": "2026-10-09T16:00:12.491327"
       }
     },
     {
-      "id": "NP6-WNL",
+      "id": "PR4-WNL",
       "card_title": "Project Phoenix Prenatal - NP6",
       "client": "Project Phoenix Prenatal",
       "category": "client",
@@ -2164,7 +2164,7 @@
       "region": "EUROPE",
       "location": "GXO Op Den Dries 1 6019 RA Wessem, Netherlands",
       "operating_hours": "NP13 (PRENTAL AUTOMATION)",
-      "live": false,
+      "live": true,
       "go_live": null,
       "flags": [],
       "environments": {
@@ -2174,12 +2174,12 @@
           "realm": "bh10-006-euw"
         },
         "prod": {
-          "code": null,
+          "code": "PR4",
           "version": "2023.1.0.42.0",
           "realm": "bh10-009-euw"
         },
         "arch": {
-          "code": "A",
+          "code": "PR4A",
           "version": null,
           "realm": null
         }
@@ -2192,20 +2192,20 @@
       "urls": {
         "web": {
           "np": "https://bh10-gxo-wms-web-NP6.jdadelivers.com/portal",
-          "prod": null
+          "prod": "https://bh10-gxo-wms-web-PR4.jdadelivers.com/portal"
         },
         "app": {
           "np": "https://bh10-gxo-wms-app-NP6.jdadelivers.com/service",
-          "prod": null
+          "prod": "https://bh10-gxo-wms-app-PR4.jdadelivers.com/service"
         },
         "console": {
           "np": "https://bh10-gxo-wms-con-NP6.jdadelivers.com",
-          "prod": null
+          "prod": "https://bh10-gxo-wms-con-PR4.jdadelivers.com"
         }
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-prenatal-les exec-wms-gxo-phoenix-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.153858"
+        "last_updated": "2026-10-09T16:00:12.491327"
       }
     },
     {
@@ -2260,7 +2260,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-kumho-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.153858"
+        "last_updated": "2026-10-09T16:00:12.491835"
       }
     },
     {
@@ -2315,7 +2315,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-commscope-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.153858"
+        "last_updated": "2026-10-09T16:00:12.491835"
       }
     },
     {
@@ -2370,7 +2370,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.154883"
+        "last_updated": "2026-10-09T16:00:12.491835"
       }
     },
     {
@@ -2425,7 +2425,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.154883"
+        "last_updated": "2026-10-09T16:00:12.492341"
       }
     },
     {
@@ -2480,7 +2480,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.154883"
+        "last_updated": "2026-10-09T16:00:12.492341"
       }
     },
     {
@@ -2535,7 +2535,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.154883"
+        "last_updated": "2026-10-09T16:00:12.493351"
       }
     },
     {
@@ -2590,7 +2590,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.154883"
+        "last_updated": "2026-10-09T16:00:12.493351"
       }
     },
     {
@@ -2645,7 +2645,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.155883"
+        "last_updated": "2026-10-09T16:00:12.493351"
       }
     },
     {
@@ -2700,7 +2700,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.155883"
+        "last_updated": "2026-10-09T16:00:12.493351"
       }
     },
     {
@@ -2755,7 +2755,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.156881"
+        "last_updated": "2026-10-09T16:00:12.493351"
       }
     },
     {
@@ -2810,7 +2810,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.156881"
+        "last_updated": "2026-10-09T16:00:12.493351"
       }
     },
     {
@@ -2865,7 +2865,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.157881"
+        "last_updated": "2026-10-09T16:00:12.493351"
       }
     },
     {
@@ -2920,7 +2920,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.157881"
+        "last_updated": "2026-10-09T16:00:12.493351"
       }
     },
     {
@@ -2975,7 +2975,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.157881"
+        "last_updated": "2026-10-09T16:00:12.494361"
       }
     },
     {
@@ -3030,7 +3030,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.159395"
+        "last_updated": "2026-10-09T16:00:12.494361"
       }
     },
     {
@@ -3085,13 +3085,13 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.159395"
+        "last_updated": "2026-10-09T16:00:12.494361"
       }
     },
     {
       "id": "NP9-ES01-9",
-      "card_title": "Castellbisbal multi client : GLOKEM - NP9",
-      "client": "Castellbisbal multi client : GLOKEM",
+      "card_title": "Castellbisbal multi client : GIVAUDAN - NP9",
+      "client": "Castellbisbal multi client : GIVAUDAN",
       "category": "client",
       "client_id": "3054",
       "instance": "bh10",
@@ -3140,7 +3140,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.159395"
+        "last_updated": "2026-10-09T16:00:12.494361"
       }
     },
     {
@@ -3195,7 +3195,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.159395"
+        "last_updated": "2026-10-09T16:00:12.494361"
       }
     },
     {
@@ -3250,7 +3250,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.160409"
+        "last_updated": "2026-10-09T16:00:12.494361"
       }
     },
     {
@@ -3305,7 +3305,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.160409"
+        "last_updated": "2026-10-09T16:00:12.495358"
       }
     },
     {
@@ -3360,7 +3360,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.160409"
+        "last_updated": "2026-10-09T16:00:12.495358"
       }
     },
     {
@@ -3415,7 +3415,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.160409"
+        "last_updated": "2026-10-09T16:00:12.495358"
       }
     },
     {
@@ -3470,7 +3470,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.160409"
+        "last_updated": "2026-10-09T16:00:12.495358"
       }
     },
     {
@@ -3525,7 +3525,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.161926"
+        "last_updated": "2026-10-09T16:00:12.495358"
       }
     },
     {
@@ -3580,7 +3580,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.161926"
+        "last_updated": "2026-10-09T16:00:12.496360"
       }
     },
     {
@@ -3635,7 +3635,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.161926"
+        "last_updated": "2026-10-09T16:00:12.496360"
       }
     },
     {
@@ -3690,7 +3690,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.161926"
+        "last_updated": "2026-10-09T16:00:12.496360"
       }
     },
     {
@@ -3745,7 +3745,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.162944"
+        "last_updated": "2026-10-09T16:00:12.496360"
       }
     },
     {
@@ -3800,7 +3800,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.162944"
+        "last_updated": "2026-10-09T16:00:12.497358"
       }
     },
     {
@@ -3855,7 +3855,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.162944"
+        "last_updated": "2026-10-09T16:00:12.497358"
       }
     },
     {
@@ -3910,7 +3910,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-passenger-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.163947"
+        "last_updated": "2026-10-09T16:00:12.497358"
       }
     },
     {
@@ -3965,7 +3965,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.163947"
+        "last_updated": "2026-10-09T16:00:12.497358"
       }
     },
     {
@@ -4020,7 +4020,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.164459"
+        "last_updated": "2026-10-09T16:00:12.497358"
       }
     },
     {
@@ -4075,26 +4075,26 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.164459"
+        "last_updated": "2026-10-09T16:00:12.497358"
       }
     },
     {
-      "id": "IKEA",
-      "card_title": "IKEA",
+      "id": "IKEA-BMS",
+      "card_title": "IKEA - BMS",
       "client": "IKEA",
       "category": "client",
-      "client_id": "3071",
-      "instance": null,
-      "site": null,
-      "region": null,
-      "location": null,
+      "client_id": "1144",
+      "instance": "be40",
+      "site": "BMS",
+      "region": "AMAPAC",
+      "location": "280 Mt Carmel Rd Byhalia, MS 38611 USA",
       "operating_hours": null,
       "live": false,
       "go_live": null,
       "flags": [],
       "environments": {
         "np": {
-          "code": "req",
+          "code": "BY Case 05810245",
           "version": null,
           "realm": null
         },
@@ -4130,7 +4130,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.164459"
+        "last_updated": "2026-10-09T16:00:12.497358"
       }
     },
     {
@@ -4149,7 +4149,7 @@
       "flags": [],
       "environments": {
         "np": {
-          "code": "req",
+          "code": "BY Case",
           "version": null,
           "realm": null
         },
@@ -4185,17 +4185,17 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.164459"
+        "last_updated": "2026-10-09T16:00:12.497358"
       }
     },
     {
-      "id": "Halo (OpenAI)",
-      "card_title": "Halo (OpenAI)",
+      "id": "Halo (OpenAI)-AVI",
+      "card_title": "Halo (OpenAI) - AVI",
       "client": "Halo (OpenAI)",
       "category": "client",
       "client_id": "3073",
       "instance": "be40",
-      "site": null,
+      "site": "AVI",
       "region": "AMAPAC",
       "location": "0207 Veterans Dr. Avon, IN 46123 USA",
       "operating_hours": null,
@@ -4240,19 +4240,19 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.164459"
+        "last_updated": "2026-10-09T16:00:12.497358"
       }
     },
     {
-      "id": "Halo (OpenAI)-2",
-      "card_title": "Halo (OpenAI)",
+      "id": "Halo (OpenAI)-NL03",
+      "card_title": "Halo (OpenAI) - NL03",
       "client": "Halo (OpenAI)",
       "category": "client",
       "client_id": "3073",
       "instance": "bh10",
-      "site": null,
+      "site": "NL03",
       "region": "EUROPE",
-      "location": null,
+      "location": "Noord 25-27 5651 GG Eindhoven Netherlands",
       "operating_hours": null,
       "live": false,
       "go_live": null,
@@ -4295,17 +4295,17 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.164459"
+        "last_updated": "2026-10-09T16:00:12.498360"
       }
     },
     {
-      "id": "Halo (OpenAI)-3",
-      "card_title": "Halo (OpenAI)",
+      "id": "Halo (OpenAI)-IML",
+      "card_title": "Halo (OpenAI) - IML",
       "client": "Halo (OpenAI)",
       "category": "client",
       "client_id": "3073",
-      "instance": "TBD",
-      "site": null,
+      "instance": null,
+      "site": "IML",
       "region": null,
       "location": null,
       "operating_hours": null,
@@ -4314,7 +4314,7 @@
       "flags": [],
       "environments": {
         "np": {
-          "code": null,
+          "code": "BY case: 05813657",
           "version": null,
           "realm": null
         },
@@ -4350,7 +4350,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.164459"
+        "last_updated": "2026-10-09T16:00:12.498360"
       }
     },
     {
@@ -4405,7 +4405,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.184608"
+        "last_updated": "2026-10-09T16:00:12.511936"
       }
     },
     {
@@ -4460,7 +4460,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.184608"
+        "last_updated": "2026-10-09T16:00:12.511936"
       }
     },
     {
@@ -4515,7 +4515,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-09-30T16:00:13.185560"
+        "last_updated": "2026-10-09T16:00:12.513492"
       }
     }
   ]
