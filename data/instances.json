@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-10-09T16:00:12.523345",
-    "total_instances": 82,
+    "generated_at": "2026-10-15T10:00:16.399838",
+    "total_instances": 83,
     "source_file": "data/instances.xlsx",
     "source_sheet": "Client Info"
   },
@@ -58,7 +58,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-romeoville-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.473235"
+        "last_updated": "2026-10-15T10:00:16.348750"
       }
     },
     {
@@ -113,7 +113,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-hasbro-savannah-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.474233"
+        "last_updated": "2026-10-15T10:00:16.349749"
       }
     },
     {
@@ -168,7 +168,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-loewe-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.476458"
+        "last_updated": "2026-10-15T10:00:16.350751"
       }
     },
     {
@@ -223,7 +223,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.477457"
+        "last_updated": "2026-10-15T10:00:16.351746"
       }
     },
     {
@@ -278,7 +278,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.477457"
+        "last_updated": "2026-10-15T10:00:16.351746"
       }
     },
     {
@@ -333,7 +333,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-darigold-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.478459"
+        "last_updated": "2026-10-15T10:00:16.351746"
       }
     },
     {
@@ -388,7 +388,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-alpargata-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.478459"
+        "last_updated": "2026-10-15T10:00:16.352752"
       }
     },
     {
@@ -443,7 +443,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-west-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.478459"
+        "last_updated": "2026-10-15T10:00:16.352752"
       }
     },
     {
@@ -498,7 +498,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-sodastream-east-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.479458"
+        "last_updated": "2026-10-15T10:00:16.352752"
       }
     },
     {
@@ -553,7 +553,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-starbucks-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.479458"
+        "last_updated": "2026-10-15T10:00:16.353753"
       }
     },
     {
@@ -608,7 +608,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-lg-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.479458"
+        "last_updated": "2026-10-15T10:00:16.353753"
       }
     },
     {
@@ -663,7 +663,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-peloton-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.480459"
+        "last_updated": "2026-10-15T10:00:16.353753"
       }
     },
     {
@@ -718,7 +718,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.480459"
+        "last_updated": "2026-10-15T10:00:16.353753"
       }
     },
     {
@@ -773,7 +773,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-california-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.480459"
+        "last_updated": "2026-10-15T10:00:16.354753"
       }
     },
     {
@@ -828,7 +828,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-corsair-canada-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.480459"
+        "last_updated": "2026-10-15T10:00:16.354753"
       }
     },
     {
@@ -883,7 +883,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.481974"
+        "last_updated": "2026-10-15T10:00:16.354753"
       }
     },
     {
@@ -938,7 +938,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.481974"
+        "last_updated": "2026-10-15T10:00:16.354753"
       }
     },
     {
@@ -993,7 +993,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.481974"
+        "last_updated": "2026-10-15T10:00:16.354753"
       }
     },
     {
@@ -1048,7 +1048,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.481974"
+        "last_updated": "2026-10-15T10:00:16.354753"
       }
     },
     {
@@ -1103,7 +1103,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.481974"
+        "last_updated": "2026-10-15T10:00:16.355752"
       }
     },
     {
@@ -1158,7 +1158,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-amiri-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.481974"
+        "last_updated": "2026-10-15T10:00:16.355752"
       }
     },
     {
@@ -1215,7 +1215,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-food52-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.483526"
+        "last_updated": "2026-10-15T10:00:16.355752"
       }
     },
     {
@@ -1270,7 +1270,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.485556"
+        "last_updated": "2026-10-15T10:00:16.360308"
       }
     },
     {
@@ -1325,7 +1325,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toast-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.486540"
+        "last_updated": "2026-10-15T10:00:16.360308"
       }
     },
     {
@@ -1380,7 +1380,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-on-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.486540"
+        "last_updated": "2026-10-15T10:00:16.360308"
       }
     },
     {
@@ -1435,7 +1435,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-on-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.486540"
+        "last_updated": "2026-10-15T10:00:16.361322"
       }
     },
     {
@@ -1490,7 +1490,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-castore-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.486540"
+        "last_updated": "2026-10-15T10:00:16.361322"
       }
     },
     {
@@ -1545,7 +1545,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-mw-les exec-wms-gxo-mt-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.487543"
+        "last_updated": "2026-10-15T10:00:16.361322"
       }
     },
     {
@@ -1600,7 +1600,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.487543"
+        "last_updated": "2026-10-15T10:00:16.361322"
       }
     },
     {
@@ -1655,7 +1655,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-wh-smith-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.488543"
+        "last_updated": "2026-10-15T10:00:16.362313"
       }
     },
     {
@@ -1710,7 +1710,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-plainfield-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.488543"
+        "last_updated": "2026-10-15T10:00:16.362313"
       }
     },
     {
@@ -1765,7 +1765,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-orlando-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.488543"
+        "last_updated": "2026-10-15T10:00:16.362313"
       }
     },
     {
@@ -1820,7 +1820,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-portland-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.488543"
+        "last_updated": "2026-10-15T10:00:16.362313"
       }
     },
     {
@@ -1875,7 +1875,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-rjr-ruralhall-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.489817"
+        "last_updated": "2026-10-15T10:00:16.363320"
       }
     },
     {
@@ -1930,7 +1930,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.489817"
+        "last_updated": "2026-10-15T10:00:16.363320"
       }
     },
     {
@@ -1985,7 +1985,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-span-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.489817"
+        "last_updated": "2026-10-15T10:00:16.363320"
       }
     },
     {
@@ -2040,7 +2040,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-toolstation-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.489817"
+        "last_updated": "2026-10-15T10:00:16.364314"
       }
     },
     {
@@ -2095,7 +2095,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-passenger-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.491327"
+        "last_updated": "2026-10-15T10:00:16.364314"
       }
     },
     {
@@ -2150,7 +2150,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.491327"
+        "last_updated": "2026-10-15T10:00:16.364314"
       }
     },
     {
@@ -2205,7 +2205,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-prenatal-les exec-wms-gxo-phoenix-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.491327"
+        "last_updated": "2026-10-15T10:00:16.365319"
       }
     },
     {
@@ -2260,7 +2260,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-kumho-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.491835"
+        "last_updated": "2026-10-15T10:00:16.365319"
       }
     },
     {
@@ -2315,7 +2315,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-commscope-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.491835"
+        "last_updated": "2026-10-15T10:00:16.365319"
       }
     },
     {
@@ -2370,7 +2370,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.491835"
+        "last_updated": "2026-10-15T10:00:16.365319"
       }
     },
     {
@@ -2425,7 +2425,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.492341"
+        "last_updated": "2026-10-15T10:00:16.366319"
       }
     },
     {
@@ -2480,7 +2480,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.492341"
+        "last_updated": "2026-10-15T10:00:16.366319"
       }
     },
     {
@@ -2535,7 +2535,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.493351"
+        "last_updated": "2026-10-15T10:00:16.366319"
       }
     },
     {
@@ -2590,7 +2590,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.493351"
+        "last_updated": "2026-10-15T10:00:16.367318"
       }
     },
     {
@@ -2645,7 +2645,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.493351"
+        "last_updated": "2026-10-15T10:00:16.367318"
       }
     },
     {
@@ -2700,7 +2700,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.493351"
+        "last_updated": "2026-10-15T10:00:16.367318"
       }
     },
     {
@@ -2755,7 +2755,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.493351"
+        "last_updated": "2026-10-15T10:00:16.367318"
       }
     },
     {
@@ -2810,7 +2810,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.493351"
+        "last_updated": "2026-10-15T10:00:16.367318"
       }
     },
     {
@@ -2865,7 +2865,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.493351"
+        "last_updated": "2026-10-15T10:00:16.368318"
       }
     },
     {
@@ -2920,7 +2920,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.493351"
+        "last_updated": "2026-10-15T10:00:16.368318"
       }
     },
     {
@@ -2975,7 +2975,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.494361"
+        "last_updated": "2026-10-15T10:00:16.368318"
       }
     },
     {
@@ -3030,7 +3030,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.494361"
+        "last_updated": "2026-10-15T10:00:16.369320"
       }
     },
     {
@@ -3085,7 +3085,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.494361"
+        "last_updated": "2026-10-15T10:00:16.369320"
       }
     },
     {
@@ -3140,7 +3140,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.494361"
+        "last_updated": "2026-10-15T10:00:16.369320"
       }
     },
     {
@@ -3195,7 +3195,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.494361"
+        "last_updated": "2026-10-15T10:00:16.369320"
       }
     },
     {
@@ -3250,7 +3250,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.494361"
+        "last_updated": "2026-10-15T10:00:16.369320"
       }
     },
     {
@@ -3305,7 +3305,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.495358"
+        "last_updated": "2026-10-15T10:00:16.370318"
       }
     },
     {
@@ -3360,7 +3360,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.495358"
+        "last_updated": "2026-10-15T10:00:16.370318"
       }
     },
     {
@@ -3415,7 +3415,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.495358"
+        "last_updated": "2026-10-15T10:00:16.370318"
       }
     },
     {
@@ -3470,7 +3470,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.495358"
+        "last_updated": "2026-10-15T10:00:16.370318"
       }
     },
     {
@@ -3525,7 +3525,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.495358"
+        "last_updated": "2026-10-15T10:00:16.371319"
       }
     },
     {
@@ -3580,7 +3580,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.496360"
+        "last_updated": "2026-10-15T10:00:16.371319"
       }
     },
     {
@@ -3635,7 +3635,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.496360"
+        "last_updated": "2026-10-15T10:00:16.371319"
       }
     },
     {
@@ -3690,7 +3690,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.496360"
+        "last_updated": "2026-10-15T10:00:16.371319"
       }
     },
     {
@@ -3745,7 +3745,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.496360"
+        "last_updated": "2026-10-15T10:00:16.371319"
       }
     },
     {
@@ -3800,7 +3800,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.497358"
+        "last_updated": "2026-10-15T10:00:16.372319"
       }
     },
     {
@@ -3855,7 +3855,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.497358"
+        "last_updated": "2026-10-15T10:00:16.372319"
       }
     },
     {
@@ -3910,7 +3910,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-passenger-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.497358"
+        "last_updated": "2026-10-15T10:00:16.372319"
       }
     },
     {
@@ -3965,7 +3965,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.497358"
+        "last_updated": "2026-10-15T10:00:16.372319"
       }
     },
     {
@@ -4020,7 +4020,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.497358"
+        "last_updated": "2026-10-15T10:00:16.372319"
       }
     },
     {
@@ -4075,7 +4075,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.497358"
+        "last_updated": "2026-10-15T10:00:16.373315"
       }
     },
     {
@@ -4130,7 +4130,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.497358"
+        "last_updated": "2026-10-15T10:00:16.373315"
       }
     },
     {
@@ -4185,7 +4185,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.497358"
+        "last_updated": "2026-10-15T10:00:16.373315"
       }
     },
     {
@@ -4240,7 +4240,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.497358"
+        "last_updated": "2026-10-15T10:00:16.373315"
       }
     },
     {
@@ -4295,7 +4295,7 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.498360"
+        "last_updated": "2026-10-15T10:00:16.374314"
       }
     },
     {
@@ -4304,10 +4304,10 @@
       "client": "Halo (OpenAI)",
       "category": "client",
       "client_id": "3073",
-      "instance": null,
+      "instance": "??",
       "site": "IML",
       "region": null,
-      "location": null,
+      "location": "11 Sunview Way Singapore 627542 Singapore",
       "operating_hours": null,
       "live": false,
       "go_live": null,
@@ -4350,7 +4350,62 @@
       },
       "extensions_repo": null,
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.498360"
+        "last_updated": "2026-10-15T10:00:16.374314"
+      }
+    },
+    {
+      "id": "Jellycat NL-NL04",
+      "card_title": "Jellycat NL - NL04",
+      "client": "Jellycat NL",
+      "category": "client",
+      "client_id": "3071",
+      "instance": "bh10",
+      "site": "NL04",
+      "region": "EUROPE",
+      "location": "Achtseweg Noord 25 5651 GG Eindhoven Netherlands",
+      "operating_hours": null,
+      "live": false,
+      "go_live": null,
+      "flags": [],
+      "environments": {
+        "np": {
+          "code": "BY case: 05820112",
+          "version": null,
+          "realm": null
+        },
+        "prod": {
+          "code": null,
+          "version": null,
+          "realm": null
+        },
+        "arch": {
+          "code": "A",
+          "version": null,
+          "realm": null
+        }
+      },
+      "contact": {
+        "poc": "EMEA",
+        "site_contact": null,
+        "site_distribution": null
+      },
+      "urls": {
+        "web": {
+          "np": null,
+          "prod": null
+        },
+        "app": {
+          "np": null,
+          "prod": null
+        },
+        "console": {
+          "np": null,
+          "prod": null
+        }
+      },
+      "extensions_repo": null,
+      "metadata": {
+        "last_updated": "2026-10-15T10:00:16.374314"
       }
     },
     {
@@ -4405,7 +4460,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.511936"
+        "last_updated": "2026-10-15T10:00:16.391319"
       }
     },
     {
@@ -4460,7 +4515,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.511936"
+        "last_updated": "2026-10-15T10:00:16.391319"
       }
     },
     {
@@ -4515,7 +4570,7 @@
       },
       "extensions_repo": "https://github.com/BYExternal/exec-wms-gxo-unilever-les",
       "metadata": {
-        "last_updated": "2026-10-09T16:00:12.513492"
+        "last_updated": "2026-10-15T10:00:16.391319"
       }
     }
   ]
